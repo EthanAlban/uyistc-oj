@@ -91,11 +91,6 @@ export default {
   beforeMount () {
   },
   mounted () {
-    const oScript = document.createElement('script');
-    oScript.type = 'text/javascript';
-    oScript.src = 'https://sf1-scmcdn-tos.pstatp.com/goofy/ee/lark/h5jssdk/lark/js_sdk/h5-js-sdk-1.5.4.js';
-    document.body.appendChild(oScript);
-
     // 获取验证码图片
     this.get_captcha_img();
     this.$notify.info({
