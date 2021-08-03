@@ -1,0 +1,77 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"tabBar": {
+	    "color": "#7A7E83",
+	    "selectedColor": "#3cc51f",
+	    "borderStyle": "black",
+	    "backgroundColor": "#ffffff",
+	    "list": [{
+	        "pagePath": "pages/user/index/index",
+	        "iconPath": "static/icons/index-unselected.png",
+	        "selectedIconPath": "static/icons/index-selected.png",
+	        "text": "首页"
+	    }, {
+	        "pagePath": "pages/user/problems/problems",
+	        "iconPath": "static/icons/problems-unselected.png",
+	        "selectedIconPath": "static/icons/problem-selected.png",
+	        "text": "题库"
+	    },{
+	        "pagePath": "pages/user/01_stastic/01_stastic",
+	        "iconPath": "static/icons/signing-unselected.png",
+	        "selectedIconPath": "static/icons/sigining-selected.png",
+	        "text": "签到"
+	    },{
+	        "pagePath": "pages/user/01_stastic/01_stastic",
+	        "iconPath": "static/icons/calendar-unselected.png",
+	        "selectedIconPath": "static/icons/calendar-selected.png",
+	        "text": "安排"
+	    },{
+	        "pagePath": "pages/user/mine/mine",
+	        "iconPath": "static/icons/info-unselected.png",
+	        "selectedIconPath": "static/icons/info-selected.png",
+	        "text": "我的"
+	    }]
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/user/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"enablePullDownRefresh": true
+			}
+		}
+	   ,{
+	       "path" : "pages/user/01_stastic/01_stastic",
+	       "style" :                                                                                    
+	       {
+	           "navigationBarTitleText": "",
+	           "enablePullDownRefresh": false
+	       }
+	       
+	   } ,{
+            "path" : "pages/user/problems/problems",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": true
+            }
+            
+        } ,{
+            "path" : "pages/user/mine/mine",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#1296db"
+	}
+}
