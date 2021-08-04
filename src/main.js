@@ -6,7 +6,10 @@ import dataV from '@jiaminghi/data-view';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import { vueBaberrage } from 'vue-baberrage'
+
 import Api from './api/index';
+import UserApi from './api/user_api'
+
 import './icons'
 import VueCookies from 'vue-cookies'
 import VueCodemirror from 'vue-codemirror'
@@ -36,7 +39,7 @@ Vue.use(VueCodemirror, /* {
 
 // 懒加载
 Vue.use(VueLazyload, {
-    loading: loading
+  loading: loading
 })
 
 import VueQuillEditor from 'vue-quill-editor'
@@ -51,6 +54,7 @@ import Export2Excel from './views/Teacher/export/Export2Excel'
 Vue.use(VueQuillEditor, /* { default global options } */)
 Vue.use(VueCookies)
 Vue.prototype.$axios = Api;
+Vue.prototype.$user_axios = UserApi;
 
 Vue.prototype.$OJIP = "http://47.94.135.51"
 Vue.prototype.$tenant_access_token = ""
@@ -71,41 +75,41 @@ import Moment from 'moment'
 
 // 定义全局时间戳过滤器
 Vue.filter('formatDate', function (value) {
-    return Moment(value).format('YYYY-MM-DD HH:mm:ss')
+  return Moment(value).format('YYYY-MM-DD HH:mm:ss')
 })
 
 new Vue({
-    beforeCreate () {
-        // 前端在启动的时候检查两台服务器的在线情况  心跳监测
-        this.selfLog("项目启动");
-        this.setInterval_id = setInterval(() => {
-            this.$axios.heartbeat().then(res => {
-                this.selfLog("心跳检测.....");
-                this.selfLog(res);
-                if (res.err === "OJ_is_down") {
-                    this.sys_status = -1
-                }
-                else if (res.err === null) {
-                    this.sys_status = 1
-                }
-            }).catch(err => {
-                this.sys_status = 0
-            })
-        }, 50000);
-
-    },
-    router,
-    store,
-    data: function () {
-        return {
-            sys_status: 1,
-            setInterval_id: -1,
-            user_profile: null,
+  beforeCreate () {
+    // 前端在启动的时候检查两台服务器的在线情况  心跳监测
+    this.selfLog("项目启动");
+    this.setInterval_id = setInterval(() => {
+      this.$axios.heartbeat().then(res => {
+        this.selfLog("心跳检测.....");
+        this.selfLog(res);
+        if (res.err === "OJ_is_down") {
+          this.sys_status = -1
         }
-    },
+        else if (res.err === null) {
+          this.sys_status = 1
+        }
+      }).catch(err => {
+        this.sys_status = 0
+      })
+    }, 50000);
 
-    beforeDestroy () {
-        clearInterval(this.setInterval_id);
-    },
-    render: h => h(App)
+  },
+  router,
+  store,
+  data: function () {
+    return {
+      sys_status: 1,
+      setInterval_id: -1,
+      user_profile: null,
+    }
+  },
+
+  beforeDestroy () {
+    clearInterval(this.setInterval_id);
+  },
+  render: h => h(App)
 }).$mount('#app')
