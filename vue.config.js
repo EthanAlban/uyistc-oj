@@ -1,5 +1,5 @@
 const path = require('path')
-const CompressionPlugin = require("compression-webpack-plugin")
+const CompressionPlugin = require('compression-webpack-plugin')
 function resolve (dir) {
   return path.join(__dirname, dir) // path.join(__dirname)设置绝对路径
 }
@@ -27,12 +27,10 @@ module.exports = {
       .end()
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
-      .options({
-        symbolId: 'icon-[name]'
-      })
+      .options({ symbolId: 'icon-[name]' })
       .end()
   },
-  chainWebpack: (config) => {
+  chainWebpack: config => {
     config.resolve.alias
       .set('@', resolve('./src'))
       .set('components', resolve('./src/components'))
@@ -62,37 +60,29 @@ module.exports = {
     proxy: {
       // oj服务器
       '/api': {
-        target: 'http://127.0.0.1:8000',
+        target: 'http://192.168.128.0:8000',
         ws: true,
         changeOrigin: true,
-        pathRewrite: {
-          '^/api': '/api'
-        }
+        pathRewrite: { '^/api': '/api' }
       },
       '/open-apis': {
         target: 'https://open.feishu.cn',
         ws: true,
         changeOrigin: true,
-        pathRewrite: {
-          '^/open-apis': '/open-apis'
-        }
+        pathRewrite: { '^/open-apis': '/open-apis' }
       },
       // 学校的API http://studyapi.uestc.edu.cn
       '/ckd': {
         target: 'http://studyapi.uestc.edu.cn',
         ws: true,
         changeOrigin: true,
-        pathRewrite: {
-          '^/ckd': '/ckd'
-        }
+        pathRewrite: { '^/ckd': '/ckd' }
       },
       'uestcapi': {
         target: 'http://feishumiddle.uestc.edu.cn',
         ws: true,
         changeOrigin: true,
-        pathRewrite: {
-          '^/uestcapi': '/uestcapi'
-        }
+        pathRewrite: { '^/uestcapi': '/uestcapi' }
       }
     }
   }

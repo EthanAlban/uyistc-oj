@@ -77,10 +77,10 @@
             <!-- 天气 -->
             <el-col :span="10">
               <el-button type="text" style="color:black">
-                <i class="el-icon-location-information">{{ wether.city }}</i>&nbsp;
-                <i class="el-icon-timer">{{ wether.date }}</i>&nbsp;
-                <i class="el-icon-wind-power">{{ wether.winddirect }}&nbsp;{{ wether.windpower }}</i>&nbsp;
-                <i class="el-icon-sunny">{{ wether.templow }}­°C-{{ wether.temphigh }}­°C</i>&nbsp;
+                <i class="el-icon-location-information">{{ wether.basic.city }}</i>&nbsp;
+                <i class="el-icon-timer">{{ wether.daily_forecast[0].date }}</i>&nbsp;
+                <i class="el-icon-wind-power">{{  wether.daily_forecast[0].wind.dir }}&nbsp;{{ wether.daily_forecast[0].wind.spd }}</i>&nbsp;
+                <i class="el-icon-sunny">{{ wether.daily_forecast[0].tmp.min }}­°C-{{ wether.daily_forecast[0].tmp.max }}­°C</i>&nbsp;
               </el-button>
             </el-col>
             <!-- 账户管理 -->
@@ -327,58 +327,13 @@ export default {
   },
   // 添加钩子函数在页面之前把弹幕加载进来
   beforeMount () {
-    this.selfLog(this.user_profile);
     // 查天气
     this.wetherToday();
-    // 用户
-    this.$axios.user_profile().then(res => {
-      this.selfLog(res);
-      this.user_profile = res["data"];
-      // 信息数量
-      if (this.user_profile !== null) {
-        let params = {
-          userId: this.user_profile.id
-        };
-        this.$axios.get_sys_info(params).then(res => {
-          this.selfLog(res);
-          this.sysinfo_arr = res.data;
-          this.sys_info_num = res.data.length;
-        });
-        this.selfLog(this.user_profile);
-        this.user_profile.avatar = this.OJIP + this.user_profile.avatar;
-        // 查用户真名
-        let query = {
-          stuNum: this.user_profile.user.username
-        };
-        this.stuNum = this.user_profile.user.username;
-        this.$axios.get_real_name_by_stunum(query).then(res => {
-          this.real_name = res["name"];
-        });
-        // user信息搞成全局数据
-        this.$root.user_profile = this.user_profile;
-        //  查系统公告
-        this.$axios.obtain_announcement(0, 10).then(res => {
-          this.selfLog(res);
-          this.annoncement_arr = res.data.results
-          this.annoucement_num = this.annoncement_arr.length
-        })
-      }
-      if (this.user_profile === null) {
-        this.show_announcement()
-      }
-
-    })
-      .catch(err => {
-        this.$axios.user_profile()
-      })
     this.move_maliao()
   },
   methods: {
     move_maliao () {
       setInterval(() => {
-        // if (this.maliao_position_int % 100 === 0) {
-        //   this.selfLog(this.maliao_position_int)
-        // }
         if (this.maliao_position_int === 1000) {
           this.maliao_back_falg = true
         } else if (this.maliao_position_int === -20) {
@@ -454,9 +409,9 @@ export default {
       }
     },
     wetherToday () {
-      this.$axios.wetherToday().then(res => {
-        this.selfLog(res);
-        this.wether = res;
+      this.$utils_axios.WeatherToday().then(res => {
+        this.selfLog(res.data.result.HeWeather5[0]);
+        this.wether = res.data.result.HeWeather5[0];
       }).catch(err => {
         this.selfLog(err + "  天气获取失败")
         this.wetherToday()

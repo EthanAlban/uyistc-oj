@@ -10,7 +10,10 @@ import {
 } from '../utils'
 import axios from 'axios'
 export default {
-	Login: params => {
-		return Post('usr/login', params)
+	WeatherToday: () => {
+		return Get('utils/weather')
+	},
+	HeartBeat: () => {
+		return Get('utils/heartbeat')
 	}
 }
