@@ -29,12 +29,12 @@
 					</el-input>
 					<img :src="captcha" @click="get_captcha_img" class="captchaImg" />
 				</el-form-item>
-				<el-form-item label="注册类型" size="medium" style="width:290px">
+				<!-- <el-form-item label="注册类型" size="medium" style="width:290px">
 					<el-radio-group v-model="form.registerType">
 						<el-radio border label="学生">学生</el-radio>
 						<el-radio border label="老师" @change="register_msg(form.registerType)">老师</el-radio>
 					</el-radio-group>
-				</el-form-item>
+				</el-form-item> -->
 				<el-button style="width:80%;" type="primary" @click="submitForm('ruleForm')" :loading="form.loading">注册
 				</el-button>
 			</el-form>
@@ -50,14 +50,7 @@
 <script>
 	export default {
 		name: "Register",
-		beforeMount() {
-			let month = new Date().getMonth(); //获取当前月份(0-11,0代表1月)
-			this.bg[month] = true;
-		},
-		mounted() {
-			// 获取验证码图片
-			this.get_captcha_img();
-		},
+		
 		data() {
 			let isEmail = s => {
 				return /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/.test(
@@ -98,7 +91,6 @@
 					checkPass: "",
 					email: "",
 					captcha_str: "",
-					registerType: "学生",
 					loading: false
 				},
 				rules: {
@@ -121,130 +113,85 @@
 						}
 					]
 				},
-				captcha: ""
+				captcha: "",
+				captchaId: ""
 			};
+		},
+		beforeMount() {
+			let month = new Date().getMonth(); //获取当前月份(0-11,0代表1月)
+			this.bg[month] = true;
+			// 获取验证码图片
+			this.get_captcha_img()
+		},
+		mounted() {
+		
 		},
 		methods: {
 			gotoLoginPage() {
 				this.$router.push("/login");
 			},
 			get_captcha_img() {
-				this.$axios.get_captcha_img().then(res => {
-					this.captcha = res.data;
-				});
+				this.$captcha_axios.NewCaptId().then(res => {
+					this.captcha = "http://192.168.128.0:8666/captcha/" + res.CaptchaId + ".png"
+					this.captchaId = res.CaptchaId
+					this.selfLog(this.captchaId,"----" , res.CaptchaId)
+				})
 			},
+			// 先校验一把表单的字段合法性  和  验证码是不是对的 
 			submitForm(formName) {
 				this.form.loading = true;
 				this.$refs[formName].validate(valid => {
 					if (valid) {
-						if (this.form.registerType === "学生") {
-							this.register("学生");
-						} else if (this.form.registerType === "老师") {
-							this.register("老师");
-						}
+						this.selfLog({
+							"captchaId": this.captchaId,
+							"captchaSolution": this.form.captcha_str
+						})
+						this.$captcha_axios.VerifyCaptcha({
+							"captchaId": this.captchaId,
+							"captchaSolution": this.form.captcha_str
+						}).then(res => {
+							this.selfLog(res)
+							if (res.errcode === 200) {
+								this.register()
+							} else if (res.errcode === 205) {
+								this.$message({
+									message: '验证码错误',
+									type: 'warning'
+								});
+								this.form.loading = false
+							}
+						})
 					} else {
+						this.$message({
+							message: '请检查字段合法性',
+							type: 'warning'
+						});
 						this.form.loading = false;
 						return false;
 					}
 				});
 			},
 			register(type) {
-				let param = {
-					username: this.form.username,
-					password: this.form.password,
-					email: this.form.email,
-					captcha: this.form.captcha_str
-				};
-				if (param.captcha === "") {
-					this.$message({
-						message: "验证码不能为空",
-						type: "warning"
-					});
-					return false;
-				} else {
-					let username = {
-						username: this.form.username
-					};
-					this.$axios.check_username_is_stunum(username).then(res => {
-						// 不是学号工号 直接注册
-						if (res.error === null) {
-							this.$axios.register_new(param).then(res => {
-								this.selfLog(res);
-								if (res.data === "Username already exists") {
-									this.$message({
-										message: "用户名已存在请重选",
-										type: "warning"
-									});
-									this.get_captcha_img();
-								} else if (res.data === "Email already exists") {
-									this.$message({
-										message: "所填邮箱已被绑定",
-										type: "warning"
-									});
-									this.get_captcha_img();
-								} else if (res.data === "Invalid captcha") {
-									this.$message({
-										message: "验证码错误",
-										type: "warning"
-									});
-									this.get_captcha_img();
-								} else {
-									// 是老师的话发邮件告诉老师我们会尽快审核
-									if (type === "老师") {
-										this.$notify({
-											title: "成功",
-											message: "我们将尽快审核，请确保您的邮箱正确,审核通过后您可以在OJ平台首页找到教师端入口",
-											type: "success"
-										});
-										//   拿id先登录
-										let param = {
-											username: this.form.username,
-											password: this.form.password
-										};
-										this.$axios.userLogin(param).then(res => {
-											if (res.error === null) {
-												this.$axios.user_profile().then(res2 => {
-													let forms = {
-														mail: this.form.email,
-														userId: res2.data.id
-													};
-													this.selfLog(forms);
-													this.$axios
-														.send_mail_to_teacher_register(
-															forms);
-												});
-											} else {}
-										});
-									} else {
-										this.$message({
-											message: "注册成功",
-											type: "success"
-										});
-									}
-									this.form.loading = false;
-									// 注册成功跳登录界面
-									this.$router.push("/login");
-								}
-							});
-						}
-						//   是学号但是还没有被注册
-						else if (res.error === "username_is_stunum_not_registered") {
-							this.$notify({
-								title: "账号预注册",
-								message: "用户您好，您的学/工号在系统中已预注册，请使用学/工号直接学号登录",
-								type: "warning"
-							});
-							this.form.loading = false;
-						} else if (res.error === "username_is_stunum_registered") {
-							this.$notify({
-								title: "账号已注册",
-								message: "用户您好，您的学/工号已注册且登陆过，请使用学/工号直接学号登录",
-								type: "warning"
-							});
-							this.form.loading = false;
-						}
-					});
-				}
+				this.get_captcha_img()
+				this.$user_axios.Register({
+					"UserName": this.form.username,
+					"Password": this.form.password,
+					"Email":this.form.email
+				}).then(res=>{
+					this.selfLog(res)
+					if(res.errcode===205){
+						this.$message({
+							message: '该用户名已经被注册',
+							type: 'warning'
+						});
+					}else if(res.errcode===206){
+						this.$message({
+							message: '该email已经被注册',
+							type: 'warning'
+						});
+					}
+				})
+				this.form.loading = false
 			},
 			register_msg(type) {
 				if (type === "老师") {

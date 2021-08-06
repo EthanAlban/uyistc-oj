@@ -65,6 +65,12 @@ module.exports = {
         changeOrigin: true,
         pathRewrite: { '^/api': '/api' }
       },
+	  '/captcha': {
+	    target: 'http://192.168.128.0:8666',
+	    ws: true,
+	    changeOrigin: true,
+	    pathRewrite: { '^/captcha': '/captcha' }
+	  },
       '/open-apis': {
         target: 'https://open.feishu.cn',
         ws: true,

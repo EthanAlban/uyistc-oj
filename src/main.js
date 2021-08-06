@@ -10,6 +10,7 @@ import { vueBaberrage } from 'vue-baberrage'
 import Api from './api/index'
 import UserApi from './api/user_api'
 import UtilsApi from './api/utils'
+import CaptcahApi from './api/captcha_api'
 
 import './icons'
 import VueCookies from 'vue-cookies'
@@ -58,6 +59,7 @@ Vue.use(VueCookies)
 Vue.prototype.$axios = Api
 Vue.prototype.$user_axios = UserApi
 Vue.prototype.$utils_axios = UtilsApi
+Vue.prototype.$captcha_axios = CaptcahApi
 
 
 Vue.prototype.$OJIP = 'http://47.94.135.51'

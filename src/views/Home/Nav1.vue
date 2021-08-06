@@ -192,11 +192,11 @@ export default {
       // 创建页面的之前获取用户的信息
       var that = this;
       this.selfLog("页面创建之前获取用户详情：");
-      this.$axios.user_profile().then((res) => {
-        that.user_profile = res["data"];
-        this.selfLog("页面创建之前获取用户详情：");
-        this.selfLog(that.user_profile);
-      });
+      // this.$axios.user_profile().then((res) => {
+      //   that.user_profile = res["data"];
+      //   this.selfLog("页面创建之前获取用户详情：");
+      //   this.selfLog(that.user_profile);
+      // });
     },
   },
   beforeDestroy () {
@@ -209,7 +209,7 @@ export default {
 .message_banner1 {
   position: absolute;
   top: 0px;
-  left: 9%;
+  left: 0px;
   right: 0;
   height: 100%;
   width: 100%;
@@ -220,7 +220,7 @@ export default {
 .message_banner2 {
   position: absolute;
   top: 0px;
-  left: 9%;
+  left: 0px;
   right: 0;
   height: 100%;
   width: 100%;
@@ -231,7 +231,7 @@ export default {
 .message_banner3 {
   position: absolute;
   top: 0px;
-  left: 9%;
+  left: 0px;
   right: 0;
   height: 100%;
   width: 100%;
@@ -242,7 +242,7 @@ export default {
 .message_banner4 {
   position: absolute;
   top: 0px;
-  left: 9%;
+  left: 0px;
   right: 0;
   height: 100%;
   width: 100%;
