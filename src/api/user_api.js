@@ -13,8 +13,13 @@ export default {
 	Login: params => {
 		return Post('usr/login', params)
 	},
+	Logout: () => {
+		return Get('usr/logout')
+	},
 	Register: params => {
-		selfLog(params)
 		return Post('usr/register', params)
 	},
+	user_profile: () => {
+		return Get('usr/user_profile')
+	}
 }

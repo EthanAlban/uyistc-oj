@@ -29,38 +29,43 @@
 						</el-col>
 						<!-- 首页 -->
 						<el-col :span="8">
-							<el-button  v-if="this.$root.sys_status === 1" type="text" style="color:black">
+							<el-button v-if="this.$root.sys_status === 1" type="text" style="color:black">
 								<i class="el-icon-cpu" @click="sys_info">服务器在线</i>
 							</el-button>
-							<el-button  v-if="this.$root.sys_status === -1" type="text" style="color:black">
+							<el-button v-if="this.$root.sys_status === -1" type="text" style="color:black">
 								<i class="el-icon-cpu" @click="sys_info">OJ离线</i>
 							</el-button>
-							<el-button  v-if="this.$root.sys_status === 0" type="text" style="color:black">
+							<el-button v-if="this.$root.sys_status === 0" type="text" style="color:black">
 								<i class="el-icon-cpu" @click="sys_info">服务器离线</i>
 							</el-button>
 							<el-button type="text" style="color:black">
-								<i class="el-icon-cpu" @click="page_navigator('/home/nav1')">首页</i>
+								<img src="../../icons/pages/dashboard.png" class="icons_images"></img>
+								<i @click="page_navigator('/home/nav1')">首页</i>
 							</el-button>
 							<el-button type="text" style="color:black">
-								<i class="el-icon-cpu" @click="page_navigator('/home/nav2')">题库</i>
+								<img src="../../icons/pages/problems.png" class="icons_images"></img>
+								<i  @click="page_navigator('/home/nav2')">题库</i>
 							</el-button>
 							<el-button type="text" style="color:black">
-								<i class="el-icon-cpu" @click="page_navigator('/home/nav3')">作业</i>
+								<img src="../../icons/pages/homework.png" class="icons_images"></img>
+								<i  @click="page_navigator('/home/nav3')">作业</i>
 							</el-button>
 							<el-button type="text" style="color:black">
-								<i class="el-icon-cpu" @click="page_navigator('/home/nav4')">提交</i>
+								<img src="../../icons/pages/submission.png" class="icons_images"></img>
+								<i  @click="page_navigator('/home/nav4')">提交</i>
 							</el-button>
 							<el-button type="text" style="color:black">
-								<i class="el-icon-cpu" @click="page_navigator('/home/nav5')">排名</i>
+								<img src="../../icons/pages/rank.png" class="icons_images"></img>
+								<i   @click="page_navigator('/home/nav5')">排名</i>
 							</el-button>
 						</el-col>
 						<!-- 页面跳转 -->
-						
+
 						<!-- 天气 -->
-						
+
 						<el-col v-if="wether.basic" :span="4">
 							<el-button type="text" style="color:black">
-								<i  class="el-icon-location-information">{{ wether.basic.city }}</i>&nbsp;
+								<i class="el-icon-location-information">{{ wether.basic.city }}</i>&nbsp;
 								<!-- <i class="el-icon-timer">{{ wether.daily_forecast[0].date }}</i>&nbsp; -->
 								<i
 									class="el-icon-wind-power">{{ wether.daily_forecast[0].wind.dir }}&nbsp;{{ wether.daily_forecast[0].wind.spd }}</i>&nbsp;
@@ -78,8 +83,8 @@
 													style="color:black">账户管理</span></i>
 										</div>
 										<div v-else style="display:flex">
-											<img :src="user_profile.avatar" style="width:30px" />
-											<div v-if="user_profile.user.admin_type==='Admin'" style="paddingTop:6px">
+											<img :src="user_profile.Avatar" style="width:30px" />
+											<div v-if="user_profile.admin_type===1" style="paddingTop:6px">
 												&nbsp;<span style="color:black">账户管理</span>&nbsp;<span
 													style="color:black">{{real_name}}老师</span></div>
 											<div v-else style="paddingTop:6px">&nbsp;<span
@@ -119,13 +124,11 @@
 						</el-col>
 						<!-- 教师入口 -->
 						<el-col :span="2">
-							<div v-if="user_profile!==null && user_profile.user.admin_type==='Admin'"
-								style="marginTop:-3px">
+							<div v-if="user_profile!==null && user_profile.UserType===1" style="marginTop:-3px">
 								<el-button type="text" @click="gotoTeacherSide"><span style="color:black">教师入口</span>
 								</el-button>
 							</div>
-							<div v-else-if="user_profile!==null && user_profile.user.admin_type==='Super Admin'"
-								style="marginTop:-8px">
+							<div v-else-if="user_profile!==null && user_profile.admin_type===0" style="marginTop:-8px">
 								<el-button type="text" @click="gotoAdminSide"><span style="color:black">管理入口</span>
 								</el-button>
 							</div>
@@ -214,7 +217,7 @@
 			<div class="demo-drawer__content">
 				<div v-if="sysinfo_annoucement==='sysinfo' && user_profile!==null">
 					<div v-for="(info, index) of sysinfo_arr" :key="index" style="margin:10px;">
-						<dv-border-box-8 :dur=6 style="height:100px"><br>&nbsp;&nbsp;{{info.msg}}
+						<dv-border-box-8 :dur=6 style="height:100px"><br>&nbsp;&nbsp;{{info.Content}}
 							<el-col :span="20">
 								<dv-border-box-13>
 									<el-button style="float: right; padding: 3px 0" type="primary"
@@ -235,9 +238,9 @@
 						<el-col :span="22">
 							<el-card class="box-card" shadow="always">
 								<div slot="header" class="clearfix">
-									<span>{{info.title}}</span>
+									<span>{{info.Title}}</span>
 								</div>
-								<div v-html="info.content" style="color:green"></div>
+								<div v-html="info.Content" style="color:green"></div>
 							</el-card>
 						</el-col>
 					</div>
@@ -317,10 +320,13 @@
 					this.selfLog("当前屏幕大小：" + this.screenWidth)
 				})()
 			}
-
+			this.$user_axios.user_profile().then(res => {
+				this.selfLog(res)
+				this.user_profile = res.data
+			})
 		},
 		// 添加钩子函数在页面之前把弹幕加载进来
-		beforeMount () {
+		beforeMount() {
 			// 查天气
 			this.wetherToday();
 			this.move_maliao()
@@ -377,10 +383,8 @@
 			logOut() {
 				this.$confirm("确认退出？").then(() => {
 					this.user_profile = null;
-					this.$axios.logout();
-					this.$router.push({
-						path: "/login"
-					});
+					this.$user_axios.Logout();
+					this.$message('已登出...');
 				});
 			},
 			logIn() {
@@ -515,7 +519,7 @@
 					userId: this.user_profile.id
 				};
 				this.show_announcement()
-				this.$axios.get_sys_info(params).then(res => {
+				this.$annonce_axios.GetSysInfolist(10, 0).then(res => {
 					this.selfLog(res);
 					this.sysinfo_arr = res.data;
 					this.sys_info_num = res.data.length;
@@ -536,15 +540,15 @@
 				this.sysinfo_annoucement = "sysinfo"
 			},
 			show_announcement() {
-				this.$axios.obtain_announcement(0, 10).then(res => {
+				this.$annonce_axios.GetAnnocements(0, 10).then(res => {
 					this.selfLog(res);
-					this.annoncement_arr = res.data.results
+					this.annoncement_arr = res.data
 					this.annoucement_num = this.annoncement_arr.length
 				})
 				this.sysinfo_annoucement = "annoucement"
 			},
 			// 页面导航
-			page_navigator(page){
+			page_navigator(page) {
 				this.selfLog(page)
 				this.$router.push(page);
 			}
@@ -556,6 +560,11 @@
 
 
 <style lang='scss' scoped>
+	.icons_images {
+		width: 20px;
+		height: 20px;
+	}
+
 	#home {
 		#header {
 			// background-color: rgba(191, 248, 245, 0.2);
