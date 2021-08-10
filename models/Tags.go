@@ -19,3 +19,20 @@ func (t *Tags) TableEngine() string {
 func NewTags() *Tags {
 	return &Tags{}
 }
+
+// GetAllTags 获得系统中的所有tag
+func (t *Tags) GetAllTags() (*[]Tags, error) {
+	var tags []Tags
+	_, err := O.QueryTable("tags").All(&tags)
+	if err != nil {
+		return nil, err
+	}
+	return &tags, nil
+}
+
+// GetTagObjectByTagName 根据tagname返回tag对象
+func (t *Tags) GetTagObjectByTagName(tagname string) *Tags {
+	var tag Tags
+	O.QueryTable("tags").Filter("tag_name", tagname).One(&tag)
+	return &tag
+}

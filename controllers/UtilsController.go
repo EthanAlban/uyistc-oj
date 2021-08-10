@@ -10,11 +10,11 @@ import (
 	"net"
 	"net/http"
 	"net/url"
-	"strconv"
 	"time"
 	"unioj/conf"
 	"unioj/logs"
 	"unioj/models"
+	"unioj/models/redisOP"
 )
 
 type UtilsController struct {
@@ -101,6 +101,10 @@ type Weather struct {
 }
 
 func (this *UtilsController) WetherToday() {
+	weather_ := this.Ctx.Input.CruSession.Get("weather")
+	if weather_ != nil {
+		this.JsonResult(200, "缓存加载", weather_)
+	}
 	params := url.Values{}
 	appkey := conf.GetStringConfig("appkey")
 	city := "chengdu"
@@ -119,7 +123,12 @@ func (this *UtilsController) WetherToday() {
 	body, _ := ioutil.ReadAll(resp.Body)
 	var weather Weather
 	json.Unmarshal(body, &weather)
-	this.JsonResult(200, "", weather)
+	//记录session
+	if this.Ctx.Input.CruSession == nil {
+		this.StartSession()
+	}
+	this.Ctx.Input.CruSession.Set("weather", weather)
+	this.JsonResult(200, "新查询", weather)
 }
 
 func (this *UtilsController) Heartbeat() {
@@ -150,11 +159,19 @@ func (this *UtilsController) RecordSysInfo() {
 	userid = userid.(int)
 }
 
-// SetInfoRead 设置系统信息以读
-func (this *UtilsController) SetInfoRead() {
-	Iid, _ := strconv.Atoi(this.Ctx.Input.Query("Iid"))
-	models.NewSysInfo().SetSysInfoReadedById(Iid)
-	res := make(map[string]bool)
-	res["result"] = true
-	this.JsonResult(200, "设置成功", res)
+//
+func (this *UtilsController) GetAllTags() {
+	var tags []models.Tags
+	tags_str, err := redisOP.RedisGetKey("Problemtags")
+	if err == nil {
+		json.Unmarshal([]byte(tags_str), &tags)
+		this.JsonResult(200, "redis获取tags", tags)
+	}
+	tags_, err := models.NewTags().GetAllTags()
+	tagsByte, _ := json.Marshal(tags_)
+	err = redisOP.RedisSetKey("Problemtags", string(tagsByte))
+	if err != nil {
+		this.JsonResult(205, "缓存tags失败")
+	}
+	this.JsonResult(200, "获取tags成功", tags_)
 }

@@ -17,3 +17,7 @@ func TestGetPagesProblems(t *testing.T) {
 		fmt.Println((*pros)[i])
 	}
 }
+
+func TestGetProblemByTag(t *testing.T) {
+	fmt.Println(*(models.NewProblems().GetProblemByTag("快慢指针")))
+}

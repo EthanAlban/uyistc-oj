@@ -5,6 +5,6 @@ import (
 	"testing"
 )
 
-func TestGetConfig(t *testing.T) { //sad
+func TestGetConfig(t *testing.T) {
 	fmt.Println(GetStringConfig("dbhost"))
 }

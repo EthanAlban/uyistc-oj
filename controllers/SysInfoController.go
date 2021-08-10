@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"strconv"
 	"unioj/models"
 )
 
@@ -20,4 +21,13 @@ func (this *SysInfoController) GetSysInfoList() {
 		(*sysinfos)[i].UId, _ = models.NewUser().GetUserByUid((*sysinfos)[i].UId.UId)
 	}
 	this.JsonResult(200, "", sysinfos)
+}
+
+// SetInfoRead 设置系统信息以读
+func (this *SysInfoController) SetInfoRead() {
+	Iid, _ := strconv.Atoi(this.Ctx.Input.Query("Iid"))
+	models.NewSysInfo().SetSysInfoReadedById(Iid)
+	res := make(map[string]bool)
+	res["result"] = true
+	this.JsonResult(200, "设置成功", res)
 }

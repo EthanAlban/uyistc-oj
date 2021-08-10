@@ -56,7 +56,10 @@ func (this *UserController) Login() {
 	if this.Ctx.Input.CruSession == nil {
 		this.StartSession()
 	}
-	this.Ctx.Input.CruSession.Set("userid", user.UId)
+	user_, err := models.NewUser().GetUserByUid(user.UId)
+	if err == nil {
+		this.Ctx.Input.CruSession.Set("user_login", *user_)
+	}
 	//sess,err := session.GlobalSessions.SessionStart(this.Ctx.ResponseWriter,this.Ctx.Request)
 	//err = sess.Set("userid", user.UId)
 	if err != nil {
@@ -93,12 +96,11 @@ func (this *UserController) Register() {
 
 // UserProfile 按照session中存储的userid查询登陆用户的信息
 func (this *UserController) UserProfile() {
-	userid := this.Ctx.Input.CruSession.Get("userid")
-	var user *models.User
-	if userid != nil {
-		user, _ = models.NewUser().GetUserByUid(userid.(int))
+	userLogin := this.Ctx.Input.CruSession.Get("user_login")
+	if userLogin == nil {
+		this.JsonResult(205, "尚未登陆，无缓存", models.User{})
 	}
-	this.JsonResult(200, "msg", user)
+	this.JsonResult(200, "加载缓存用户信息", userLogin)
 }
 
 // Logout 用户登出（退出登陆）
