@@ -25,8 +25,8 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column prop="_id" label="#" width="120"></el-table-column>
-      <el-table-column prop="title" label="标题" width="180"></el-table-column>
+      <el-table-column prop="Pid" label="#" width="120"></el-table-column>
+      <el-table-column prop="Title" label="标题" width="180"></el-table-column>
       <el-table-column label="标签" width="180">
         <template slot-scope="scope">
           <el-tag v-for="(tag,idx) in scope.row.tags" :key="tag" size="mini" :type="tag_types[idx%5]" effect="dark"
@@ -35,14 +35,14 @@
 
         </template>
       </el-table-column>
-      <el-table-column prop="difficulty" label="难度" width="180">
+      <el-table-column prop="Level" label="难度" width="180">
         <template slot-scope="scope">
-          <el-rate v-model="scope.row.difficulty" disabled show-score :max="max" text-color="#ff9900" score-template>
+          <el-rate v-model="scope.row.Level" disabled show-score :max="max" text-color="#ff9900" score-template>
           </el-rate>
         </template>
       </el-table-column>
-      <el-table-column prop="accepted_number" label="通过数量"></el-table-column>
-      <el-table-column prop="submission_number" label="提交数"></el-table-column>
+      <el-table-column prop="AcceptSubmissions" label="通过数量"></el-table-column>
+      <el-table-column prop="TotalSubmissions" label="提交数"></el-table-column>
       <el-table-column prop="pass_rate" label="通过率">
         <template slot-scope="scope">
           <div v-if="scope.row.pass_rate===0" title="一个人都没做出来">
@@ -53,7 +53,7 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column prop="created_by.username" label="创建者"></el-table-column>
+      <el-table-column prop="Uid.UserName" label="创建者"></el-table-column>
       <el-table-column fixed="right" label="操作" width="100">
         <template slot-scope="scope">
           <el-button @click="problemDetail(scope.row)" type="success" round>
@@ -120,45 +120,13 @@ export default {
     },
     // 获取问题列表
     GetProblems () {
-      this.$axios.problem_list_page(this.offset, this.limit, this.page, "").then(res => {
+      this.$problem_axios.ProblemListPage(this.offset, this.limit).then(res => {
         this.selfLog(res);
-        if (res.error === null) {
-          this.total = res.data.total;
-          this.problems_list = res.data.results;
-          this.selfLog(this.problems_list[0]);
-          this.selfLog(this.problems_list.length)
+        if (res.errcode === 200) {
+          this.total = res.data.length;
+          this.problems_list = res.data;
           let arange = this.limit
-          if (this.limit > this.problems_list.length) {
-            arange = this.problems_list.length
-          }
-          for (let i = 0; i < arange; i++) {
-            // 离散化难度值
-            if (this.problems_list[i].difficulty == "Low") {
-              this.problems_list[i].difficulty = 1;
-            } else if (this.problems_list[i].difficulty == "Mid") {
-              this.problems_list[i].difficulty = 2;
-            } else if (this.problems_list[i].difficulty == "High") {
-              this.problems_list[i].difficulty = 3;
-            }
-
-            if (this.problems_list[i].submission_number === 0) {
-              this.problems_list[i]["pass_rate"] = 0;
-            } else {
-              if (this.problems_list[i].accepted_number == 0) {
-                this.problems_list[i]["pass_rate"] = 0;
-              } else {
-                let x = (
-                  (this.problems_list[i].accepted_number /
-                    this.problems_list[i].submission_number) *
-                  100
-                ).toFixed(2);
-                this.problems_list[i]["pass_rate"] = parseFloat(x);
-              }
-              this.selfLog(this.problems_list[i]["pass_rate"]);
-            }
-          }
         }
-        this.selfLog(this.problems_list);
       });
     },
     // 进入问题详情页

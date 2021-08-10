@@ -29,8 +29,8 @@
 						</el-col>
 						<!-- 首页 -->
 						<el-col :span="8">
-							<el-button v-if="this.$root.sys_status === 1" type="text" style="color:black">
-								<i class="el-icon-cpu" @click="sys_info">服务器在线</i>
+							<el-button v-if="this.$root.sys_status === 1" @click="sys_info" type="text" style="color:black">
+								<i class="el-icon-cpu" >服务器在线</i>
 							</el-button>
 							<el-button v-if="this.$root.sys_status === -1" type="text" style="color:black">
 								<i class="el-icon-cpu" @click="sys_info">OJ离线</i>
@@ -38,25 +38,25 @@
 							<el-button v-if="this.$root.sys_status === 0" type="text" style="color:black">
 								<i class="el-icon-cpu" @click="sys_info">服务器离线</i>
 							</el-button>
-							<el-button type="text" style="color:black">
+							<el-button type="text" style="color:black" @click="page_navigator('/home/nav1')">
 								<img src="../../icons/pages/dashboard.png" class="icons_images"></img>
-								<i @click="page_navigator('/home/nav1')">首页</i>
+								<i >首页</i>
 							</el-button>
-							<el-button type="text" style="color:black">
+							<el-button type="text" style="color:black" @click="page_navigator('/home/nav2')">
 								<img src="../../icons/pages/problems.png" class="icons_images"></img>
-								<i  @click="page_navigator('/home/nav2')">题库</i>
+								<i  >题库</i>
 							</el-button>
-							<el-button type="text" style="color:black">
+							<el-button type="text" style="color:black" @click="page_navigator('/home/nav3')">
 								<img src="../../icons/pages/homework.png" class="icons_images"></img>
-								<i  @click="page_navigator('/home/nav3')">作业</i>
+								<i  >作业</i>
 							</el-button>
-							<el-button type="text" style="color:black">
+							<el-button type="text" style="color:black" @click="page_navigator('/home/nav4')">
 								<img src="../../icons/pages/submission.png" class="icons_images"></img>
-								<i  @click="page_navigator('/home/nav4')">提交</i>
+								<i  >提交</i>
 							</el-button>
-							<el-button type="text" style="color:black">
+							<el-button type="text" style="color:black"    @click="page_navigator('/home/nav5')">
 								<img src="../../icons/pages/rank.png" class="icons_images"></img>
-								<i   @click="page_navigator('/home/nav5')">排名</i>
+								<i>排名</i>
 							</el-button>
 						</el-col>
 						<!-- 页面跳转 -->
@@ -74,7 +74,7 @@
 							</el-button>
 						</el-col>
 						<!-- 账户管理 -->
-						<el-col :span="3" style="paddingTop:2px">
+						<el-col :span="2" style="paddingTop:2px">
 							<el-dropdown trigger="click" @command="handleCommand">
 								<el-button type="text">
 									<span>
@@ -128,7 +128,7 @@
 								<el-button type="text" @click="gotoTeacherSide"><span style="color:black">教师入口</span>
 								</el-button>
 							</div>
-							<div v-else-if="user_profile!==null && user_profile.admin_type===0" style="marginTop:-8px">
+							<div v-else-if="user_profile!==null && user_profile.UserType===0" style="marginTop:-8px">
 								<el-button type="text" @click="gotoAdminSide"><span style="color:black">管理入口</span>
 								</el-button>
 							</div>
@@ -221,7 +221,7 @@
 							<el-col :span="20">
 								<dv-border-box-13>
 									<el-button style="float: right; padding: 3px 0" type="primary"
-										@click="set_info_read(info.id)">已读
+										@click="set_info_read(info.Iid)">已读
 									</el-button>
 								</dv-border-box-13>
 								<!-- <el-card shadow="hover">
@@ -324,6 +324,10 @@
 				this.selfLog(res)
 				this.user_profile = res.data
 			})
+			this.$annonce_axios.GetSysInfolist(10, 0).then(res => {
+				this.sysinfo_arr = res.data;
+				this.sys_info_num = res.data.length;
+			});
 		},
 		// 添加钩子函数在页面之前把弹幕加载进来
 		beforeMount() {
@@ -527,10 +531,7 @@
 			},
 			// 已读系统消息
 			set_info_read(read_info_id) {
-				let param = {
-					info_id: read_info_id
-				};
-				this.$axios.set_info_read(param).then(res => {
+				this.$utils_axios.SetInfoRead(read_info_id).then(res => {
 					this.showSysNotify();
 				});
 				this.selfLog(read_info_id);

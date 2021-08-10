@@ -9,9 +9,10 @@ import { vueBaberrage } from 'vue-baberrage'
 
 import Api from './api/index'
 import UserApi from './api/user_api'
-import UtilsApi from './api/utils'
+import UtilsApi from './api/utils_api'
 import CaptcahApi from './api/captcha_api'
 import AnnonceApi from './api/annonce_api'
+import ProblemApi from './api/problem_api'
 
 import './icons'
 import VueCookies from 'vue-cookies'
@@ -23,9 +24,7 @@ import 'mavon-editor/dist/css/index.css'
 import VueLazyload from 'vue-lazyload'
 import loading from './assets/uestc/calendar/5.jpeg'
 
-// 全局的this.selfLog替换
-// import selfLog from './utils/selfLog';
-import { selfLog } from './utils'
+
 Vue.prototype.selfLog = selfLog
 // import base style
 // import 'codemirror/lib/codemirror.css'
@@ -62,7 +61,11 @@ Vue.prototype.$user_axios = UserApi
 Vue.prototype.$utils_axios = UtilsApi
 Vue.prototype.$captcha_axios = CaptcahApi
 Vue.prototype.$annonce_axios = AnnonceApi
+Vue.prototype.$problem_axios = ProblemApi
 
+// 全局的this.selfLog替换
+// import selfLog from './utils/selfLog';
+import { selfLog } from './utils'
 
 Vue.prototype.$OJIP = 'http://47.94.135.51'
 Vue.prototype.$tenant_access_token = ''
@@ -90,17 +93,30 @@ new Vue({
 	beforeCreate() {
 		// 前端在启动的时候检查两台服务器的在线情况  心跳监测
 		this.selfLog('项目启动')
+		this.$utils_axios.HeartBeat().then(res => {
+			selfLog(res)
+			if (res.errcode === 200) {
+				this.sys_status = 1
+			} else {
+				this.sys_status = 0
+			}
+		}).catch(err => {
+			this.sys_status = -1
+		})
 		this.setInterval_id = setInterval(() => {
+			this.selfLog('心跳检测...')
 			this.$utils_axios.HeartBeat().then(res => {
-				this.selfLog('心跳检测.....')
-				this.selfLog(res)
+				selfLog(res)
 				if (res.errcode === 200) {
 					this.sys_status = 1
 				} else {
 					this.sys_status = 0
 				}
+			}).catch(err => {
+				this.selfLog('心跳检测失败...')
+				this.sys_status = -1
 			})
-		}, 120000)
+		}, 60000)
 
 	},
 	router,
@@ -116,5 +132,6 @@ new Vue({
 	beforeDestroy() {
 		clearInterval(this.setInterval_id)
 	},
+
 	render: h => h(App)
 }).$mount('#app')
