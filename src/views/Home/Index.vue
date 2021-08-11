@@ -29,8 +29,9 @@
 						</el-col>
 						<!-- 首页 -->
 						<el-col :span="8">
-							<el-button v-if="this.$root.sys_status === 1" @click="sys_info" type="text" style="color:black">
-								<i class="el-icon-cpu" >服务器在线</i>
+							<el-button v-if="this.$root.sys_status === 1" @click="sys_info" type="text"
+								style="color:black">
+								<i class="el-icon-cpu">服务器在线</i>
 							</el-button>
 							<el-button v-if="this.$root.sys_status === -1" type="text" style="color:black">
 								<i class="el-icon-cpu" @click="sys_info">OJ离线</i>
@@ -40,21 +41,21 @@
 							</el-button>
 							<el-button type="text" style="color:black" @click="page_navigator('/home/nav1')">
 								<img src="../../icons/pages/dashboard.png" class="icons_images"></img>
-								<i >首页</i>
+								<i>首页</i>
 							</el-button>
 							<el-button type="text" style="color:black" @click="page_navigator('/home/nav2')">
 								<img src="../../icons/pages/problems.png" class="icons_images"></img>
-								<i  >题库</i>
+								<i>题库</i>
 							</el-button>
 							<el-button type="text" style="color:black" @click="page_navigator('/home/nav3')">
 								<img src="../../icons/pages/homework.png" class="icons_images"></img>
-								<i  >作业</i>
+								<i>作业</i>
 							</el-button>
 							<el-button type="text" style="color:black" @click="page_navigator('/home/nav4')">
 								<img src="../../icons/pages/submission.png" class="icons_images"></img>
-								<i  >提交</i>
+								<i>提交</i>
 							</el-button>
-							<el-button type="text" style="color:black"    @click="page_navigator('/home/nav5')">
+							<el-button type="text" style="color:black" @click="page_navigator('/home/nav5')">
 								<img src="../../icons/pages/rank.png" class="icons_images"></img>
 								<i>排名</i>
 							</el-button>
@@ -84,12 +85,12 @@
 										</div>
 										<div v-else style="display:flex">
 											<img :src="user_profile.Avatar" style="width:30px" />
-											<div v-if="user_profile.admin_type===1" style="paddingTop:6px">
+											<div v-if="user_profile.UserType===1" style="paddingTop:6px">
 												&nbsp;<span style="color:black">账户管理</span>&nbsp;<span
-													style="color:black">{{real_name}}老师</span></div>
+													style="color:black">{{user_profile.UserName}}老师</span></div>
 											<div v-else style="paddingTop:6px">&nbsp;<span
 													style="color:black">账户管理</span>&nbsp;<span
-													style="color:black">{{real_name}}</span>
+													style="color:black">{{user_profile.UserName}}</span>
 											</div>
 										</div>
 									</span>
@@ -322,7 +323,9 @@
 			}
 			this.$user_axios.user_profile().then(res => {
 				this.selfLog(res)
-				this.user_profile = res.data
+				if (res.errcode == 200) {
+					this.user_profile = res.data
+				}
 			})
 			this.$annonce_axios.GetSysInfolist(10, 0).then(res => {
 				this.sysinfo_arr = res.data;
@@ -414,7 +417,7 @@
 			},
 			wetherToday() {
 				this.$utils_axios.WeatherToday().then(res => {
-					this.selfLog(res.data.result.HeWeather5[0]);
+					this.selfLog(res)
 					this.wether = res.data.result.HeWeather5[0];
 				})
 			},
@@ -532,9 +535,9 @@
 			// 已读系统消息
 			set_info_read(read_info_id) {
 				this.$utils_axios.SetInfoRead(read_info_id).then(res => {
+					this.selfLog(res)
 					this.showSysNotify();
 				});
-				this.selfLog(read_info_id);
 			},
 			// 设置系统显示的信息抽屉显示系统信息
 			showSysNotify_button() {
