@@ -19,6 +19,7 @@ func main() {
 	//注册session要用的结构体
 	gob.Register(controllers.Weather{})
 	gob.Register(models.User{})
+	gob.Register(models.Problems{})
 	session.InitSession()
 	// 启动验证码服务
 	go captcha.StartCaptchaServer()

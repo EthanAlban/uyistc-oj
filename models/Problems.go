@@ -20,6 +20,8 @@ type Problems struct {
 	ProblemType       *ProblemType   `orm:"column(problem_type);rel(fk)"`
 	ProblemTags       []*ProblemTags `orm:"reverse(many)"`
 	Uid               *User          `orm:"column(uid);rel(fk)"`
+	InputDescription  string         `orm:"column(input_description)"`
+	OutputDescription string         `orm:"column(output_description)"`
 }
 
 // TableName 获取对应数据库表名.
