@@ -22,6 +22,7 @@ type Problems struct {
 	Uid               *User          `orm:"column(uid);rel(fk)"`
 	InputDescription  string         `orm:"column(input_description)"`
 	OutputDescription string         `orm:"column(output_description)"`
+	Template          string         `orm:"column(template)"` //问题使用的初始标准代码
 }
 
 // TableName 获取对应数据库表名.

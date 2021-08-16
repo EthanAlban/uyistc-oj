@@ -6,4 +6,5 @@ func init() {
 	problemsRouter()
 	utilsRouter()
 	sysinfoRouter()
+	judgerRouter()
 }

@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	fmt.Println(function("cbbd"))
+	fmt.Println(math.MinInt32)
 }
 func function(s string) int {
 	return 1

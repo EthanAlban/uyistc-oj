@@ -18,7 +18,6 @@ func Init() {
 		fmt.Println("redis初始化失败...")
 		return
 	}
-	logger.LogInfo("redis初始化成功...")
 	fmt.Println("[2] INFO redis初始化成功...")
 }
 

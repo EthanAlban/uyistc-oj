@@ -1,8 +1,10 @@
 package controllers
 
 import (
+	"crypto/md5"
 	"encoding/json"
 	"fmt"
+	"github.com/astaxie/beego"
 	_ "github.com/astaxie/beego"
 	"github.com/astaxie/beego/cache"
 	"github.com/astaxie/beego/utils/captcha"
@@ -174,4 +176,25 @@ func (this *UtilsController) GetAllTags() {
 		this.JsonResult(205, "缓存tags失败")
 	}
 	this.JsonResult(200, "获取tags成功", tags_)
+}
+
+type Config struct {
+	Token string `json:"token"`
+}
+
+func (this *UtilsController) GetServerConfig() {
+	token := this.Ctx.Input.Query("token")
+	serverToken := beego.AppConfig.String("token")
+	data := []byte(serverToken)
+	has := md5.Sum(data)
+	md5token := fmt.Sprintf("%x", has)
+	if token != md5token {
+		this.JsonResult(205, "token校验失败...")
+	}
+	KafkaHost := beego.AppConfig.String("juger_task_topic")
+	JugerTaskTopic := beego.AppConfig.String("kafka_host")
+	configMap := make(map[string]string)
+	configMap["juger_task_topic"] = KafkaHost
+	configMap["kafka_host"] = JugerTaskTopic
+	this.JsonResult(200, "获取参数成功", configMap)
 }

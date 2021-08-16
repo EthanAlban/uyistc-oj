@@ -1,5 +1,10 @@
 package models
 
+import (
+	"encoding/json"
+	"unioj/models/redisOP"
+)
+
 type Language struct {
 	Lid       int    `orm:"column(lid);pk"`
 	Language_ string `orm:"column(language)"`
@@ -18,4 +23,27 @@ func (l *Language) TableEngine() string {
 
 func NewLanguage() *Language {
 	return &Language{}
+}
+
+// GetAllLanges 获取所有的语言名称及其模板代码
+func (l *Language) GetAllLanges() (*[]Language, error) {
+	var lans []Language
+	//读redis看有没有
+	lans_str, err := redisOP.RedisGetKey("sysLanguages")
+	if err == nil {
+		json.Unmarshal([]byte(lans_str), &lans)
+		return &lans, err
+	} else {
+		_, err = O.QueryTable("language").All(&lans)
+		if err != nil {
+			return nil, err
+		}
+		return &lans, err
+	}
+}
+
+func (l *Language) GetLanguageById(languageName string) Language {
+	var lan Language
+	O.QueryTable("language").Filter("Language_", languageName).One(&lan)
+	return lan
 }

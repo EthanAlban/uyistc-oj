@@ -35,7 +35,7 @@ func init() {
 	dbuser := conf.GetStringConfig("dbuser")
 	dbpassword := conf.GetStringConfig("dbpassword")
 	dbhost := conf.GetStringConfig("dbhost")
-	dblink := dbuser + ":" + dbpassword + "@tcp(" + dbhost + ")/unioj?charset=utf8"
+	dblink := dbuser + ":" + dbpassword + "@tcp(" + dbhost + ")/unioj?charset=utf8&parseTime=true&loc=Local"
 	err := orm.RegisterDataBase("default", "mysql", dblink)
 	if err != nil {
 		fmt.Printf("err:%v", err)
@@ -44,7 +44,7 @@ func init() {
 	}
 	orm.RegisterDriver("mysql", orm.DRMySQL)
 	//beego 注册模型
-	orm.RegisterModel(new(User), new(Annnocement), new(ProblemType), new(Problems), new(Tags), new(ProblemTags), new(SysInfo))
+	orm.RegisterModel(new(User), new(Annnocement), new(ProblemType), new(Problems), new(Tags), new(ProblemTags), new(SysInfo), new(Judger), new(Submission), new(Language))
 	O = orm.NewOrm()
 }
 
