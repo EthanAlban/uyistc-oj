@@ -40,11 +40,11 @@
 <script>
 	import axios from 'axios'
 	export default {
-		name: "Login",
+		name: 'Login',
 		beforeMount() {
-			let month = new Date().getMonth(); //获取当前月份(0-11,0代表1月)
+			let month = new Date().getMonth() //获取当前月份(0-11,0代表1月)
 			// month = 8
-			this.bg[month] = true;
+			this.bg[month] = true
 		},
 		mounted() {
 			let code = this.$route.query.code
@@ -56,62 +56,67 @@
 				loading: false,
 				stu_not_registered: true,
 				form: {
-					username: "",
-					password: "",
-					captcha_str: ""
+					username: '',
+					password: '',
+					captcha_str: ''
 				},
-				captcha: "",
+				captcha: '',
 				// 登录预授权码
-				code: "",
+				code: '',
 				FeiShu_login_check: false,
 				//   飞书登录时等待网络请求loading
 				FeiShu_login_loadin: false,
-				formLabelWidth: "80px",
+				formLabelWidth: '80px',
 				FeiShu: {
-					tenant_access_token: "",
-					app_access_token: ""
+					tenant_access_token: '',
+					app_access_token: ''
 				},
 				is_new_stu: false
-			};
+			}
 		},
 
 
 		methods: {
 			FeiShu_authorize() {
 				window.location.href =
-					'https://open.feishu.cn/open-apis/authen/v1/user_auth_page_beta?app_id=cli_a0f809e4ca78100e&redirect_uri=http%3A%2F%2F47.94.135.51%3A8080%2Flogin&state=login';
+					'https://open.feishu.cn/open-apis/authen/v1/user_auth_page_beta?app_id=cli_a0f809e4ca78100e&redirect_uri=http%3A%2F%2F47.94.135.51%3A8080%2Flogin&state=login'
 			},
 			//用户登录
 			login() {
 				this.$user_axios.Login({
-					"UserName": this.form.username,
-					"Password": this.form.password
+					'UserName': this.form.username,
+					'Password': this.form.password
 				}).then(res => {
 					this.selfLog(res)
 					if (res.errcode === 205) {
-						this.$message.error('用户名密码不匹配，请重试~');
+						this.$message.error('用户名密码不匹配，请重试~')
 					} else if (res.errcode === 204) {
 						this.$message({
 							message: '用户名未注册，请检查',
 							type: 'warning'
-						});
+						})
 					} else if (res.errcode === 200) {
 						this.$message({
 							message: '登录成功~',
 							type: 'success'
-						});
-						this.$router.push("/");
+						})
+						this.$router.push('/')
 					}
+				}).catch(err=>{
+					this.$message({
+						message: '登录失败请稍后重试~',
+						type: 'warning'
+					})
 				})
 			},
 			register() {
-				this.$router.push("/register");
+				this.$router.push('/register')
 			},
 			visitor_login() {
-				this.$router.push("/");
+				this.$router.push('/')
 			},
 		}
-	};
+	}
 </script>
 
 <style lang="scss" scoped>

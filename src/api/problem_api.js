@@ -26,5 +26,9 @@ export default {
 	},
 	GetProblemTagsById: pid => {
 		return Get('problems/get_problem_tags_by_id?pid=' + pid)
+	},
+	// 新的判题任务
+	Submission: params => {
+		return Post('judger/new_judge_task',params)
 	}
 }

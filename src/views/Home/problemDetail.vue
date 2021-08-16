@@ -64,6 +64,7 @@
 		<!-- 提交结果以抽屉展示 从下往上-->
 		<el-button class="submit_fixed" type="success" round @click="submission">提交</el-button>
 
+		<!-- -2编译错误 -1答案错误 0正确 1计算超时  2超时 3内存超过 4运行时错误 5传送...  6判题中...  7部分正确 -->
 		<el-drawer title="提交结果" :visible.sync="drawer" append-to-body destroy-on-close direction="btt"
 			:before-close="handleClose" style="width:60%;marginLeft:39.8%">
 			<el-tag v-if="submission_status==='编译错误'" type="danger" effect="dark">{{submission_status}}</el-tag>
@@ -125,7 +126,8 @@
 					mode: 'text/x-csrc',
 					theme: 'monokai',
 					lineNumbers: true,
-					line: true
+					line: true,
+					smartIndent:true
 					// more CodeMirror options...
 				},
 				submission_id: '',
@@ -134,9 +136,7 @@
 				err_info: '',
 				score: '',
 				option: {
-					tooltip: {
-						trigger: 'item'
-					},
+					tooltip: { trigger: 'item' },
 					legend: {
 						top: '5%',
 						left: 'center'
@@ -185,9 +185,7 @@
 					let obj = {
 						name: keyMap.get(key),
 						value: this.problbemDetail.statistic_info[key],
-						itemStyle: {
-							color: colorMap.get(key)
-						}
+						itemStyle: { color: colorMap.get(key) }
 					}
 					this.option.series[0].data.push(obj)
 				}
@@ -210,8 +208,9 @@
 						})
 					}
 					this.problbemDetail = res.data
+					this.code = res.data.Template
 					this.$problem_axios.GetProblemTagsById(this.problbemDetail.Pid).then(res => {
-						this.problbemDetail["tags"] = res.data
+						this.problbemDetail['tags'] = res.data
 						this.selfLog(this.problbemDetail)
 					})
 					this.setEchart()
@@ -236,9 +235,7 @@
 					}
 					this.samples = []
 					for (let i = 1; i <= this.problbemDetail.samples.length; i++) {
-						let sample = Object.assign({
-								id: i
-							},
+						let sample = Object.assign({ id: i },
 							this.problbemDetail.samples[i - 1]
 						)
 						this.samples.push(sample)
@@ -262,18 +259,20 @@
 			// 	this.selfLog('the editor is focused!', cm)
 			// },
 			onCmCodeChange(newCode) {
-				this.selfLog('this is new code', newCode)
+				this.selfLog(newCode)
 				this.code = newCode
 			},
 			// 提交代码
 			submission() {
 				this.drawer = true
 				let params = {
-					code: this.code,
-					problem_id: this.problbemDetail.id,
-					language: this.language
+					Code: this.code,
+					ProblemId: this.problbemDetail.Pid,
+					Language: this.language
 				}
-				this.$axios.submission(params).then(res => {
+				this.selfLog(params)
+				this.$problem_axios.Submission(params).then(res => {
+					this.selfLog(res)
 					if (res.error === null) {
 						//提交之后刷新页面
 						this.getData()
