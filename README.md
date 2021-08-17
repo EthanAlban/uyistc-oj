@@ -5,19 +5,28 @@ onlinejudge的在线评测OJ平台，基于beego go kafka redis mysql docker doc
 
 #### 软件架构
 软件架构说明
-
+![img.png](img.png)
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. 建议使用linux系统
+2. 安装docker-compose   go 1.13  go语言bee脚手架   nodejs
+3. 下载docker-compose的文件，执行docker-compose up -d 准备好所需要的环境
+4. 运行本项目 进入项目文件夹，执行bee run 
+5. 下载本仓库的judge-server分支，执行其中的/run/run.go文件
+6. 运行以上两个项目注意看控制台的输出，是否有环境不满足要求（beego项目在启动的judger还没启动故此健康检测会失败，问题不大）
+7. 下载本仓库的vue-front分支，运行 npm run serve 即可连接后端
+8. 如出现环境问题，请检查beego项目中的conf文件夹下的配置文件的字段
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. 首页
+![img_1.png](img_1.png)
+2. 前端
+![img_2.png](img_2.png)
+3. 答题
+![img_3.png](img_3.png)
+4. xxxx
 
 #### 参与贡献
 

@@ -645,3 +645,10 @@
   	err:Get http://127.0.0.1:7998/healthy: dial tcp 127.0.0.1:7998: connect: connection refused
 2021/08/17 15:41:31.499 [E] [logger.go:29]  	_0_   ERROR  judger:127.0.0.1:7998健康检测异常...
   		err:Get http://127.0.0.1:7998/healthy: dial tcp 127.0.0.1:7998: connect: connection refused
+2021/08/17 19:49:01.548 [E] [logger.go:29]  	_0_   ERROR  judger:127.0.0.1:7998健康检测异常...
+  		err:Get http://127.0.0.1:7998/healthy: dial tcp 127.0.0.1:7998: connect: connection refused
+2021/08/17 19:49:01.549 [E] [logger.go:29]  	_1_   ERROR  judger:127.0.0.1:7999健康检测异常...
+  		err:Get http://127.0.0.1:7999/healthy: dial tcp 127.0.0.1:7999: connect: connection refused
+2021/08/17 19:49:36.112 [E] [logger.go:29]  redigo: nil returned
+2021/08/17 19:49:36.218 [E] [logger.go:29]  redigo: nil returned
+2021/08/17 19:49:56.169 [E] [logger.go:29]  redigo: nil returned
