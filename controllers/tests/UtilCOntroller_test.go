@@ -8,3 +8,7 @@ import (
 func TestwetherToday(t *testing.T) {
 	controllers.UtilsController.WetherToday(nil)
 }
+
+func TestCheckJudgerHealth(t *testing.T) {
+
+}

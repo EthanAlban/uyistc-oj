@@ -636,3 +636,12 @@
 2021/08/16 16:45:24.899 [E] [logger.go:29]  插入submission失败,请稍候重试... err:field `unioj/models.Submission.ProblemId` cannot be NULL
 2021/08/16 16:54:40.699 [E] [logger.go:29]  获取问题失败，id0  error:<QuerySeter> no row found
 2021/08/16 16:54:40.699 [E] [logger.go:29]  插入submission失败,请稍候重试... err:field `unioj/models.Submission.ProblemId` cannot be NULL
+2021/08/17 15:12:30.238 [E] [logger.go:29]  redigo: nil returned
+2021/08/17 15:12:37.197 [E] [logger.go:29]  redigo: nil returned
+2021/08/17 15:12:40.180 [E] [logger.go:29]  redigo: nil returned
+2021/08/17 15:39:23.200 [E] [logger.go:29]  [6] ERROR  judger:127.0.0.1:7998健康检测异常...   err:Get http://127.0.0.1:7998/healthy: dial tcp 127.0.0.1:7998: connect: connection refused
+2021/08/17 15:40:46.725 [E] [logger.go:29]  	_0_   ERROR  judger:127.0.0.1:7998健康检测异常...  err:Get http://127.0.0.1:7998/healthy: dial tcp 127.0.0.1:7998: connect: connection refused
+2021/08/17 15:41:20.885 [E] [logger.go:29]  	_0_   ERROR  judger:127.0.0.1:7998健康检测异常...
+  	err:Get http://127.0.0.1:7998/healthy: dial tcp 127.0.0.1:7998: connect: connection refused
+2021/08/17 15:41:31.499 [E] [logger.go:29]  	_0_   ERROR  judger:127.0.0.1:7998健康检测异常...
+  		err:Get http://127.0.0.1:7998/healthy: dial tcp 127.0.0.1:7998: connect: connection refused

@@ -189,12 +189,18 @@ func (this *UtilsController) GetServerConfig() {
 	has := md5.Sum(data)
 	md5token := fmt.Sprintf("%x", has)
 	if token != md5token {
-		this.JsonResult(205, "token校验失败...")
+		this.JsonResult(205, "token校验失败...,请检查beego服务器和判题器配置文件中的token字段是否一致")
 	}
 	KafkaHost := beego.AppConfig.String("juger_task_topic")
 	JugerTaskTopic := beego.AppConfig.String("kafka_host")
+	SqlHost := beego.AppConfig.String("dbhost")
+	SqlUser := beego.AppConfig.String("dbuser")
+	SqlPassword := beego.AppConfig.String("dbpassword")
 	configMap := make(map[string]string)
 	configMap["juger_task_topic"] = KafkaHost
 	configMap["kafka_host"] = JugerTaskTopic
+	configMap["sql_host"] = SqlHost
+	configMap["sql_user"] = SqlUser
+	configMap["sql_password"] = SqlPassword
 	this.JsonResult(200, "获取参数成功", configMap)
 }

@@ -9,6 +9,7 @@ import (
 	"unioj/models"
 	"unioj/models/redisOP"
 	_ "unioj/routers"
+	"unioj/utils"
 	"unioj/utils/captcha"
 	"unioj/utils/kafka"
 	"unioj/utils/session"
@@ -26,6 +27,9 @@ func main() {
 	go captcha.StartCaptchaServer()
 	kafka.KafkaHealthCheck(beego.AppConfig.String("kafka_host"))
 	port := conf.GetStringConfig("httpport")
+	//检测judger的健康状态
+	utils.CheckJudgerHealth()
+	utils.PrintSysLogo()
 	beego.Run("0.0.0.0:" + port)
 	//orm.RunCommand()
 }
