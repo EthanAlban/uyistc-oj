@@ -1,0 +1,61 @@
+version: '3'
+services:
+  mysql:
+    restart: always
+    image: mysql:5.7
+    # 选择镜像，这里用的是mysql8，低版本mysql需要修改配置文件映射地址
+    container_name: unioj_mysql
+    volumes:
+      - ./mysql/mydir:/mydir
+      # 文件挂载
+      - ./mysql/datadir:/var/lib/mysql
+      # 挂载目录
+      - ./mysql/conf:/etc/mysql
+      # 挂载 my.cnf 配置文件
+      - ./mysql/docker/mysql/source:/docker-entrypoint-initdb.d
+    environment:
+      - "MYSQL_ROOT_PASSWORD=Abc741258963.0"
+      # 设置密码
+      - "TZ=Asia/Shanghai"
+      # 设置时区
+    ports:
+      - 3306:3306
+    # 设置端口
+    
+    
+  redis:
+    restart: always
+    image: redis:4.0.8-alpine
+    container_name: unioj_redis
+    restart: always
+    ports:
+      - 6379:6379
+    volumes:
+      - ./redis/config:/docker/config
+      - ./redis/data:/data
+
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: unioj_zookeeper
+    # always restart
+    restart: always
+    ports:
+      - 2181:2181
+
+  kafka:
+    image: wurstmeister/kafka
+    container_name: unioj_kafka
+    ports:
+      - 9092:9092
+    # host ip
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181/kafka
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://39.105.152.206:9092
+      KAFKA_LISTENERS: PLAINTEXT://:9092
+      KAFKA_BROKER_ID: 1
+    # always restart
+    restart: always
+    volumes:
+      - ./docker.sock:/var/run/docker.sock
+      - ./kafka:/kafka

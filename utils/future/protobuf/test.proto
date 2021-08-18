@@ -1,0 +1,12 @@
+syntax = "proto3" ;
+//包名和文件夹一样
+package protobuf ;
+// 生成go文件命令：protoc  --go_out=./ *.proto
+message PandaRequest{
+  //1 2 3 代表的是对应字段的顺序而不是键值对
+  string name = 1 ;
+  repeated int32 weight = 2 ;
+  int32 height = 3 ;
+  string motto = 4;
+}
+

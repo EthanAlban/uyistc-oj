@@ -29,7 +29,7 @@ func KafkaHealthCheck(host string) {
 	// 发送消息
 	_, _, err = client.SendMessage(msg)
 	if err != nil {
-		fmt.Println("send msg failed, err:", err)
+		fmt.Println("[5] ERROR 初始化kafka失败...,error:", err)
 		return
 	}
 	fmt.Println("[5] INFO 初始化kafka成功...")
