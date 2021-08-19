@@ -1,0 +1,23 @@
+syntax = "proto3" ;
+package gprc ;
+//定义服务 protoc --go_out=./ *.proto  编译后不会有rpc的服务
+// 添加插件  protoc --go_out=plugins=grpc:./ *.proto
+service HelloServer{
+  //  打招呼的函数
+  rpc SayHello(HelloRequest)returns(HelloResponse){}
+  //  说名字的函数
+  rpc SayName(NameRequest)returns(NameResponse){}
+}
+
+message  HelloRequest{
+  string name = 1;
+}
+message HelloResponse {
+  string msg = 1;
+}
+message NameRequest{
+  string name = 1;
+}
+message NameResponse{
+  string msg = 1;
+}

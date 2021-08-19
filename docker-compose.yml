@@ -24,7 +24,6 @@ services:
     
     
   redis:
-    restart: always
     image: redis:4.0.8-alpine
     container_name: unioj_redis
     restart: always
