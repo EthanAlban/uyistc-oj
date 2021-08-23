@@ -22,7 +22,12 @@ type Problems struct {
 	Uid               *User          `orm:"column(uid);rel(fk)"`
 	InputDescription  string         `orm:"column(input_description)"`
 	OutputDescription string         `orm:"column(output_description)"`
-	Template          string         `orm:"column(template)"` //问题使用的初始标准代码
+	TemplateC         string         `orm:"column(template_c)"`      //问题使用的初始标准代码
+	TemplateGo        string         `orm:"column(template_go)"`     //问题使用的初始标准代码
+	TemplateCplus     string         `orm:"column(template_c_plus)"` //问题使用的初始标准代码
+	TemplateJava      string         `orm:"column(template_java)"`   //问题使用的初始标准代码
+	TemplatePython    string         `orm:"column(template_python)"` //问题使用的初始标准代码
+
 }
 
 // TableName 获取对应数据库表名.

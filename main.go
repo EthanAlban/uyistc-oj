@@ -22,6 +22,12 @@ func main() {
 	gob.Register(controllers.Weather{})
 	gob.Register(models.User{})
 	gob.Register(models.Problems{})
+
+	data := make(map[string]interface{})
+	data["problem"] = models.Problems{}
+	data["templates"] = models.Templates{}
+	gob.Register(data)
+
 	session.InitSession()
 	// 启动验证码服务
 	go captcha.StartCaptchaServer()

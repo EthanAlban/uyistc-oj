@@ -11,6 +11,12 @@ type Language struct {
 	Template  string `orm:"column(template)"`
 }
 
+// Templates 序列化问题中的template字段以支持多种语言形成一个数组
+type Templates struct {
+	LanName string `json:"lan_name"`
+	Code    string `json:"code"`
+}
+
 // TableName 获取对应数据库表名.
 func (l *Language) TableName() string {
 	return "language"

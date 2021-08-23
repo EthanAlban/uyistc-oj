@@ -36,3 +36,10 @@ func (sb *Submission) InsertNewSubmission(sub Submission) error {
 	}
 	return err
 }
+
+// GetSubmissionByID 根据id查询submission
+func (sb *Submission) GetSubmissionByID(submissionID string) (error, Submission) {
+	var submission Submission
+	err := O.QueryTable("submission").Filter("SubmissionId", submissionID).One(&submission)
+	return err, submission
+}

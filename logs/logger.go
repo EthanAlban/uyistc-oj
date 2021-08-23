@@ -25,11 +25,12 @@ func Init() {
 }
 
 func LogError(err_msg string) {
-	fmt.Println("ERROR:", err_msg)
+	fmt.Printf("\033[1;31;41m ERROR %s\033[0m\n", err_msg)
 	uniLogger.Error(err_msg)
 }
 
 func LogInfo(info string) {
+	fmt.Printf("%c[1;34;40m INFO %s%c[0m", 0x1B, info, 0x1B)
 	fmt.Println("INFO:", info)
 	uniLogger.Info(info)
 }

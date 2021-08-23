@@ -65,3 +65,34 @@ func (this *SubmissionController) SendTaskToKafka() {
 	retMap["submissionID"] = submissionID
 	this.JsonResult(200, "提交成功", retMap)
 }
+
+// IsSubmissionExsit 检查提交是否存在
+func (this *SubmissionController) IsSubmissionExsit() {
+	submissionID := this.Ctx.Input.Query("submissionID")
+	err, _ := models.NewSubmission().GetSubmissionByID(submissionID)
+	if err != nil && err.Error() == "<QuerySeter> no row found" {
+		this.JsonResult(204, "没有对应的提交...")
+		logger.LogInfo(err.Error())
+	}
+	this.JsonResult(200, "ok")
+}
+
+// GetFinalInfoOfSubmission 查询提交的最终结果  只有在不是-3的时候才会进行返回
+func (this *SubmissionController) GetFinalInfoOfSubmission() {
+	submissionID := this.Ctx.Input.Query("submissionID")
+	err, submision := models.NewSubmission().GetSubmissionByID(submissionID)
+	if err != nil {
+		logger.LogError(err.Error())
+		if err.Error() == "<QuerySeter> no row found" {
+			this.JsonResult(204, "没有对应的提交...")
+			logger.LogInfo(err.Error())
+		} else {
+			this.JsonResult(205, err.Error())
+			logger.LogInfo(err.Error())
+		}
+	}
+	if submision.Result == -3 {
+		this.JsonResult(202, "判题中...")
+	}
+	this.JsonResult(200, "OK", submision)
+}
