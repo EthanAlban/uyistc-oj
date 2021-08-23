@@ -110,7 +110,7 @@
 				problbemDetail: {},
 				msg: '',
 				samples: [],
-				language: 'C',
+				language: "C",
 				theme: 'monokai',
 				themes: [
 					'eclipse',
@@ -207,15 +207,23 @@
 							type: 'warning'
 						})
 					}
-					this.problbemDetail = res.data
-					this.code = res.data.Template
+					this.problbemDetail = res.data.problem
+					this.code = res.data.templates.C
+					// 设置可用的语言选择下拉框
+					let lans = []
+					for (var key of Object.keys(res.data.templates)) {
+						lans.push(key)
+					}
+					this.problbemDetail["languages"]= lans
+					this.problbemDetail["template"] = res.data.templates
 					this.$problem_axios.GetProblemTagsById(this.problbemDetail.Pid).then(res => {
 						this.problbemDetail['tags'] = res.data
 						this.selfLog(this.problbemDetail)
 					})
 					this.setEchart()
 					// 检查是否有前置的代码 有的话就不刷掉当前的代码
-					if (this.code === '') {
+					cookie_code = this.$utils_axios.GetCookie("user_code")
+					if (cookie_code === '') {
 						this.selfLog('无前置代码')
 						this.code = this.problbemDetail.template[this.language]
 					} else {
@@ -261,6 +269,8 @@
 			onCmCodeChange(newCode) {
 				this.selfLog(newCode)
 				this.code = newCode
+				// 将用户编辑过的代码存入cookie中
+				this.$utils_axios.SetCookie("user_code",newCode,1)
 			},
 			// 提交代码
 			submission() {
@@ -273,24 +283,19 @@
 				this.selfLog(params)
 				this.$problem_axios.Submission(params).then(res => {
 					this.selfLog(res)
-					if (res.error === null) {
+					if (res.errcode === 200) {
 						//提交之后刷新页面
 						this.getData()
 						// 把用户代码再写进去避免每次提交都被刷新掉
 						//   this.problbemDetail.template[this.language] = this.code;
-						this.submission_id = res.data.submission_id
+						this.submission_id = res.data.submissionID
 						this.getSubmissionDetail(params.problem_id, this.submission_id)
-					} else if (res.error === 'permission-denied') {
+					} else if (res.errcode === 204) {
 						this.$message({
 							message: '提交失败，请先登录',
 							type: 'warning'
 						})
-					} else if (res.data === 'code: This field is required.') {
-						this.$message({
-							message: '提交失败，代码区域为空',
-							type: 'warning'
-						})
-					} else {
+					}else {
 						this.$message({
 							message: '提交失败，请稍后重试',
 							type: 'warning'
@@ -302,18 +307,19 @@
 			getSubmissionDetail(problem_id) {
 				const that = this
 				// 先查有没有对应的提交
-				this.$axios.submission_exists(problem_id).then(res => {
+				this.$problem_axios.IsSubmissionExsit(this.submission_id).then(res => {
 					// 提交存在
+					this.selfLog("查询问题存在与否:")
 					this.selfLog(res)
-					if (res.data) {
+					if (res.errcode === 200) {
 						this.selfLog('启动定时任务')
 						// 需要设置定时一秒去轮询提交的submission状态 在页面展示之
 						that.setInterval_id = setInterval(() => {
-							this.$axios.submission_id(that.submission_id).then(res => {
+							this.$problem_axios.GetSubmissionFinal(that.submission_id).then(res => {
 								this.selfLog(res)
-								if (res.error === null) {
+								if (res.errcode === 200) {
 									// 更新状态完成就清楚定时任务
-									let result_ = res.data.result
+									let result_ = res.data.Result
 									if (result_ === -2) {
 										that.submission_status = '编译错误'
 									} else if (result_ === -1) {
@@ -337,9 +343,8 @@
 									} else if (result_ === 8) {
 										that.submission_status = '部分正确'
 									}
-									if (!(res.data.result === 6 || res.data.result === 7)) {
-										that.err_info = res.data.statistic_info.err_info
-										that.score = res.data.statistic_info.score
+									if (!(res.data.Result === 6 || res.data.Result === 7 || res.data.Result === -3)) {
+										that.err_info = res.data.ErrInfo
 										clearInterval(that.setInterval_id)
 									}
 								} else {
@@ -497,7 +502,7 @@
 			height: 50px;
 			font-size: 20px;
 			position: fixed;
-			bottom: 150px;
+			bottom: 21%;
 			right: 50px;
 		}
 	}

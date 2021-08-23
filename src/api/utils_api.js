@@ -3,7 +3,8 @@ import {
 	Post,
 	Put,
 	Delete,
-	getCookie
+	getCookie,
+	setCookie
 } from '@/api/request'
 import {
 	selfLog,
@@ -28,5 +29,9 @@ export default {
 	// 获得cookie
 	GetCookie: name => {
 		return getCookie(name)
+	},
+	// 设置系统中cookie 
+	SetCookie: (c_name, value, expiredays) => {
+		return setCookie(c_name, value, expiredays)
 	}
 }

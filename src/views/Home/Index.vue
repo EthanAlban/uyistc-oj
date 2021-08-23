@@ -84,7 +84,7 @@
 													style="color:black">账户管理</span></i>
 										</div>
 										<div v-else style="display:flex">
-											<img :src="user_profile.Avatar" style="width:30px" />
+											<img :src="user_profile.Avatar" style="width:20px" />
 											<div v-if="user_profile.UserType===1" style="paddingTop:6px">
 												&nbsp;<span style="color:black">账户管理</span>&nbsp;<span
 													style="color:black">{{user_profile.UserName}}老师</span></div>
@@ -125,21 +125,23 @@
 						</el-col>
 						<!-- 教师入口 -->
 						<el-col :span="2">
-							<div v-if="user_profile!==null && user_profile.UserType===1" style="marginTop:-3px">
-								<el-button type="text" @click="gotoTeacherSide"><span style="color:black">教师入口</span>
+							<div v-if="user_profile!==null && user_profile.UserType===1" >
+								<el-button type="text" @click="gotoTeacherSide" style="color:black">教师入口
 								</el-button>
 							</div>
-							<div v-else-if="user_profile!==null && user_profile.UserType===0" style="marginTop:-8px">
-								<el-button type="text" @click="gotoAdminSide"><span style="color:black">管理入口</span>
+							<div v-else-if="user_profile!==null && user_profile.UserType===0" >
+								<el-button type="text" @click="gotoAdminSide" style="color:black">管理入口
 								</el-button>
 							</div>
 						</el-col>
 						<!-- 系统通知 -->
-						<el-col :span="1.5" style="fontSize: 14px;color:black;marginTop: 18px;">
-							<el-badge :value="sys_info_num" :max="99">
-								<span style="color:black"><i class="el-icon-message" style="color:black"
-										@click="showSysNotify">系统通知</i></span>
-							</el-badge>
+						<el-col :span="1.5" >
+							<el-button type="text" style="color:black">
+								<el-badge :value="sys_info_num" :max="99">
+									<i class="el-icon-message" style="color:black"
+											@click="showSysNotify">系统通知</i>
+								</el-badge>
+							</el-button> 
 						</el-col>
 					</el-row>
 				</el-header>
@@ -254,7 +256,7 @@
 	src="https://sf1-scmcdn-tos.pstatp.com/goofy/ee/lark/h5jssdk/lark/js_sdk/h5-js-sdk-1.5.2.js">
 	window.h5sdk.ready(() => {
 		//  lark.ready参数为回调函数，在环境准备就绪时触发
-	});
+	})
 </script>
 <script>
 	export default {

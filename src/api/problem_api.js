@@ -29,6 +29,14 @@ export default {
 	},
 	// 新的判题任务
 	Submission: params => {
-		return Post('judger/new_judge_task',params)
+		return Post('judger/new_judge_task', params)
+	},
+	// 查询对应的submissionID的提交是否存在
+	IsSubmissionExsit: submissionID => {
+		return Get('submission/submision_exist?submissionID=' + submissionID)
+	},
+	// 查询提交的最新状态
+	GetSubmissionFinal: submissionID => {
+		return Get('submission/get_submission_final?submissionID=' + submissionID)
 	}
 }
