@@ -6,7 +6,7 @@ import (
 )
 
 func GetStringConfig(pathname string) string {
-	conf, err := config.NewConfig("ini", "/home/et/Desktop/Projects/beego/unioj/conf/app.conf")
+	conf, err := config.NewConfig("ini", "./conf/app.conf")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
