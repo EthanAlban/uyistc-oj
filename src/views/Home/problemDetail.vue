@@ -53,6 +53,7 @@
 				<el-select v-model="theme" placeholder="请选择" class="selectTheme">
 					<el-option v-for="item in themes" :key="item" :label="item" :value="item"></el-option>
 				</el-select>
+				 <el-button type="primary" round @click="recoverInit">恢复模板</el-button>
 			</div>
 
 			<!-- <codemirror class="codeEditor" ref="cmEditor" :value="code" :options="cmOptions" @ready="onCmReady"
@@ -105,12 +106,14 @@
 		},
 		data() {
 			return {
+				// 初次加载代码标记
+				InitLoadCode:false,
 				tag_types: ['info', 'warning', 'danger', '', 'success'],
 				drawer: false,
 				problbemDetail: {},
 				msg: '',
 				samples: [],
-				language: "C",
+				language: 'C',
 				theme: 'monokai',
 				themes: [
 					'eclipse',
@@ -127,7 +130,8 @@
 					theme: 'monokai',
 					lineNumbers: true,
 					line: true,
-					smartIndent:true
+					smartIndent:true,
+					indentUnit: 2
 					// more CodeMirror options...
 				},
 				submission_id: '',
@@ -136,7 +140,9 @@
 				err_info: '',
 				score: '',
 				option: {
-					tooltip: { trigger: 'item' },
+					tooltip: {
+						trigger: 'item'
+					},
 					legend: {
 						top: '5%',
 						left: 'center'
@@ -185,7 +191,9 @@
 					let obj = {
 						name: keyMap.get(key),
 						value: this.problbemDetail.statistic_info[key],
-						itemStyle: { color: colorMap.get(key) }
+						itemStyle: {
+							color: colorMap.get(key)
+						}
 					}
 					this.option.series[0].data.push(obj)
 				}
@@ -208,27 +216,30 @@
 						})
 					}
 					this.problbemDetail = res.data.problem
-					this.code = res.data.templates.C
+					this.InitLoadCode = true
+					// 检查是否有前置的代码 有的话就不刷掉当前的代码
+					let cookie_code =this.$cookies.get("judge_code") 
+					if (cookie_code === null) {
+						this.selfLog('无前置代码')
+						this.code = this.problbemDetail.TemplateC
+					} else {
+						this.selfLog('检测到前置代码')
+						this.selfLog(cookie_code)
+						this.code = cookie_code
+					}
 					// 设置可用的语言选择下拉框
 					let lans = []
 					for (var key of Object.keys(res.data.templates)) {
 						lans.push(key)
 					}
-					this.problbemDetail["languages"]= lans
-					this.problbemDetail["template"] = res.data.templates
+					this.problbemDetail['languages'] = lans
+					this.problbemDetail['template'] = res.data.templates
 					this.$problem_axios.GetProblemTagsById(this.problbemDetail.Pid).then(res => {
 						this.problbemDetail['tags'] = res.data
 						this.selfLog(this.problbemDetail)
 					})
 					this.setEchart()
-					// 检查是否有前置的代码 有的话就不刷掉当前的代码
-					cookie_code = this.$utils_axios.GetCookie("user_code")
-					if (cookie_code === '') {
-						this.selfLog('无前置代码')
-						this.code = this.problbemDetail.template[this.language]
-					} else {
-						this.selfLog('检测到前置代码')
-					}
+
 					this.score = this.problbemDetail.total_score
 					if (this.problbemDetail.submission_number === 0) {
 						this.problbemDetail['pass_rate'] = 0
@@ -241,36 +252,37 @@
 							).toFixed(2)
 						)
 					}
-					this.samples = []
-					for (let i = 1; i <= this.problbemDetail.samples.length; i++) {
-						let sample = Object.assign({ id: i },
-							this.problbemDetail.samples[i - 1]
-						)
-						this.samples.push(sample)
-					}
-					if (this.code === '') {
-						this.code = this.problbemDetail.template.C
-					}
+					// this.samples = []
+					// for (let i = 1; i <= this.problbemDetail.samples.length; i++) {
+					// 	let sample = Object.assign({ id: i },
+					// 		this.problbemDetail.samples[i - 1]
+					// 	)
+					// 	this.samples.push(sample)
+					// }
 
 				})
 			},
 			//切换语言换模板
 			changeModel(chosen_lan) {
 				this.selfLog(chosen_lan)
-				this.selfLog(this.problbemDetail.template)
+				// this.selfLog(this.problbemDetail.template)
 				this.code = this.problbemDetail.template[chosen_lan]
 			},
-			// onCmReady(cm) {
-			// 	this.selfLog('the editor is readied!', cm)
-			// },
-			// onCmFocus(cm) {
-			// 	this.selfLog('the editor is focused!', cm)
-			// },
+			//编辑区域监听
 			onCmCodeChange(newCode) {
-				this.selfLog(newCode)
 				this.code = newCode
+				if (!this.InitLoadCode) {
+					this.$cookies.set("judge_code",newCode)
+					this.selfLog("存储cookie")
+					this.selfLog(newCode)
+				}
+				this.InitLoadCode = false
 				// 将用户编辑过的代码存入cookie中
-				this.$utils_axios.SetCookie("user_code",newCode,1)
+				// newCode = this.encodeUtf8(newCode)
+			},
+			// 恢复默认模板代码
+			recoverInit(){
+				this.code = this.problbemDetail.template["C"]
 			},
 			// 提交代码
 			submission() {
@@ -284,10 +296,6 @@
 				this.$problem_axios.Submission(params).then(res => {
 					this.selfLog(res)
 					if (res.errcode === 200) {
-						//提交之后刷新页面
-						this.getData()
-						// 把用户代码再写进去避免每次提交都被刷新掉
-						//   this.problbemDetail.template[this.language] = this.code;
 						this.submission_id = res.data.submissionID
 						this.getSubmissionDetail(params.problem_id, this.submission_id)
 					} else if (res.errcode === 204) {
@@ -295,7 +303,7 @@
 							message: '提交失败，请先登录',
 							type: 'warning'
 						})
-					}else {
+					} else {
 						this.$message({
 							message: '提交失败，请稍后重试',
 							type: 'warning'
@@ -309,7 +317,7 @@
 				// 先查有没有对应的提交
 				this.$problem_axios.IsSubmissionExsit(this.submission_id).then(res => {
 					// 提交存在
-					this.selfLog("查询问题存在与否:")
+					this.selfLog('查询问题存在与否:')
 					this.selfLog(res)
 					if (res.errcode === 200) {
 						this.selfLog('启动定时任务')
@@ -343,7 +351,8 @@
 									} else if (result_ === 8) {
 										that.submission_status = '部分正确'
 									}
-									if (!(res.data.Result === 6 || res.data.Result === 7 || res.data.Result === -3)) {
+									if (!(res.data.Result === 6 || res.data.Result === 7 || res
+											.data.Result === -3)) {
 										that.err_info = res.data.ErrInfo
 										clearInterval(that.setInterval_id)
 									}
@@ -488,6 +497,7 @@
 				text-align: left;
 				height: 20vh;
 			}
+
 			.CodeMirror-scroll {
 				height: auto;
 				overflow-y: hidden;

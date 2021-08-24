@@ -26,7 +26,7 @@ import VueLazyload from 'vue-lazyload'
 import loading from './assets/uestc/calendar/5.jpeg'
 
 
-Vue.prototype.selfLog = selfLog
+
 // import base style
 // import 'codemirror/lib/codemirror.css'
 // 下载到本地自定义
@@ -67,6 +67,12 @@ Vue.prototype.$problem_axios = ProblemApi
 // 全局的this.selfLog替换
 // import selfLog from './utils/selfLog';
 import { selfLog } from './utils'
+import { decodeUtf8 } from './utils'
+import { encodeUtf8 } from './utils'
+
+Vue.prototype.selfLog = selfLog
+Vue.prototype.decodeUtf8 = decodeUtf8
+Vue.prototype.encodeUtf8 = encodeUtf8
 
 Vue.prototype.$OJIP = 'http://47.94.135.51'
 Vue.prototype.$tenant_access_token = ''
@@ -90,8 +96,11 @@ Vue.filter('formatDate', function(value) {
 	return Moment(value).format('YYYY-MM-DD HH:mm:ss')
 })
 
+
+
 new Vue({
 	beforeCreate() {
+		this.$cookies.config('1d')
 		// 前端在启动的时候检查两台服务器的在线情况  心跳监测
 		this.selfLog('项目启动')
 		this.$utils_axios.HeartBeat().then(res => {

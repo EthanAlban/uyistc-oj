@@ -175,6 +175,7 @@ export function getCookie(name) {
 
 //设置cookie,增加到vue实例方便全局调用
 export function setCookie(c_name, value, expiredays) {
+	value = URLEncoder.encode(value,'utf-8')
 	var exdate = new Date()
 	exdate.setDate(exdate.getDate() + expiredays)
 	document.cookie = c_name + '=' + escape(value) + ((expiredays == null) ? '' : ';expires=' + exdate.toGMTString())

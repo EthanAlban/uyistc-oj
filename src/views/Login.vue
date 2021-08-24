@@ -98,7 +98,8 @@
 					} else if (res.errcode === 200) {
 						this.$message({
 							message: '登录成功~',
-							type: 'success'
+							type: 'success',
+							duration:1000
 						})
 						this.$router.push('/')
 					}
