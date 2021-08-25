@@ -141,7 +141,7 @@ func (this *UtilsController) Heartbeat() {
 		logs.LogError("服务器当前不可达...")
 		this.JsonResult(204, "server not found", err)
 	}
-	this.JsonResult(200, "")
+	this.JsonResult(200, "跳着呢，跳着呢...")
 }
 
 var cpt *captcha.Captcha

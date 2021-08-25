@@ -23,6 +23,7 @@ RUN go mod download
 RUN go build main.go
 #暴露端口
 EXPOSE 8000
+EXPOSE 8666
 #最终运行docker的命令
 CMD  ["./main"]
 

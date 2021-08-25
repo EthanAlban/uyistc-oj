@@ -4,9 +4,11 @@ import (
 	"encoding/json"
 	"github.com/astaxie/beego"
 	uuid "github.com/satori/go.uuid"
+	"math/rand"
 	"time"
 	logger "unioj/logs"
 	"unioj/models"
+	"unioj/models/redisOP"
 	"unioj/utils/kafka"
 )
 
@@ -41,6 +43,8 @@ func (this *SubmissionController) SendTaskToKafka() {
 	problem, _ := models.NewProblems().GetProblemDetailById(taskParams.ProblemId)
 	task.ProblemId = problem
 	task.Code = taskParams.Code
+	//设置cookie到用户本地
+	this.Ctx.SetCookie("judge_code", task.Code)
 	task.Result = -3
 	task.Score = 0
 	task.CreateTime = time.Now()
@@ -80,6 +84,20 @@ func (this *SubmissionController) IsSubmissionExsit() {
 // GetFinalInfoOfSubmission 查询提交的最终结果  只有在不是-3的时候才会进行返回
 func (this *SubmissionController) GetFinalInfoOfSubmission() {
 	submissionID := this.Ctx.Input.Query("submissionID")
+	//避免在判题器不在线的时候或者长时间没有结果客户端一直询问 造成网络拥塞  记录查询次数
+	// 用redis时间窗口限流 如果限流则会以50的概率不执行动作
+	overflow, err := redisOP.RedisSetExpireLimit("limit_"+submissionID, 10, 5)
+	if err == nil {
+		if overflow {
+			rand.Seed(time.Now().Unix())
+			rate := rand.Intn(2)
+			if rate == 0 {
+				logger.LogInfo("用户请求被限流")
+				this.JsonResult(203, "请求频繁请稍候重试", submissionID)
+			}
+		}
+	}
+	//正常逻辑
 	err, submision := models.NewSubmission().GetSubmissionByID(submissionID)
 	if err != nil {
 		logger.LogError(err.Error())
