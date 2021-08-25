@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"fmt"
+	"github.com/wonderivan/logger"
 	"strconv"
 	"unioj/models"
 )
@@ -14,7 +14,8 @@ type ProblemsController struct {
 func (this *ProblemsController) GetPagesProblems() {
 	pros, err := models.NewProblems().GetPagesProblems(10, 0)
 	if err != nil {
-		fmt.Println(err)
+		logger.Error(err)
+		//fmt.Println(err)
 	}
 	for i := 0; i < len(*pros); i++ {
 		models.O.LoadRelated(&((*pros)[i]), "ProblemType")

@@ -1,11 +1,10 @@
 package session
 
 import (
-	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/session"
 	_ "github.com/astaxie/beego/session/redis"
-	logger "unioj/logs"
+	"github.com/wonderivan/logger"
 )
 
 var GlobalSessions *session.Manager
@@ -26,10 +25,9 @@ func InitSession() {
 	var err error
 	GlobalSessions, err = session.NewManager("redis", sessionConfig)
 	if err != nil {
-		logger.LogError("session初始化失败...,err:" + err.Error())
-		fmt.Println("session初始化失败...,err:" + err.Error())
+		logger.Error("session初始化失败...,err:" + err.Error())
 		return
 	}
 	go GlobalSessions.GC()
-	fmt.Println("[3] INFO session初始化成功...")
+	logger.Debug("[3] INFO session初始化成功...")
 }

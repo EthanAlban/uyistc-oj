@@ -2,6 +2,7 @@ package tests
 
 import (
 	"fmt"
+	"github.com/wonderivan/logger"
 	"testing"
 	"unioj/models"
 )
@@ -14,10 +15,10 @@ func TestGetPagesProblems(t *testing.T) {
 	for i := 0; i < len(*pros); i++ {
 		models.O.LoadRelated(&((*pros)[i]), "Uid")
 		models.O.LoadRelated(&((*pros)[i]), "ProblemType")
-		fmt.Println((*pros)[i])
+		logger.Debug((*pros)[i])
 	}
 }
 
 func TestGetProblemByTag(t *testing.T) {
-	fmt.Println(*(models.NewProblems().GetProblemByTag("快慢指针")))
+	logger.Debug(*(models.NewProblems().GetProblemByTag("快慢指针")))
 }

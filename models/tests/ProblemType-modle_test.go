@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"fmt"
+	"github.com/wonderivan/logger"
 	"testing"
 	"unioj/models"
 )
@@ -9,6 +9,6 @@ import (
 func TestGetAllProblemTypes(t *testing.T) {
 	pts := models.NewProblemType().GetAllProblemTypes()
 	for i := 0; i < len(pts); i++ {
-		fmt.Println(*(pts[i]))
+		logger.Debug(*(pts[i]))
 	}
 }

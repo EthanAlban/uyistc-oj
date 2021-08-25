@@ -1,11 +1,11 @@
 package tests
 
 import (
-	"fmt"
+	"github.com/wonderivan/logger"
 	"testing"
 	"unioj/models"
 )
 
 func TestGetSysInfoList(t *testing.T) {
-	fmt.Println(models.NewSysInfo().GetSysInfoList(10, 0))
+	logger.Debug(models.NewSysInfo().GetSysInfoList(10, 0))
 }

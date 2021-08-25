@@ -9,9 +9,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/dchest/captcha"
+	"github.com/wonderivan/logger"
 	"net/http"
 	"unioj/conf"
-	logger "unioj/logs"
 	//"text/template"
 )
 
@@ -54,8 +54,7 @@ func processFormHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	bytes, err := json.Marshal(result)
 	if err != nil {
-		fmt.Println("err:", err)
-		logger.LogError("验证验证码序列化失败：" + err.Error())
+		logger.Error("验证验证码序列化失败：" + err.Error())
 	}
 	w.Write(bytes)
 }
@@ -65,9 +64,8 @@ func StartCaptchaServer() {
 	http.HandleFunc("/captcha/verify", processFormHandler)
 	http.Handle("/captcha/", captcha.Server(captcha.StdWidth*0.7, captcha.StdHeight))
 	captchaServer := conf.GetStringConfig("captcha_host")
-	fmt.Println("[4] INFO 验证码服务器启动... Server is at " + captchaServer)
+	logger.Debug("[4] INFO 验证码服务器启动... Server is at " + captchaServer)
 	if err := http.ListenAndServe(captchaServer, nil); err != nil {
-		fmt.Println("验证码服务器启动失败：", err)
-		logger.LogError("验证码服务器启动失败：" + err.Error())
+		logger.Error("验证码服务器启动失败：" + err.Error())
 	}
 }

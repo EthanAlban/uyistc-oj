@@ -8,13 +8,13 @@ import (
 	_ "github.com/astaxie/beego"
 	"github.com/astaxie/beego/cache"
 	"github.com/astaxie/beego/utils/captcha"
+	"github.com/wonderivan/logger"
 	"io/ioutil"
 	"net"
 	"net/http"
 	"net/url"
 	"time"
 	"unioj/conf"
-	"unioj/logs"
 	"unioj/models"
 	"unioj/models/redisOP"
 )
@@ -119,7 +119,6 @@ func (this *UtilsController) WetherToday() {
 	//如果参数中有中文参数,这个方法会进行URLEncode
 	Url.RawQuery = params.Encode()
 	urlPath := Url.String()
-	//fmt.Println(urlPath) // https://httpbin.org/get?age=23&name=zhaofan
 	resp, err := http.Get(urlPath)
 	defer resp.Body.Close()
 	body, _ := ioutil.ReadAll(resp.Body)
@@ -137,8 +136,8 @@ func (this *UtilsController) Heartbeat() {
 	timeout := time.Duration(5 * time.Second)
 	_, err := net.DialTimeout("tcp", "127.0.0.1:"+conf.GetStringConfig("httpport"), timeout)
 	if err != nil {
-		fmt.Println("Site unreachable, error: ", err)
-		logs.LogError("服务器当前不可达...")
+		logger.Error("服务器当前不可达...")
+		logger.Error("Site unreachable, error: ", err)
 		this.JsonResult(204, "server not found", err)
 	}
 	this.JsonResult(200, "跳着呢，跳着呢...")

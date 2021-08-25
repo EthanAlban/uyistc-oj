@@ -2,9 +2,8 @@ package kafka
 
 import (
 	"encoding/json"
-	"fmt"
 	"github.com/Shopify/sarama"
-	logger "unioj/logs"
+	"github.com/wonderivan/logger"
 	"unioj/models"
 )
 
@@ -20,19 +19,18 @@ func KafkaHealthCheck(host string) {
 	// 连接kafka
 	client, err := sarama.NewSyncProducer([]string{host}, config)
 	if err != nil {
-		fmt.Println("[5] ERROR 初始化kafka失败...,error:", err)
-		logger.LogError("[5] ERROR 初始化kafka失败...,error:" + err.Error())
-		fmt.Println("producer closed, err:", err)
+		logger.Error("[5] ERROR 初始化kafka失败...,error:" + err.Error())
+		logger.Error("producer closed, err:", err)
 		return
 	}
 	defer client.Close()
 	// 发送消息
 	_, _, err = client.SendMessage(msg)
 	if err != nil {
-		fmt.Println("[5] ERROR 初始化kafka失败...,error:", err)
+		logger.Error("[5] ERROR 初始化kafka失败...,error:", err)
 		return
 	}
-	fmt.Println("[5] INFO 初始化kafka成功...")
+	logger.Debug("[5] INFO 初始化kafka成功...")
 }
 
 func SendToKafka(host, topic string, task models.Submission) error {
@@ -48,18 +46,16 @@ func SendToKafka(host, topic string, task models.Submission) error {
 	// 连接kafka
 	client, err := sarama.NewSyncProducer([]string{host}, config)
 	if err != nil {
-		fmt.Println("ERROR kafka生产者异常...,error:", err)
-		logger.LogError("kafka生产者异常...,error:" + err.Error())
+		logger.Error("ERROR kafka生产者异常...,error:", err)
 		return err
 	}
 	defer client.Close()
 	// 发送消息
 	_, _, err = client.SendMessage(msg)
 	if err != nil {
-		fmt.Println("ERROR kafka发送消息失败,err:", err)
-		logger.LogError("ERROR kafka发送消息失败,err:" + err.Error())
+		logger.Error("ERROR kafka发送消息失败,err:", err)
 		return err
 	}
-	fmt.Println("消息发送成功")
+	logger.Debug("消息发送成功")
 	return err
 }

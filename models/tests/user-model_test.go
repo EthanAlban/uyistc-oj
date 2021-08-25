@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"fmt"
+	"github.com/wonderivan/logger"
 	"testing"
 	"unioj/models"
 )
@@ -10,11 +10,11 @@ func TestGetuserbyUsernamePwd(t *testing.T) {
 	user := models.NewUser()
 	user_, err := user.GetuserbyUsernamePwd("2814635354@qq.com", "741258", "email")
 	if err == nil {
-		fmt.Printf("%v", user_)
+		logger.Debug(user_)
 	}
-	fmt.Println(err)
+	logger.Error(err)
 }
 
 func TestIsEmailUsed(t *testing.T) {
-	fmt.Println(models.NewUser().IsEmailUsed("sad@qq.com"))
+	logger.Debug(models.NewUser().IsEmailUsed("sad@qq.com"))
 }

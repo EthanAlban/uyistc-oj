@@ -3,14 +3,14 @@ package utils
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/robfig/cron"
+	"github.com/wonderivan/logger"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"regexp"
 	"strconv"
-	"strings"
-	"unioj/conf"
-	logger "unioj/logs"
+	"unioj/models"
 )
 
 type CaptchaResponse struct {
@@ -39,19 +39,23 @@ type Ret struct {
 }
 
 // CheckJudgerHealth 判断judgeserver的健康状态
-func CheckJudgerHealth() (err error) {
-	judgers := strings.Split(conf.GetStringConfig("judgeserver_hosts"), ",")
-	fmt.Println("[6] INFO judger健康检测启动...")
+func CheckJudgerHealth() {
+	judgers := *(models.NewJudger().GetAllJudger())
+	//judgers := strings.Split(conf.GetStringConfig("judgeserver_hosts"), ",")
+	logger.Debug("[6] INFO judger健康检测启动...")
 	for i := 0; i < len(judgers); i++ {
-		Url, err := url.Parse("http://" + judgers[i] + "/healthy")
+		Url, err := url.Parse("http://" + judgers[i].JudgerHost + "/healthy")
 		if err != nil {
-			return err
+			logger.Error(err)
 		}
 		urlPath := Url.String()
 		resp, err := http.Get(urlPath)
 		if err != nil {
-			//fmt.Println("[6] ERROR  judger:"+judgers[i]+"健康检测异常...   err:",err)
-			logger.LogError("	_" + strconv.Itoa(i) + "_   ERROR  judger:" + judgers[i] + "健康检测异常...\n  		err:" + err.Error())
+			logger.Error("	_" + strconv.Itoa(i) + "_   ERROR  judger:" + judgers[i].JudgerHost + "健康检测异常...\n  		err:" + err.Error())
+			err := models.NewJudger().UpdateJudgerStatus(judgers[i].JudgerHost, 0, 0, 0)
+			if err != nil {
+				logger.Error("更新judger"+judgers[i].JudgerHost+"状态失败", err)
+			}
 			continue
 		}
 		defer resp.Body.Close()
@@ -59,10 +63,53 @@ func CheckJudgerHealth() (err error) {
 		var ret Ret
 		json.Unmarshal(body, &ret)
 		if ret.Code == 200 {
-			fmt.Println("	_" + strconv.Itoa(i) + "_   INFO  judger:" + judgers[i] + "健康检测正常...   ")
+			logger.Debug("	_" + strconv.Itoa(i) + "_   INFO  judger:" + judgers[i].JudgerHost + "健康检测正常...   ")
+			//拿好的机器的参数
+			mem, cpu := GetJudgerStatus(judgers[i].JudgerHost)
+			logger.Debug(mem, cpu)
+			err = models.NewJudger().UpdateJudgerStatus(judgers[i].JudgerHost, 1, mem, cpu)
+			if err != nil {
+				logger.Error("更新judger"+judgers[i].JudgerHost+"状态失败", err)
+			}
 		}
 	}
-	return err
+}
+
+type Usage struct {
+	MemLoad float64 `json:"MemLoad"`
+	LoadAvg float64 `json:"LoadAvg"`
+}
+
+func GetJudgerStatus(host string) (mem, cpu float64) {
+	Url, err := url.Parse("http://" + host + "/usage_status")
+	if err != nil {
+		logger.Error(err)
+		//logger.Error(err)
+	}
+	urlPath := Url.String()
+	resp, err := http.Get(urlPath)
+	defer resp.Body.Close()
+	body, _ := ioutil.ReadAll(resp.Body)
+	var ret Usage
+	err = json.Unmarshal(body, &ret)
+	if err != nil {
+		logger.Error(err)
+	}
+	return ret.MemLoad, ret.LoadAvg
+}
+
+// StartJudgerHealtyCheck 定时检测健康状态
+func StartJudgerHealtyCheck(validTime int) *cron.Cron {
+	//定期 删除过期文件
+	cron2 := cron.New() //创建一个cron实例
+	//validTime秒执行一次
+	err := cron2.AddFunc("*/"+strconv.Itoa(validTime)+" * * * * *", CheckJudgerHealth)
+	if err != nil {
+		logger.Error(err)
+	}
+	logger.Debug("定时检测判题器健康状态启动成功...")
+	cron2.Start()
+	return cron2
 }
 
 // PrintSysLogo 打印系统图形

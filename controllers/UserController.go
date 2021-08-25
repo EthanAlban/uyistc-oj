@@ -2,9 +2,8 @@ package controllers
 
 import (
 	"encoding/json"
-	"fmt"
 	"github.com/astaxie/beego"
-	logger "unioj/logs"
+	"github.com/wonderivan/logger"
 	"unioj/models"
 	"unioj/utils"
 )
@@ -45,7 +44,7 @@ func (this *UserController) Login() {
 	}
 	user, err := models.NewUser().GetuserbyUsernamePwd(params.UserName, params.Password, usernameType)
 	if err != nil {
-		fmt.Printf("%v ", err.Error())
+		logger.Info(err)
 		if err.Error() == "<QuerySeter> no row found" {
 			this.JsonResult(204, "没有找到相关用户", err.Error())
 		} else if err.Error() == "wrong password" {
@@ -63,7 +62,7 @@ func (this *UserController) Login() {
 	//sess,err := session.GlobalSessions.SessionStart(this.Ctx.ResponseWriter,this.Ctx.Request)
 	//err = sess.Set("userid", user.UId)
 	if err != nil {
-		fmt.Println(" err:" + err.Error())
+		logger.Warn(err)
 	}
 	this.JsonResult(200, "登陆成功", user)
 }
@@ -74,7 +73,7 @@ func (this *UserController) Register() {
 	body := this.Ctx.Input.RequestBody
 	err := json.Unmarshal(body, &params)
 	if err != nil {
-		fmt.Println(err)
+		logger.Error(err)
 	}
 	var user models.User
 	user.UserName = params.UserName
@@ -88,8 +87,7 @@ func (this *UserController) Register() {
 	}
 	_, err = models.O.Insert(&user)
 	if err != nil {
-		fmt.Println("注册用户：" + params.UserName + "失败，err:" + err.Error())
-		logger.LogError("注册用户：" + params.UserName + "失败，err:" + err.Error())
+		logger.Warn("注册用户：" + params.UserName + "失败，err:" + err.Error())
 	}
 	this.JsonResult(200, "登陆成功", user)
 }

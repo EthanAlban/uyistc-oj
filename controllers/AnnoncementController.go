@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"github.com/wonderivan/logger"
 	"unioj/models"
 )
 
@@ -17,7 +18,8 @@ func (this *AnnoncementController) GetAnnoncements() {
 	var page limit_pages
 	err := this.ParseForm(&page)
 	if err != nil {
-		this.JsonResult(500, "请同时给出limit,offset两个整形数字参数", err)
+		logger.Error(500, "请同时给出limit,offset两个整形数字参数", err)
+		//this.JsonResult(500, "请同时给出limit,offset两个整形数字参数", err)
 		this.StopRun()
 	}
 	annonces := models.NewAnnonement().GetAllAnnnocementsSortByTime(page.limit, page.offset)

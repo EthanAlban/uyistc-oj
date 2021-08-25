@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"github.com/astaxie/beego"
 	uuid "github.com/satori/go.uuid"
+	"github.com/wonderivan/logger"
 	"math/rand"
 	"time"
-	logger "unioj/logs"
 	"unioj/models"
 	"unioj/models/redisOP"
 	"unioj/utils/kafka"
@@ -56,7 +56,8 @@ func (this *SubmissionController) SendTaskToKafka() {
 	task.UserId = &user
 	err = models.NewSubmission().InsertNewSubmission(task)
 	if err != nil {
-		logger.LogError("插入submission失败,请稍候重试... err:" + err.Error())
+		logger.Error("插入submission失败,请稍候重试... err:", err)
+		//logger.LogError("插入submission失败,请稍候重试... err:" + err.Error())
 		this.JsonResult(205, "插入submission失败,请稍候重试...", err)
 	}
 	kafkaHost := beego.AppConfig.String("kafka_host")
@@ -76,7 +77,8 @@ func (this *SubmissionController) IsSubmissionExsit() {
 	err, _ := models.NewSubmission().GetSubmissionByID(submissionID)
 	if err != nil && err.Error() == "<QuerySeter> no row found" {
 		this.JsonResult(204, "没有对应的提交...")
-		logger.LogInfo(err.Error())
+		logger.Warn(err.Error())
+		//logger.LogInfo(err.Error())
 	}
 	this.JsonResult(200, "ok")
 }
@@ -92,7 +94,7 @@ func (this *SubmissionController) GetFinalInfoOfSubmission() {
 			rand.Seed(time.Now().Unix())
 			rate := rand.Intn(2)
 			if rate == 0 {
-				logger.LogInfo("用户请求被限流")
+				logger.Warn("用户请求被限流")
 				this.JsonResult(203, "请求频繁请稍候重试", submissionID)
 			}
 		}
@@ -100,13 +102,13 @@ func (this *SubmissionController) GetFinalInfoOfSubmission() {
 	//正常逻辑
 	err, submision := models.NewSubmission().GetSubmissionByID(submissionID)
 	if err != nil {
-		logger.LogError(err.Error())
+		logger.Error(err.Error())
 		if err.Error() == "<QuerySeter> no row found" {
 			this.JsonResult(204, "没有对应的提交...")
-			logger.LogInfo(err.Error())
+			logger.Warn(err)
 		} else {
 			this.JsonResult(205, err.Error())
-			logger.LogInfo(err.Error())
+			logger.Error(err)
 		}
 	}
 	if submision.Result == -3 {

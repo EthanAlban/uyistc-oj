@@ -1,10 +1,11 @@
 package conf
 
 import (
-	"fmt"
+	"github.com/wonderivan/logger"
 	"testing"
 )
 
 func TestGetConfig(t *testing.T) {
-	fmt.Println(GetStringConfig("dbhost"))
+	logger.Debug(GetStringConfig("dbhost"))
+	//fmt.Println(GetStringConfig("dbhost"))
 }

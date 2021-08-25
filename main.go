@@ -16,7 +16,7 @@ import (
 )
 
 func main() {
-	logger.Init()
+	logger.InitJudgerLogger()
 	redisOP.Init()
 	//注册session要用的结构体
 	gob.Register(controllers.Weather{})
@@ -33,7 +33,10 @@ func main() {
 	go captcha.StartCaptchaServer()
 	kafka.KafkaHealthCheck(beego.AppConfig.String("kafka_host"))
 	port := conf.GetStringConfig("httpport")
-	//检测judger的健康状态
+	//定时 检测judger的健康状态
+	interval, _ := beego.AppConfig.Int("healthy_check_interval")
+	cron := utils.StartJudgerHealtyCheck(interval)
+	defer cron.Stop()
 	utils.CheckJudgerHealth()
 	utils.PrintSysLogo()
 	beego.Run("0.0.0.0:" + port)

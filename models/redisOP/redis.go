@@ -1,10 +1,9 @@
 package redisOP
 
 import (
-	"fmt"
 	"github.com/gomodule/redigo/redis"
+	"github.com/wonderivan/logger"
 	"unioj/conf"
-	logger "unioj/logs"
 )
 
 var Conn redis.Conn
@@ -13,20 +12,17 @@ func Init() {
 	var err error
 	Conn, err = redis.Dial("tcp", conf.GetStringConfig("redis_host"))
 	if err != nil {
-		logger.LogError("redis初始化失败...")
-		logger.LogError(fmt.Sprintf("err:%v", err))
-		fmt.Println("redis初始化失败...")
+		logger.Error("redis初始化失败...")
 		return
 	}
-	fmt.Println("[2] INFO redis初始化成功...")
+	logger.Debug("[2] INFO redis初始化成功...")
 }
 
 func RedisSetKey(keyname string, keyval string) error {
 	Conn, _ = redis.Dial("tcp", conf.GetStringConfig("redis_host"))
 	_, err := Conn.Do("set", keyname, keyval)
 	if err != nil {
-		logger.LogError(fmt.Sprintf("%v", err))
-		fmt.Println(err)
+		logger.Error(err)
 		return err
 	}
 	return err
@@ -37,8 +33,7 @@ func RedisGetKey(keyname string) (string, error) {
 	reply, err := Conn.Do("get", keyname)
 	str, err := redis.String(reply, err)
 	if err != nil {
-		logger.LogError(fmt.Sprintf("%v", err))
-		fmt.Println(err)
+		logger.Error(err)
 	}
 	return str, err
 }
@@ -49,7 +44,7 @@ func RedisSetExpireLimit(keyname string, expireSec, limit int) (bool, error) {
 	reply, err := Conn.Do("set", keyname, 0, "NX", "EX", expireSec)
 	_, err = redis.String(reply, err)
 	if err != nil {
-		//fmt.Println("键已经存在", str)
+		logger.Debug(err)
 	}
 	exist, err := Conn.Do("ttl", keyname)
 	ex, err := redis.Int(exist, err)
@@ -58,12 +53,11 @@ func RedisSetExpireLimit(keyname string, expireSec, limit int) (bool, error) {
 		current, err := Conn.Do("incr", keyname)
 		current_, err = redis.Int(current, err)
 		if err != nil {
-			fmt.Println(err, current)
+			logger.Debug(err, current)
 		}
-		//fmt.Println(current)
 	} else {
 		Conn.Do("del", keyname)
-		fmt.Println("删除异常键...")
+		logger.Warn("删除异常键...")
 	}
 	//
 	if current_ > limit {

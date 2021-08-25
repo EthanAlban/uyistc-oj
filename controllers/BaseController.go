@@ -4,6 +4,7 @@ import (
 	"compress/gzip"
 	"encoding/json"
 	"github.com/astaxie/beego"
+	"github.com/wonderivan/logger"
 	"io"
 	"strings"
 )
@@ -22,7 +23,8 @@ func (this *BaseController) JsonResult(errCode int, errMsg string, data ...inter
 	}
 	returnJSON, err := json.Marshal(jsonData)
 	if err != nil {
-		beego.Error(err)
+		logger.Error(err)
+		//beego.Error(err)
 	}
 	this.Ctx.ResponseWriter.Header().Set("Content-Type", "application/json; charset=utf-8")
 	//this.Ctx.ResponseWriter.Header().Set("Cache-Control", "no-cache, no-store")//解决回退出现json的问题

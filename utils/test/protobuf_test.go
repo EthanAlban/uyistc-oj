@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"google.golang.org/protobuf/proto"
 	"testing"
+	"unioj/utils"
 	"unioj/utils/future/protobuf"
 )
 
@@ -26,4 +27,8 @@ func TestProtoBuffer(t *testing.T) {
 		return
 	}
 	fmt.Println(newPanda)
+}
+
+func TestGetJudgerStatus(t *testing.T) {
+	fmt.Println(utils.GetJudgerStatus("127.0.0.1:7999"))
 }

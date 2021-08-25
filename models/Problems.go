@@ -1,9 +1,7 @@
 package models
 
 import (
-	"fmt"
-	"strconv"
-	logger "unioj/logs"
+	"github.com/wonderivan/logger"
 )
 
 // Problems 记录所有问题的基本信息的表
@@ -57,8 +55,7 @@ func (p *Problems) GetProblemDetailById(pid int) (*Problems, error) {
 	var problem Problems
 	err := O.QueryTable("problems").Filter("pid", pid).One(&problem)
 	if err != nil {
-		fmt.Println("获取问题失败，id", pid, "  error:", err)
-		logger.LogError("获取问题失败，id" + strconv.Itoa(pid) + "  error:" + err.Error())
+		logger.Error("获取问题失败，id", pid, "  error:", err)
 		return nil, err
 	}
 	return &problem, nil

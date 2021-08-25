@@ -3,12 +3,11 @@ package models
 import (
 	"encoding/json"
 	"errors"
-	"fmt"
 	"github.com/beego/beego/v2/client/orm"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/wonderivan/logger"
 	"strconv"
 	"unioj/conf"
-	"unioj/logs"
 	"unioj/models/redisOP"
 )
 
@@ -38,8 +37,7 @@ func init() {
 	dblink := dbuser + ":" + dbpassword + "@tcp(" + dbhost + ")/unioj?charset=utf8&parseTime=true&loc=Local"
 	err := orm.RegisterDataBase("default", "mysql", dblink)
 	if err != nil {
-		fmt.Printf("err:%v", err)
-		logs.LogError("err:mysql connnection failed")
+		logger.Error("err:mysql connnection failed")
 		return
 	}
 	orm.RegisterDriver("mysql", orm.DRMySQL)
