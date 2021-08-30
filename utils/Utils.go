@@ -10,6 +10,7 @@ import (
 	"net/url"
 	"regexp"
 	"strconv"
+	"sync"
 	"unioj/models"
 )
 
@@ -43,44 +44,51 @@ func CheckJudgerHealth() {
 	judgers := *(models.NewJudger().GetAllJudger())
 	//judgers := strings.Split(conf.GetStringConfig("judgeserver_hosts"), ",")
 	logger.Debug("[6] INFO judger健康检测启动...")
+	var wg sync.WaitGroup
 	for i := 0; i < len(judgers); i++ {
-		Url, err := url.Parse("http://" + judgers[i].JudgerHost + "/healthy")
-		if err != nil {
-			logger.Error(err)
-		}
-		urlPath := Url.String()
-		resp, err := http.Get(urlPath)
-		if err != nil {
-			logger.Error("	_" + strconv.Itoa(i) + "_   ERROR  judger:" + judgers[i].JudgerHost + "健康检测异常...\n  		err:" + err.Error())
-			err := models.NewJudger().UpdateJudgerStatus(judgers[i].JudgerHost, 0, 0, 0)
+		wg.Add(1)
+		go func(judgers []models.Judger, i int) {
+			Url, err := url.Parse("http://" + judgers[i].JudgerHost + "/healthy")
 			if err != nil {
-				logger.Error("更新judger"+judgers[i].JudgerHost+"状态失败", err)
+				logger.Error(err)
 			}
-			continue
-		}
-		defer resp.Body.Close()
-		body, _ := ioutil.ReadAll(resp.Body)
-		var ret Ret
-		json.Unmarshal(body, &ret)
-		if ret.Code == 200 {
-			logger.Debug("	_" + strconv.Itoa(i) + "_   INFO  judger:" + judgers[i].JudgerHost + "健康检测正常...   ")
-			//拿好的机器的参数
-			mem, cpu := GetJudgerStatus(judgers[i].JudgerHost)
-			logger.Debug(mem, cpu)
-			err = models.NewJudger().UpdateJudgerStatus(judgers[i].JudgerHost, 1, mem, cpu)
+			urlPath := Url.String()
+			resp, err := http.Get(urlPath)
 			if err != nil {
-				logger.Error("更新judger"+judgers[i].JudgerHost+"状态失败", err)
+				logger.Error("	_" + strconv.Itoa(i) + "_   ERROR  judger:" + judgers[i].JudgerHost + "健康检测异常...\n  		err:" + err.Error())
+				err := models.NewJudger().UpdateJudgerStatus(judgers[i].JudgerHost, 0, 0, 0, "")
+				if err != nil {
+					logger.Error("更新judger"+judgers[i].JudgerHost+"状态失败", err)
+				}
+			} else {
+				defer resp.Body.Close()
+				body, _ := ioutil.ReadAll(resp.Body)
+				var ret Ret
+				json.Unmarshal(body, &ret)
+				if ret.Code == 200 {
+					logger.Debug("	_" + strconv.Itoa(i) + "_   INFO  judger:" + judgers[i].JudgerHost + "健康检测正常...   ")
+					//拿好的机器的参数
+					mem, cpu, topic := GetJudgerStatus(judgers[i].JudgerHost)
+					logger.Debug(mem, cpu)
+					err = models.NewJudger().UpdateJudgerStatus(judgers[i].JudgerHost, 1, mem, cpu, topic)
+					if err != nil {
+						logger.Error("更新judger"+judgers[i].JudgerHost+"状态失败", err)
+					}
+				}
 			}
-		}
+			wg.Done()
+		}(judgers, i)
+		wg.Wait()
 	}
 }
 
 type Usage struct {
 	MemLoad float64 `json:"MemLoad"`
 	LoadAvg float64 `json:"LoadAvg"`
+	Topic   string  `json:"Topic"`
 }
 
-func GetJudgerStatus(host string) (mem, cpu float64) {
+func GetJudgerStatus(host string) (mem, cpu float64, topic string) {
 	Url, err := url.Parse("http://" + host + "/usage_status")
 	if err != nil {
 		logger.Error(err)
@@ -95,7 +103,7 @@ func GetJudgerStatus(host string) (mem, cpu float64) {
 	if err != nil {
 		logger.Error(err)
 	}
-	return ret.MemLoad, ret.LoadAvg
+	return ret.MemLoad, ret.LoadAvg, ret.Topic
 }
 
 // StartJudgerHealtyCheck 定时检测健康状态

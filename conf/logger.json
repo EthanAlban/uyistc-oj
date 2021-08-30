@@ -1,6 +1,6 @@
 {
   "File": {
-    "filename": "./logs/beeo_logs.log",
+    "filename": "./logs/beego_logs.log",
     "level": "TRAC",
     "daily": true,
     "maxlines": 1000000,

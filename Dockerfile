@@ -32,4 +32,6 @@ CMD  ["./main"]
 #   一条命令实现停用并删除容器：
 #   docker stop $(docker ps -q) & docker rm $(docker ps -aq)
 #   删除none镜像
-#docker rmi `docker images | grep  '<none>' | awk '{print $3}'`
+#   docker rmi `docker images | grep  '<none>' | awk '{print $3}'`
+#   docker tag 3197839e3cb0 registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-beego:latest
+#   docker push registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-beego:latest

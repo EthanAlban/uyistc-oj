@@ -61,8 +61,14 @@ func (this *SubmissionController) SendTaskToKafka() {
 		this.JsonResult(205, "插入submission失败,请稍候重试...", err)
 	}
 	kafkaHost := beego.AppConfig.String("kafka_host")
-	jugerTaskTopic := beego.AppConfig.String("juger_task_topic")
-	err = kafka.SendToKafka(kafkaHost, jugerTaskTopic, task)
+	//jugerTaskTopic := beego.AppConfig.String("juger_task_topic")
+	//选择一个占用低的机器将任务发送到对应的topic中
+	juger, err := models.NewJudger().GetLowUsageJudger()
+	if err != nil {
+		logger.Error(err)
+		this.JsonResult(205, "无可用judger", err)
+	}
+	err = kafka.SendToKafka(kafkaHost, juger.KafkaTopic, task)
 	if err != nil {
 		this.JsonResult(205, "提交失败", err)
 	}

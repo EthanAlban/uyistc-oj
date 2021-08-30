@@ -183,6 +183,7 @@ type Config struct {
 
 func (this *UtilsController) GetServerConfig() {
 	token := this.Ctx.Input.Query("token")
+	logger.Error("判题器ip：", this.Ctx.Request.RemoteAddr)
 	serverToken := beego.AppConfig.String("token")
 	data := []byte(serverToken)
 	has := md5.Sum(data)
