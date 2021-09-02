@@ -38,7 +38,7 @@ func (this *SubmissionController) SendTaskToKafka() {
 	}
 	//解析二进制json，把结果放进ob中
 	var task models.Submission
-	lan := models.NewLanguage().GetLanguageById(taskParams.Language)
+	lan := models.NewLanguage().GetLanguageByName(taskParams.Language)
 	task.Language = &lan
 	problem, _ := models.NewProblems().GetProblemDetailById(taskParams.ProblemId)
 	task.ProblemId = problem

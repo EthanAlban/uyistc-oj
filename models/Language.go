@@ -9,6 +9,7 @@ type Language struct {
 	Lid       int    `orm:"column(lid);pk"`
 	Language_ string `orm:"column(language)"`
 	Template  string `orm:"column(template)"`
+	Suffix    string `orm:"column(suffix)"`
 }
 
 // Templates 序列化问题中的template字段以支持多种语言形成一个数组
@@ -48,7 +49,7 @@ func (l *Language) GetAllLanges() (*[]Language, error) {
 	}
 }
 
-func (l *Language) GetLanguageById(languageName string) Language {
+func (l *Language) GetLanguageByName(languageName string) Language {
 	var lan Language
 	O.QueryTable("language").Filter("Language_", languageName).One(&lan)
 	return lan

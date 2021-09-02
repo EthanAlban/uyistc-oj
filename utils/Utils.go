@@ -68,11 +68,13 @@ func CheckJudgerHealth() {
 				if ret.Code == 200 {
 					logger.Debug("	_" + strconv.Itoa(i) + "_   INFO  judger:" + judgers[i].JudgerHost + "健康检测正常...   ")
 					//拿好的机器的参数
-					mem, cpu, topic := GetJudgerStatus(judgers[i].JudgerHost)
-					logger.Debug(mem, cpu)
-					err = models.NewJudger().UpdateJudgerStatus(judgers[i].JudgerHost, 1, mem, cpu, topic)
-					if err != nil {
-						logger.Error("更新judger"+judgers[i].JudgerHost+"状态失败", err)
+					mem, cpu, topic, err := GetJudgerStatus(judgers[i].JudgerHost)
+					logger.Debug(mem, cpu, topic)
+					if err == nil {
+						err = models.NewJudger().UpdateJudgerStatus(judgers[i].JudgerHost, 1, mem, cpu, topic)
+						if err != nil {
+							logger.Error("更新judger"+judgers[i].JudgerHost+"状态失败", err)
+						}
 					}
 				}
 			}
@@ -88,11 +90,12 @@ type Usage struct {
 	Topic   string  `json:"Topic"`
 }
 
-func GetJudgerStatus(host string) (mem, cpu float64, topic string) {
+func GetJudgerStatus(host string) (mem, cpu float64, topic string, err error) {
 	Url, err := url.Parse("http://" + host + "/usage_status")
 	if err != nil {
 		logger.Error(err)
 		//logger.Error(err)
+		return 0, 0, "", err
 	}
 	urlPath := Url.String()
 	resp, err := http.Get(urlPath)
@@ -102,8 +105,9 @@ func GetJudgerStatus(host string) (mem, cpu float64, topic string) {
 	err = json.Unmarshal(body, &ret)
 	if err != nil {
 		logger.Error(err)
+		return 0, 0, "", err
 	}
-	return ret.MemLoad, ret.LoadAvg, ret.Topic
+	return ret.MemLoad, ret.LoadAvg, ret.Topic, err
 }
 
 // StartJudgerHealtyCheck 定时检测健康状态

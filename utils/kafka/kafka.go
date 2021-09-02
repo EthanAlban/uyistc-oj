@@ -56,6 +56,6 @@ func SendToKafka(host, topic string, task models.Submission) error {
 		logger.Error("ERROR kafka发送消息失败,err:", err)
 		return err
 	}
-	logger.Debug("消息发送成功")
+	logger.Debug("消息发送成功,topic: ", topic, "语言：", task.Language.Language_)
 	return err
 }
