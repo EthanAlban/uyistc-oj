@@ -5890,3 +5890,224 @@ func function(s string) int {
 2021-09-02 11:03:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 28.900000000000002  负载统计: 11.92  topic: judger_task53309748-a454-4d15-8269-8433c79b6a2f
 2021-09-02 11:04:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
 2021-09-02 11:04:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 28.89  负载统计: 6.18  topic: judger_task53309748-a454-4d15-8269-8433c79b6a2f
+2021-09-02 13:12:38 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/log.go:13] Judgerloger初始化成功...
+2021-09-02 13:13:03 [EROR] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:54] [1] ERROR  获取server kafka配置信息失败...  Get http://http//unioj.org:32366/beego/api/utils/get_server_config?token=15e0426f224673a257b593323cab136f: dial tcp: lookup http: Temporary failure in name resolution
+2021-09-02 13:13:03 [EROR] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:55] [1] ERROR  请检查与服务器的连接...
+2021-09-02 13:13:03 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/etcd.go:38] etcd连接成功...
+2021-09-02 13:14:19 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/log.go:13] Judgerloger初始化成功...
+2021-09-02 13:14:19 [DEBG] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:75] [1] INFO  获取server kafka配置信息成功...
+2021-09-02 13:14:19 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:77] 		(_1_)  kafka_host:       39.105.152.206:9092
+2021-09-02 13:14:19 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:78] 		(_2_)  juger_task_topic: judger_task
+2021-09-02 13:14:19 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:79] 		(_3_)  sql_host:         39.105.152.206:3306
+2021-09-02 13:14:19 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:80] 		(_4_)  sql_user:         root
+2021-09-02 13:14:19 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:81] 		(_5_)  sql_password:     Abc741258963.0
+2021-09-02 13:14:19 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/etcd.go:38] etcd连接成功...
+2021-09-02 13:14:19 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/mysql.go:19] [3] INFO:初始化连接mysql成功... 
+2021-09-02 13:14:19 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/maintain.go:25] 定时删除任务启动成功...
+2021-09-02 13:14:19 [DEBG] [/home/et/Desktop/Projects/unioj-judger/run/run.go:38] judgeserver 启动成功...
+监听：0.0.0.0:7999
+2021-09-02 13:14:19 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:97] 新的topic:  judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:14:19 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:108] kafka消费者启动中...
+2021-09-02 13:14:22 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:153] kafka消费者启动成功...,topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:14:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:14:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.14  负载统计: 5.03  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:15:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:15:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:15:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.33  负载统计: 9.040000000000001  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:15:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.38  负载统计: 8.93  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:15:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:15:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.4  负载统计: 7.45  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:16:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:16:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:16:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.550000000000004  负载统计: 8.540000000000001  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:16:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.58  负载统计: 8.63  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:16:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:16:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.76  负载统计: 6.28  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:17:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:17:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:17:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.18  负载统计: 9.700000000000001  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:17:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.18  负载统计: 9.59  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:17:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:17:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.38  负载统计: 4.7700000000000005  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:18:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:18:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:18:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.39  负载统计: 9.17  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:18:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.39  负载统计: 9.28  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:18:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:18:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.57  负载统计: 4.91  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:19:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:19:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:19:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.79  负载统计: 9.41  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:19:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.79  负载统计: 9.17  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:19:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:19:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.81  负载统计: 4.2700000000000005  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:20:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:20:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:20:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.6  负载统计: 8.15  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:20:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.61  负载统计: 8.15  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:20:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:20:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.74  负载统计: 4.89  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:21:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:21:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:21:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.63  负载统计: 8.8  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:21:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.65  负载统计: 8.91  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:21:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:21:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.96  负载统计: 5.28  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:22:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:22:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:22:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.94  负载统计: 8.78  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:22:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.94  负载统计: 8.66  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:22:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:22:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.82  负载统计: 4.2700000000000005  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:23:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:23:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:23:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.94  负载统计: 8.42  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:23:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.94  负载统计: 8.42  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:23:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:23:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.800000000000004  负载统计: 4.76  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:24:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:24:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:24:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39  负载统计: 8.950000000000001  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:24:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39  负载统计: 9.06  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:24:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:24:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.92  负载统计: 6.49  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:25:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:25:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 13:25:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39  负载统计: 8.9  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 13:25:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.06  负载统计: 8.9  topic: judger_task7fa0b49a-188e-4181-a29a-5d0b6e25dcd7
+2021-09-02 16:28:51 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/log.go:13] Judgerloger初始化成功...
+2021-09-02 16:29:12 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/log.go:13] Judgerloger初始化成功...
+2021-09-02 16:29:13 [DEBG] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:75] [1] INFO  获取server kafka配置信息成功...
+2021-09-02 16:29:13 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:77] 		(_1_)  kafka_host:       39.105.152.206:9092
+2021-09-02 16:29:13 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:78] 		(_2_)  juger_task_topic: judger_task
+2021-09-02 16:29:13 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:79] 		(_3_)  sql_host:         39.105.152.206:3306
+2021-09-02 16:29:13 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:80] 		(_4_)  sql_user:         root
+2021-09-02 16:29:13 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:81] 		(_5_)  sql_password:     Abc741258963.0
+2021-09-02 16:29:13 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/etcd.go:38] etcd连接成功...
+2021-09-02 16:29:13 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/mysql.go:19] [3] INFO:初始化连接mysql成功... 
+2021-09-02 16:29:13 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/maintain.go:25] 定时删除任务启动成功...
+2021-09-02 16:29:13 [DEBG] [/home/et/Desktop/Projects/unioj-judger/run/run.go:38] judgeserver 启动成功...
+监听：0.0.0.0:7999
+2021-09-02 16:29:13 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:97] 新的topic:  judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:29:13 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:108] kafka消费者启动中...
+2021-09-02 16:29:15 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:153] kafka消费者启动成功...,topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:29:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:29:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 40.07  负载统计: 7.9  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:30:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:30:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:30:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 40.21  负载统计: 9.67  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:30:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 40.22  负载统计: 9.58  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:30:13 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/service.go:53] kafka读取submissoin:  {b54450d8-92d9-4cad-b883-e3ddba5dcbef {1 A+B 1 56 13 求两个数a,b之和，输入输出分别是两个整数 10000 10 直接写，不要有多余的打印 {1 } <nil> {1  0   0       } 输入两个整数AB 输出一个整数 } 2021-09-02 08:30:13.338545133 +0000 UTC {1 et 0   0   head up high 计算机 https://gitee.com/ethanalban/uyistc-oj.git https://blog.csdn.net/qq_41009846/article/details/118912788 https://img1.baidu.com/it/u=3366246598,2446278796&fm=26&fmt=auto&gp=0.jpg} et package main
+
+import "fmt"
+
+func main() {
+  	var name int
+  	var name2 int
+  	fmt.Scanln(&name,&name2)
+	fmt.Print(function(name,name2))
+}
+func function(s,s2 int) int {
+	return s+s2
+} -3 {1 Golang package main
+
+import "fmt"
+
+func main() {
+	fmt.Println(function("cbbd"))
+}
+func function(s string) int {
+	return 1
+} } 0 }
+2021-09-02 16:30:13 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:48] codesfiles/    +     cdb5c7f8-c7f0-4e49-a12f-2429ae17b3c9.
+2021-09-02 16:30:13 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:141] [1] 文件创建成功...
+2021-09-02 16:30:13 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:167] [2] 文件写入成功...
+2021-09-02 16:30:13 [DEBG] [/home/et/Desktop/Projects/unioj-judger/server/server.go:176] Golang 代码，编译中...
+2021-09-02 16:30:13 [EROR] [/home/et/Desktop/Projects/unioj-judger/server/server.go:177] ----------- codesfiles/cdb5c7f8-c7f0-4e49-a12f-2429ae17b3c9.
+2021-09-02 16:30:13 [EROR] [/home/et/Desktop/Projects/unioj-judger/server/server.go:181] codesfiles/cdb5c7f8-c7f0-4e49-a12f-2429ae17b3c9.
+2021-09-02 16:30:13 [WARN] [/home/et/Desktop/Projects/unioj-judger/server/server.go:189] [3] 编译文件失败:build ../codesfiles/cdb5c7f8-c7f0-4e49-a12f-2429ae17b3c9.: cannot find module for path ../codesfiles/cdb5c7f8-c7f0-4e49-a12f-2429ae17b3c9.
+
+
+2021-09-02 16:30:14 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/mysql.go:30] 更新记录数量: 1  更新问题: A+B
+2021-09-02 16:30:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:30:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.83  负载统计: 5.54  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:31:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/maintain.go:87] 文件:../codesfiles/cdb5c7f8-c7f0-4e49-a12f-2429ae17b3c9. 已过期，予以删除
+2021-09-02 16:31:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:31:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:31:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.43  负载统计: 13.56  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:31:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.43  负载统计: 13.65  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:31:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:31:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 38.95  负载统计: 6.34  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:32:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:32:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:32:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.34  负载统计: 9.43  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:32:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.34  负载统计: 9.31  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:32:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:32:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.32  负载统计: 6.17  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:33:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:33:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:33:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.42  负载统计: 10.99  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:33:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.42  负载统计: 11.200000000000001  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:33:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:33:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.14  负载统计: 5.28  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:33:59 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:34:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:34:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.21  负载统计: 11.4  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:34:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.28  负载统计: 11.4  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:35:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:35:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.160000000000004  负载统计: 10.75  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:36:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:36:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.39  负载统计: 12.950000000000001  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:37:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:37:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.59  负载统计: 14.01  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:37:56 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:37:57 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.45  负载统计: 0.25  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:38:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:38:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:38:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.45  负载统计: 2.41  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:38:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.45  负载统计: 2.41  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb
+2021-09-02 16:38:16 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/service.go:53] kafka读取submissoin:  {e3f8121d-5099-4896-a853-417928f20616 {1 A+B 1 56 13 求两个数a,b之和，输入输出分别是两个整数 10000 10 直接写，不要有多余的打印 {1 } <nil> {1  0   0       } 输入两个整数AB 输出一个整数 } 2021-09-02 16:38:15.655516817 +0800 CST {1 et 0   0   head up high 计算机 https://gitee.com/ethanalban/uyistc-oj.git https://blog.csdn.net/qq_41009846/article/details/118912788 https://img1.baidu.com/it/u=3366246598,2446278796&fm=26&fmt=auto&gp=0.jpg} et package main
+
+import "fmt"
+
+func main() {
+  	var name int
+  	var name2 int
+  	fmt.Scanln(&name,&name2)
+	fmt.Print(function(name,name2))
+}
+func function(s,s2 int) int {
+	return s+s2
+  } -3 {1 Golang package main
+
+import "fmt"
+
+func main() {
+	fmt.Println(function("cbbd"))
+}
+func function(s string) int {
+	return 1
+} go} 0 }
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:48] codesfiles/    +     071d6af7-b4ea-46bb-9f0c-83d98c5f1735.go
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:141] [1] 文件创建成功...
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:167] [2] 文件写入成功...
+2021-09-02 16:38:16 [DEBG] [/home/et/Desktop/Projects/unioj-judger/server/server.go:176] Golang 代码，编译中...
+2021-09-02 16:38:16 [EROR] [/home/et/Desktop/Projects/unioj-judger/server/server.go:177] ----------- codesfiles/071d6af7-b4ea-46bb-9f0c-83d98c5f1735.go
+2021-09-02 16:38:16 [EROR] [/home/et/Desktop/Projects/unioj-judger/server/server.go:181] codesfiles/071d6af7-b4ea-46bb-9f0c-83d98c5f1735.go
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:193] [3] 编译文件成功... 
+
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:80] rss: 3 Mb  MemoryLimit: 10 Mb
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:80] rss: 3 Mb  MemoryLimit: 10 Mb
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:80] rss: 3 Mb  MemoryLimit: 10 Mb
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:80] rss: 3 Mb  MemoryLimit: 10 Mb
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:80] rss: 3 Mb  MemoryLimit: 10 Mb
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:80] rss: 3 Mb  MemoryLimit: 10 Mb
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:80] rss: 3 Mb  MemoryLimit: 10 Mb
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:80] rss: 3 Mb  MemoryLimit: 10 Mb
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:80] rss: 3 Mb  MemoryLimit: 10 Mb
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:116] 最终判题结果，correct: 9   wrong: 0
+2021-09-02 16:38:16 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/mysql.go:30] 更新记录数量: 1  更新问题: A+B
+2021-09-02 16:39:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/maintain.go:87] 文件:../codesfiles/071d6af7-b4ea-46bb-9f0c-83d98c5f1735 已过期，予以删除
+2021-09-02 16:39:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/maintain.go:87] 文件:../codesfiles/071d6af7-b4ea-46bb-9f0c-83d98c5f1735.go 已过期，予以删除
+2021-09-02 16:39:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:25] 心跳检测--判题器工作正常
+2021-09-02 16:39:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/service.go:43] 内存统计: 39.77  负载统计: 1.26  topic: judger_task6d5eb58f-4b5e-4892-aa84-5be9ca12b3eb

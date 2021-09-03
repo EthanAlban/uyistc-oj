@@ -174,11 +174,10 @@ func (*Judger) CompileSourceFile(filepath string) error {
 	//按照语言选择不同的编译运行命令
 	var cmd *exec.Cmd
 	logger.Debug(JUDGER.Language + " 代码，编译中...")
-
+	logger.Error("-----------", filepath)
 	if JUDGER.Language == "C" {
 		cmd = exec.Command("gcc", "../"+filepath, "-o", "../"+strings.Split(filepath, ".")[0])
 	} else if JUDGER.Language == "Golang" {
-		logger.Error(filepath)
 		cmd = exec.Command("go", "build", "-o", "../"+strings.Split(filepath, ".")[0], "../"+filepath)
 	}
 

@@ -4,11 +4,9 @@ FROM ubuntu
 MAINTAINER ZhangLianjun "2814634354@qq.com"
 
 # 修改国内源
-RUN sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
-RUN sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
-# 执行命令
-RUN apt-get update
-RUN apt-get install gcc libc6-dev git lrzsz -y
+RUN sed -i s/archive.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list && sed -i s/security.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install gcc libc6-dev git lrzsz inetutils-ping curl -y
 #禁止交互
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -25,6 +23,14 @@ WORKDIR $GOPATH/src/unioj
 COPY . .
 ADD go.mod .
 ADD go.sum .
+
+# 自己构建docker的是否注意删掉这三句  以便镜像能找到beego
+RUN cp /etc/hosts ~/hosts.new
+RUN sed -i '2i\192.168.10.63   unioj.org' ~/hosts.new
+RUN cp -f ~/hosts.new /etc/hosts
+
+RUN rm -rf ~/hosts.new
+
 RUN go mod download
 
 #拷贝文件
@@ -46,5 +52,5 @@ CMD  ["./run"]
 #删除none镜像
 #   docker rmi `docker images | grep  '<none>' | awk '{print $3}'`
 
-#   docker tag 7b602c0b6efc registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-judger:latest
+#   docker tag 5f51660b5491 registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-judger:latest
 #   docker push registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-judger:latest

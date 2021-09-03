@@ -50,7 +50,7 @@ func UsageStatus(w http.ResponseWriter, req *http.Request) {
 
 // JudgeUserCode 接收用户代码进行评测
 func JudgeUserCode(submission Submission) {
-	logger.Debug("kafka读取submissoin: ", submission)
+	//logger.Debug("kafka读取submissoin: ", submission)
 	server.JUDGER.Code = submission.Code
 	server.JUDGER.Language = submission.Language.Language
 	server.JUDGER.MemoryLimit = submission.ProblemId.MemoryLimit
