@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.judgeserver.oj.dao.TestCaseMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.judgeserver.oj.entity.TestCase" id="testcaseMap">
+        <result property="testcaseId" column="testcase_id"/>
+        <result property="input" column="input"/>
+        <result property="output" column="output"/>
+    </resultMap>
+    <insert id="addMultipleCase" parameterType="java.util.List">
+        insert into
+        testcase(testcase_id,input,output)
+        values
+        <foreach collection="list" item="item" separator=",">
+            (#{TestCaseId},#{Input},#{Output})
+        </foreach>
+    </insert>
+    <insert id="addCase" parameterType="com.judgeserver.oj.entity.TestCase">
+        insert into
+        testcase(testcase_id,input,output)
+        values(#{TestCaseId},#{Input},#{Output})
+    </insert>
+    <delete id="deleteCase" parameterType="java.lang.Long">
+        delete from testcase
+        where testcase_id = #{caseId}
+    </delete>
+    <update id="updateCase" parameterType="com.judgeserver.oj.entity.TestCase">
+        update testcase
+        set input = #{Input},
+        output = #{Output}
+        where testcase_id = #{TestCaseId}
+    </update>
+    <select id="queryOne" parameterType="java.lang.Long" resultType="java.util.HashMap">
+        select testcase_id,input,output
+        from testcase
+        where testcase_id = #{TestCaseId}
+    </select>
+    <delete id="deleteMultipleCase" parameterType="java.lang.Long">
+        delete question_relation,testcase from question_relation
+        join testcase
+        on question_relation.testcase_id = testcase.testcase_id
+        where question_relation.pid = 2
+    </delete>
+    <insert id="addRelation" >
+        insert into question_relation
+        values (#{pid},#{caseId})
+    </insert>
+</mapper>

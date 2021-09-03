@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.105.152.206:3307/online_judge?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+
+
+mybatis-plus:
+  mapper-location: classpath:mappers/**/*.xml
+  type-aliases-package: com.judgeserver.oj.dao
+
+swagger:
+  title: API标题
+  description: API描述
+  version: 1.0
+  terms-of-service-url: http://localhost/
+  base-package: com.judgeserver.oj.controller
+  contact: http://www.javastack.cn/

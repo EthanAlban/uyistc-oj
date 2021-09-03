@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.judgeserver.oj.dao.QuestionMapper">
+    <resultMap type="com.judgeserver.oj.entity.TestCase" id="testcaseMap">
+        <result property="TestCaseId" column="testcase_id"/>
+        <result property="Input" column="input"/>
+        <result property="Output" column="output"/>
+    </resultMap>
+    <insert id="addOne" parameterType="com.judgeserver.oj.entity.Question">
+        insert into
+        question(pid,type)
+        values (#{pid},#{type})
+    </insert>
+    <delete id="deleteOneByPid" parameterType="java.lang.Long">
+        delete from question
+        where pid=#{pid}
+    </delete>
+    <update id="updateOne" parameterType="com.judgeserver.oj.entity.Question">
+        update question
+        set type = #{type}
+        where pid = #{pid}
+    </update>
+    <select id="getCaseMsgByPid" resultType="java.util.HashMap">
+        select t.testcase_id,t.input,t.output
+        from question as q
+        join question_relation as qr
+        join testcase as t
+        where q.pid=qr.pid
+        and qr.testcese_id=t.testcase_id
+    </select>
+</mapper>
