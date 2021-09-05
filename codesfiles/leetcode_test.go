@@ -57,6 +57,62 @@ func findBoundary(nums []int, somePosition int) (int, int) {
 	return left, right
 }
 
+func isValidSudoku(board [][]byte) bool {
+	// 九行的map
+	LineMap := make([]map[byte]int, 9)
+	for i := 0; i < 9; i++ {
+		LineMap[i] = make(map[byte]int)
+	}
+	// 九列的map
+	ColumeMap := make([]map[byte]int, 9)
+	for i := 0; i < 9; i++ {
+		ColumeMap[i] = make(map[byte]int)
+	}
+	// 九个方格的map
+	SquareMap := make([]map[byte]int, 9)
+	for i := 0; i < 9; i++ {
+		SquareMap[i] = make(map[byte]int)
+	}
+	for i := 0; i < 9; i++ { // 行
+		for j := 0; j < 9; j++ { // 列
+			if board[i][j] != '.' {
+				// 存入对应的行的map
+				_, ok := LineMap[i][board[i][j]]
+				if ok {
+					return false
+				} else {
+					LineMap[i][board[i][j]] = j
+				}
+				// 存入对应的列的map
+				_, ok = ColumeMap[j][board[i][j]]
+				if ok {
+					return false
+				} else {
+					ColumeMap[j][board[i][j]] = i
+				}
+				// 存入对应的3x3 map
+				square := (i/3)*3 + (j / 3)
+				_, ok = SquareMap[square][board[i][j]]
+				if ok {
+					return false
+				} else {
+					SquareMap[square][board[i][j]] = square
+				}
+			}
+		}
+	}
+	return true
+}
+
 func TestLeetcode(t *testing.T) {
-	fmt.Println(searchRange([]int{1, 1, 2}, 1))
+	fmt.Println(isValidSudoku([][]byte{
+		{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
+		{'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+		{'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+		{'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+		{'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+		{'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+		{'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+		{'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+		{'.', '.', '.', '.', '8', '.', '.', '7', '9'}}))
 }
