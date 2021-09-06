@@ -5,114 +5,39 @@ import (
 	"testing"
 )
 
-func searchRange(nums []int, target int) []int {
-	if len(nums) == 0 {
-		return []int{-1, -1}
-	}
-	// 二分查找向两边扩
-	somePosition := binarySearch(nums, target)
-	if somePosition == -1 {
-		return []int{-1, -1}
-	}
-	left, right := findBoundary(nums, somePosition)
-	return []int{left, right}
-}
-
-func binarySearch(nums []int, target int) int {
-	left := 0
-	right := len(nums) - 1
-	mid := (left + right) / 2
-	for left <= right {
-		if nums[mid] == target {
-			return mid
-		} else if nums[mid] > target {
-			right = mid - 1
-		} else {
-			left = mid + 1
+func combinationSum(candidates []int, target int) [][]int {
+	//  还是一个回溯的题目
+	curentSolution := []int{}
+	ret := [][]int{}
+	ret2 := [][]int{}
+	var dfs func(target, idx int)
+	dfs = func(target, idx int) {
+		if idx == len(candidates) {
+			return
 		}
-		mid = (left + right) / 2
-	}
-	return -1
-}
-
-func findBoundary(nums []int, somePosition int) (int, int) {
-	left, right := somePosition, somePosition
-	target := nums[somePosition]
-	if left-1 > 0 {
-		for nums[left-1] == target {
-			left--
-			if left-1 < 0 {
-				break
-			}
+		if target == 0 {
+			ret = append(ret, append([]int(nil), curentSolution...))
+			ret2 = append(ret2, curentSolution)
+			fmt.Println("------------------------------")
+			fmt.Println(curentSolution)
+			fmt.Printf("ret: cap:%v len:%v val:%v\n", cap(ret), len(ret), ret)
+			fmt.Printf("ret: cap:%v len:%v val:%v\n", cap(ret2), len(ret2), ret2)
+			return
+		}
+		// 不采用当前的数字
+		dfs(target, idx+1)
+		// 用当前的数字
+		if target-candidates[idx] >= 0 {
+			curentSolution = append(curentSolution, candidates[idx])
+			dfs(target-candidates[idx], idx)
+			// 如果走下来了证明这条路走不通 需要把最后一个加进去的拿出来
+			curentSolution = curentSolution[:len(curentSolution)-1]
 		}
 	}
-	if right < len(nums)-1 {
-		for nums[right+1] == target {
-			right++
-			if right+1 > len(nums)-1 {
-				break
-			}
-		}
-	}
-	return left, right
+	dfs(target, 0)
+	return ret
 }
 
-func isValidSudoku(board [][]byte) bool {
-	// 九行的map
-	LineMap := make([]map[byte]int, 9)
-	for i := 0; i < 9; i++ {
-		LineMap[i] = make(map[byte]int)
-	}
-	// 九列的map
-	ColumeMap := make([]map[byte]int, 9)
-	for i := 0; i < 9; i++ {
-		ColumeMap[i] = make(map[byte]int)
-	}
-	// 九个方格的map
-	SquareMap := make([]map[byte]int, 9)
-	for i := 0; i < 9; i++ {
-		SquareMap[i] = make(map[byte]int)
-	}
-	for i := 0; i < 9; i++ { // 行
-		for j := 0; j < 9; j++ { // 列
-			if board[i][j] != '.' {
-				// 存入对应的行的map
-				_, ok := LineMap[i][board[i][j]]
-				if ok {
-					return false
-				} else {
-					LineMap[i][board[i][j]] = j
-				}
-				// 存入对应的列的map
-				_, ok = ColumeMap[j][board[i][j]]
-				if ok {
-					return false
-				} else {
-					ColumeMap[j][board[i][j]] = i
-				}
-				// 存入对应的3x3 map
-				square := (i/3)*3 + (j / 3)
-				_, ok = SquareMap[square][board[i][j]]
-				if ok {
-					return false
-				} else {
-					SquareMap[square][board[i][j]] = square
-				}
-			}
-		}
-	}
-	return true
-}
-
-func TestLeetcode(t *testing.T) {
-	fmt.Println(isValidSudoku([][]byte{
-		{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
-		{'6', '.', '.', '1', '9', '5', '.', '.', '.'},
-		{'.', '9', '8', '.', '.', '.', '.', '6', '.'},
-		{'8', '.', '.', '.', '6', '.', '.', '.', '3'},
-		{'4', '.', '.', '8', '.', '3', '.', '.', '1'},
-		{'7', '.', '.', '.', '2', '.', '.', '.', '6'},
-		{'.', '6', '.', '.', '.', '.', '2', '8', '.'},
-		{'.', '.', '.', '4', '1', '9', '.', '.', '5'},
-		{'.', '.', '.', '.', '8', '.', '.', '7', '9'}}))
+func TestCombinationSum(t *testing.T) {
+	fmt.Println(combinationSum([]int{2, 3, 6, 7}, 7))
 }
