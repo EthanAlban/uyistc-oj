@@ -11,72 +11,10 @@ import (
 	"sync"
 	"time"
 	"unioj-Judger/conf"
+	"unioj-Judger/service/structs"
 )
 
-type Submission struct {
-	SubmissionId string `json:"SubmissionId"`
-	ProblemId    struct {
-		Pid               int    `json:"Pid"`
-		Title             string `json:"Title"`
-		Level             int    `json:"Level"`
-		TotalSubmissions  int    `json:"TotalSubmissions"`
-		AcceptSubmissions int    `json:"AcceptSubmissions"`
-		Content           string `json:"Content"`
-		TimeLimit         int    `json:"TimeLimit"`
-		MemoryLimit       int    `json:"MemoryLimit"`
-		Hint              string `json:"Hint"`
-		ProblemType       struct {
-			Tid      int    `json:"Tid"`
-			TypeName string `json:"TypeName"`
-		} `json:"ProblemType"`
-		ProblemTags interface{} `json:"ProblemTags"`
-		Uid         struct {
-			UId       int    `json:"UId"`
-			UserName  string `json:"UserName"`
-			UserType  int    `json:"UserType"`
-			RealName  string `json:"RealName"`
-			Password  string `json:"Password"`
-			Credit    int    `json:"Credit"`
-			Email     string `json:"Email"`
-			Tel       string `json:"Tel"`
-			Signature string `json:"Signature"`
-			Major     string `json:"Major"`
-			Gitaddr   string `json:"Gitaddr"`
-			Blogaddr  string `json:"Blogaddr"`
-			Avatar    string `json:"Avatar"`
-		} `json:"Uid"`
-		InputDescription  string `json:"InputDescription"`
-		OutputDescription string `json:"OutputDescription"`
-		Template          string `json:"Template"`
-	} `json:"ProblemId"`
-	CreateTime time.Time `json:"CreateTime"`
-	UserId     struct {
-		UId       int    `json:"UId"`
-		UserName  string `json:"UserName"`
-		UserType  int    `json:"UserType"`
-		RealName  string `json:"RealName"`
-		Password  string `json:"Password"`
-		Credit    int    `json:"Credit"`
-		Email     string `json:"Email"`
-		Tel       string `json:"Tel"`
-		Signature string `json:"Signature"`
-		Major     string `json:"Major"`
-		Gitaddr   string `json:"Gitaddr"`
-		Blogaddr  string `json:"Blogaddr"`
-		Avatar    string `json:"Avatar"`
-	} `json:"UserId"`
-	UserName string `json:"UserName"`
-	Code     string `json:"Code"`
-	Result   int    `json:"Result"`
-	Language struct {
-		Lid      int    `json:"Lid"`
-		Language string `json:"Language_"`
-		Template string `json:"Template"`
-		Suffix   string `json:"Suffix"`
-	} `json:"Language"`
-	Score   int    `json:"Score"`
-	ErrInfo string `json:"ErrInfo"`
-}
+var DeathKafka = make(chan bool)
 
 // NewKafkaConsumer 开始创建kafka订阅者
 func NewKafkaConsumer(kafka_host string) {
@@ -112,6 +50,9 @@ func NewKafkaConsumer(kafka_host string) {
 	//config.Consumer.Group.Heartbeat.Interval  = 1 * time.Second
 	//配置偏移量
 	config.Consumer.Offsets.Initial = sarama.OffsetNewest
+	config.Net.DialTimeout = 10 * time.Second
+	config.Net.ReadTimeout = 10 * time.Second
+	config.Net.WriteTimeout = 10 * time.Second
 	//开始创建订阅者
 	consumer := Consumer{
 		ready: make(chan bool),
@@ -121,13 +62,16 @@ func NewKafkaConsumer(kafka_host string) {
 	//创建订阅者群，集群地址发布者代码里已定义
 	client, err := sarama.NewConsumerGroup([]string{kafka_host}, group, config)
 	if err != nil {
-		logger.Error("创建kafka消费者失败，", err)
+		logger.Fatal("创建kafka消费者失败，", err)
 	}
 
 	//创建同步组
 	var wg sync.WaitGroup
 	wg.Add(1)
 	go func() {
+		// 重试次数
+		defaultRetries, _ := conf.CFG.Section("client").Key("kafka_retry").Int()
+		count := defaultRetries
 		defer wg.Done()
 		for {
 			/**
@@ -136,14 +80,25 @@ func NewKafkaConsumer(kafka_host string) {
 			  需要重新创建`订阅者`会话以获得新的声明
 			  所以这里把订阅者放在了循环体内
 			*/
-			if err := client.Consume(ctx, strings.Split(topics, ","), &consumer); err != nil {
-				logger.Fatal("kafka消费者错误 ", err)
+			err := client.Consume(ctx, strings.Split(topics, ","), &consumer)
+			if err != nil {
+				logger.Error("kafka消费者错误 重试次数：", count, "  err:", err)
+				count--
+				time.Sleep(time.Second * 2)
+				if count == 0 {
+					return
+				}
+			} else if count < defaultRetries {
+				logger.Debug("kafka恢复，重置重试次数...")
+				count = defaultRetries
 			}
+
 			// 检查上下文是否被取消，收到取消信号应当立刻在本协程中取消循环
 			if ctx.Err() != nil {
 				logger.Error("ctx.Err() != nil")
 				return
 			}
+
 			//获取订阅者准备就绪信号
 			consumer.ready = make(chan bool)
 		}
@@ -168,9 +123,10 @@ func NewKafkaConsumer(kafka_host string) {
 	wg.Wait()
 	//关闭客户端
 	if err = client.Close(); err != nil {
-		logger.Fatal("关闭kafka消费者出现错误 ", err)
+		logger.Error("关闭kafka消费者出现错误 ", err)
 	}
-	logger.Error("\\\\\\\\\\\\\\\\\\\\\\\\\\")
+	DeathKafka <- true
+	return
 }
 
 // Consumer 重写订阅者，并重写订阅者的所有方法
@@ -194,7 +150,7 @@ func (consumer *Consumer) Cleanup(sarama.ConsumerGroupSession) error {
 func (consumer *Consumer) ConsumeClaim(session sarama.ConsumerGroupSession, claim sarama.ConsumerGroupClaim) error {
 	for message := range claim.Messages() {
 		//log.Printf("Message claimed: value = %s, timestamp = %v, topic = %s", string(message.Value), message.Timestamp, message.Topic)
-		var submission Submission
+		var submission structs.Submission
 		err := json.Unmarshal([]byte(string(message.Value)), &submission)
 		if err != nil {
 			logger.Error(err)

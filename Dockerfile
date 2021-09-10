@@ -15,7 +15,7 @@ RUN apt-get install golang -y
 
 ENV GOPROXY https://goproxy.cn,direct
 ENV GO111MODULE on
-
+ENV JUDGERIP 192.168.128.0:7999
 
 #工作目录作目录
 WORKDIR $GOPATH/src/unioj
