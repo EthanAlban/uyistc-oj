@@ -42,6 +42,10 @@ type Ret struct {
 // CheckJudgerHealth 判断judgeserver的健康状态
 func CheckJudgerHealth() {
 	judgers := *(models.NewJudger().GetAllJudger())
+	if len(judgers) == 0 {
+		logger.Warn("当前系统没有可用的判题器...")
+		return
+	}
 	//judgers := strings.Split(conf.GetStringConfig("judgeserver_hosts"), ",")
 	logger.Debug("[6] INFO judger健康检测启动...")
 	var wg sync.WaitGroup

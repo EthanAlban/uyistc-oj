@@ -1,6 +1,8 @@
 package models
 
-import "github.com/wonderivan/logger"
+import (
+	"github.com/wonderivan/logger"
+)
 
 //判题器模型
 
