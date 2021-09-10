@@ -17,7 +17,11 @@
               <i class="el-icon-success"></i>
             </span>
           </div>
-          <div v-if="scope.row.my_status===null" title="未作"></div>
+          <div v-if="scope.row.my_status===-3" title="未作">
+			  <span style="color:while;">
+			    <i class="el-icon-info"></i>
+			  </span>
+		  </div>
           <div v-if="scope.row.my_status===-2" title="编译错误">
             <span style="color:red;">
               <i class="el-icon-error"></i>
@@ -123,10 +127,11 @@ export default {
       this.$problem_axios.ProblemListPage(this.offset, this.limit).then(res => {
         this.selfLog(res)
         if (res.errcode === 200) {
-          this.total = res.data.length
-          this.problems_list = res.data
+          this.total = res.data.problems.length
+          this.problems_list = res.data.problems
 		  for(let problem of this.problems_list){
 			  problem['pass_rate'] = parseFloat(((problem.AcceptSubmissions / problem.TotalSubmissions)*100).toFixed(2))
+			  problem['my_status'] = res.data.results[problem["Pid"]]
 		  }
         }
       })

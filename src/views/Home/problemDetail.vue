@@ -53,7 +53,7 @@
 				<el-select v-model="theme" placeholder="请选择" class="selectTheme">
 					<el-option v-for="item in themes" :key="item" :label="item" :value="item"></el-option>
 				</el-select>
-				 <el-button type="primary" round @click="recoverInit">恢复模板</el-button>
+				<el-button type="primary" round @click="recoverInit">恢复模板</el-button>
 			</div>
 
 			<!-- <codemirror class="codeEditor" ref="cmEditor" :value="code" :options="cmOptions" @ready="onCmReady"
@@ -67,16 +67,18 @@
 
 		<!-- -2编译错误 -1答案错误 0正确 1计算超时  2超时 3内存超过 4运行时错误 5传送...  6判题中...  7部分正确 -->
 		<el-drawer title="提交结果" :visible.sync="drawer" append-to-body destroy-on-close direction="btt"
-			:before-close="handleClose" style="width:60%;marginLeft:39.8%">
-			<el-tag v-if="submission_status==='编译错误'" type="danger" effect="dark">{{submission_status}}</el-tag>
-			<el-tag v-if="submission_status==='答案错误'" type="danger" effect="dark">{{submission_status}}</el-tag>
-			<el-tag v-if="submission_status==='正确'" type="success" effect="dark">{{submission_status}}</el-tag>
-			<el-tag v-if="submission_status==='计算超时'" type="info" effect="dark">{{submission_status}}</el-tag>
-			<el-tag v-if="submission_status==='超时'" type="info" effect="dark">{{submission_status}}</el-tag>
-			<el-tag v-if="submission_status==='内存超过'" type="info" effect="dark">{{submission_status}}</el-tag>
-			<el-tag v-if="submission_status==='运行时错误'" type="success" effect="dark">{{submission_status}}</el-tag>
-			<el-tag v-if="submission_status==='传送...'" type="info" effect="dark">{{submission_status}}</el-tag>
-			<el-tag v-if="submission_status==='判题中...'" type="info" effect="dark">{{submission_status}}</el-tag>
+			:before-close="handleClose" style="width:80%;marginLeft:20%">
+			<el-tag style="marginLeft:5%" v-if="submission_status==='编译错误'" type="danger" effect="dark">{{submission_status}}</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='答案错误'" type="danger" effect="dark">{{submission_status}}</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='正确'" type="success" effect="dark">{{submission_status}}</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='计算超时'" type="info" effect="dark">{{submission_status}}</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='超时'" type="info" effect="dark">{{submission_status}}</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='内存超过'" type="info" effect="dark">{{submission_status}}</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='运行时错误'" type="success" effect="dark">{{submission_status}}</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='传送...'" type="info" effect="dark">{{submission_status}}</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='判题中...'" type="info" effect="dark">{{submission_status}}</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='服务器响应超时请重试提交...'" type="info" effect="dark">{{submission_status}}
+			</el-tag>
 			<el-tag v-if="submission_status==='部分正确'" type="warning" effect="dark">{{submission_status}}</el-tag>
 			<br />
 			<br />
@@ -107,7 +109,9 @@
 		data() {
 			return {
 				// 初次加载代码标记
-				InitLoadCode:false,
+				InitLoadCode: false,
+				//  重复提交代码计数器
+				submissionReply: 0,
 				tag_types: ['info', 'warning', 'danger', '', 'success'],
 				drawer: false,
 				problbemDetail: {},
@@ -130,7 +134,7 @@
 					theme: 'monokai',
 					lineNumbers: true,
 					line: true,
-					smartIndent:true,
+					smartIndent: true,
 					indentUnit: 2
 					// more CodeMirror options...
 				},
@@ -140,9 +144,7 @@
 				err_info: '',
 				score: '',
 				option: {
-					tooltip: {
-						trigger: 'item'
-					},
+					tooltip: { trigger: 'item' },
 					legend: {
 						top: '5%',
 						left: 'center'
@@ -191,9 +193,7 @@
 					let obj = {
 						name: keyMap.get(key),
 						value: this.problbemDetail.statistic_info[key],
-						itemStyle: {
-							color: colorMap.get(key)
-						}
+						itemStyle: { color: colorMap.get(key) }
 					}
 					this.option.series[0].data.push(obj)
 				}
@@ -216,9 +216,10 @@
 						})
 					}
 					this.problbemDetail = res.data.problem
+					this.problbemDetail['templates'] = res.data.templates
 					this.InitLoadCode = true
 					// 检查是否有前置的代码 有的话就不刷掉当前的代码
-					let cookie_code =this.$cookies.get("judge_code") 
+					let cookie_code = this.$cookies.get('judge_code' + this.problbemDetail.Pid)
 					if (cookie_code === null) {
 						this.selfLog('无前置代码')
 						this.code = this.problbemDetail.TemplateC
@@ -233,7 +234,7 @@
 						lans.push(key)
 					}
 					this.problbemDetail['languages'] = lans
-					this.problbemDetail['template'] = res.data.templates
+
 					this.$problem_axios.GetProblemTagsById(this.problbemDetail.Pid).then(res => {
 						this.problbemDetail['tags'] = res.data
 						this.selfLog(this.problbemDetail)
@@ -264,25 +265,24 @@
 			},
 			//切换语言换模板
 			changeModel(chosen_lan) {
+				this.language = chosen_lan
 				this.selfLog(chosen_lan)
 				// this.selfLog(this.problbemDetail.template)
-				this.code = this.problbemDetail.template[chosen_lan]
+				this.code = this.problbemDetail.templates[chosen_lan]
 			},
 			//编辑区域监听
 			onCmCodeChange(newCode) {
 				this.code = newCode
-				if (!this.InitLoadCode) {
-					this.$cookies.set("judge_code",newCode)
-					this.selfLog("存储cookie")
-					this.selfLog(newCode)
-				}
-				this.InitLoadCode = false
-				// 将用户编辑过的代码存入cookie中
-				// newCode = this.encodeUtf8(newCode)
+				this.$cookies.set('judge_code' + this.problbemDetail.Pid, newCode)
+				this.selfLog('存储cookie')
+				this.selfLog(newCode)
 			},
 			// 恢复默认模板代码
-			recoverInit(){
-				this.code = this.problbemDetail.template["C"]
+			recoverInit() {
+				this.selfLog(this.problbemDetail)
+				this.selfLog("当前语言：")
+				this.selfLog(this.language)
+				this.code = this.problbemDetail.templates[this.language]
 			},
 			// 提交代码
 			submission() {
@@ -313,7 +313,6 @@
 			},
 			// 提交代码之后定时查询提交的状态
 			getSubmissionDetail(problem_id) {
-				const that = this
 				// 先查有没有对应的提交
 				this.$problem_axios.IsSubmissionExsit(this.submission_id).then(res => {
 					// 提交存在
@@ -322,48 +321,64 @@
 					if (res.errcode === 200) {
 						this.selfLog('启动定时任务')
 						// 需要设置定时一秒去轮询提交的submission状态 在页面展示之
-						that.setInterval_id = setInterval(() => {
-							this.$problem_axios.GetSubmissionFinal(that.submission_id).then(res => {
+						clearInterval(this.setInterval_id)
+						this.setInterval_id = setInterval(() => {
+							this.$problem_axios.GetSubmissionFinal(this.submission_id).then(res => {
 								this.selfLog(res)
 								if (res.errcode === 200) {
 									// 更新状态完成就清楚定时任务
 									let result_ = res.data.Result
 									if (result_ === -2) {
-										that.submission_status = '编译错误'
+										this.submission_status = '编译错误'
 									} else if (result_ === -1) {
-										that.submission_status = '答案错误'
+										this.submission_status = '答案错误'
 									} else if (result_ === -0) {
-										that.submission_status = '正确'
+										this.submission_status = '正确'
 									} else if (result_ === 1) {
-										that.submission_status = '计算超时'
+										this.submission_status = '计算超时'
 									} else if (result_ === 2) {
-										that.submission_status = '超时'
+										this.submission_status = '超时'
 									} else if (result_ === 3) {
-										that.submission_status = '内存超过'
+										this.submission_status = '内存超过'
 									} else if (result_ === 4) {
-										that.submission_status = '运行时错误'
+										this.submission_status = '运行时错误'
 									} else if (result_ === 5) {
-										that.submission_status = '系统错误'
+										this.submission_status = '系统错误'
 									} else if (result_ === 6) {
-										that.submission_status = '传送...'
+										this.submission_status = '传送...'
 									} else if (result_ === 7) {
-										that.submission_status = '判题中...'
+										this.submission_status = '判题中...'
 									} else if (result_ === 8) {
-										that.submission_status = '部分正确'
+										this.submission_status = '部分正确'
 									}
-									if (!(res.data.Result === 6 || res.data.Result === 7 || res
-											.data.Result === -3)) {
-										that.err_info = res.data.ErrInfo
-										clearInterval(that.setInterval_id)
+									if (!(res.data.Result === 6 || res.data.Result === 7)) {
+										this.err_info = res.data.ErrInfo
+										clearInterval(this.setInterval_id)
 									}
-								} else {
-									this.$message({
-										message: '更新提交状态失败',
-										type: 'warning'
-									})
+									this.selfLog('查询结束，清除定时任务')
+									clearInterval(this.setInterval_id)
+								} else if (res.errcode === 202 || res.errcode == 203) {
+									this.submission_status = '判题中...'
+									this.selfLog(this.submissionReply)
+									this.submissionReply++
+									// 超过二十次就重新提交一次
+									if (this.submissionReply > 20) {
+										clearInterval(this.setInterval_id)
+										this.$message({
+											message: '更新提交状态失败，请重新提交',
+											type: 'warning'
+										})
+										this.submission_status = '服务器响应超时请重试提交...'
+										this.submissionReply = 0
+									}
+								}
+								// else if (res.errcode == 203) {
+								// 被服务器限流
+								else {
+									clearInterval(that.setInterval_id)
 								}
 							})
-						}, 1000)
+						}, 3000)
 					}
 				})
 			},

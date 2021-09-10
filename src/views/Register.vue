@@ -49,106 +49,106 @@
 </template>
 <script>
 	export default {
-		name: "Register",
-		
+		name: 'Register',
+
 		data() {
 			let isEmail = s => {
 				return /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/.test(
 					s
-				);
-			};
+				)
+			}
 			let validateEmail = (rule, value, callback) => {
 				if (!isEmail(value)) {
-					callback(new Error("邮箱格式错误"));
+					callback(new Error('邮箱格式错误'))
 				} else {
-					callback();
+					callback()
 				}
-			};
+			}
 			let validatePass = (rule, value, callback) => {
-				if (value === "") {
-					callback(new Error("请输入密码"));
+				if (value === '') {
+					callback(new Error('请输入密码'))
 				} else {
-					if (this.form.checkPass !== "") {
-						this.$refs.ruleForm.validateField("checkPass");
+					if (this.form.checkPass !== '') {
+						this.$refs.ruleForm.validateField('checkPass')
 					}
-					callback();
+					callback()
 				}
-			};
+			}
 			let validatePass2 = (rule, value, callback) => {
-				if (value === "") {
-					callback(new Error("请再次输入密码"));
+				if (value === '') {
+					callback(new Error('请再次输入密码'))
 				} else if (value !== this.form.password) {
-					callback(new Error("两次输入密码不一致!"));
+					callback(new Error('两次输入密码不一致!'))
 				} else {
-					callback();
+					callback()
 				}
-			};
+			}
 			return {
 				bg: [false, false, false, false, false, false, false, false, false, false, false, false],
 				form: {
-					username: "",
-					password: "",
-					checkPass: "",
-					email: "",
-					captcha_str: "",
+					username: '',
+					password: '',
+					checkPass: '',
+					email: '',
+					captcha_str: '',
 					loading: false
 				},
 				rules: {
 					password: [{
 						validator: validatePass,
-						trigger: "blur"
+						trigger: 'blur'
 					}],
 					checkPass: [{
 						validator: validatePass2,
-						trigger: "blur"
+						trigger: 'blur'
 					}],
 					email: [{
 							required: true,
-							message: "邮箱不能为空",
-							trigger: "blur"
+							message: '邮箱不能为空',
+							trigger: 'blur'
 						},
 						{
 							validator: validateEmail,
-							trigger: "blur"
+							trigger: 'blur'
 						}
 					]
 				},
-				captcha: "",
-				captchaId: ""
-			};
+				captcha: '',
+				captchaId: ''
+			}
 		},
 		beforeMount() {
-			let month = new Date().getMonth(); //获取当前月份(0-11,0代表1月)
-			this.bg[month] = true;
+			let month = new Date().getMonth() //获取当前月份(0-11,0代表1月)
+			this.bg[month] = true
 			// 获取验证码图片
 			this.get_captcha_img()
 		},
 		mounted() {
-		
+
 		},
 		methods: {
 			gotoLoginPage() {
-				this.$router.push("/login");
+				this.$router.push('/login')
 			},
 			get_captcha_img() {
 				this.$captcha_axios.NewCaptId().then(res => {
-					this.captcha = "http://192.168.128.0:8666/captcha/" + res.CaptchaId + ".png"
+					this.captcha = 'http://192.168.128.0:8666/captcha/' + res.CaptchaId + '.png'
 					this.captchaId = res.CaptchaId
-					this.selfLog(this.captchaId,"----" , res.CaptchaId)
+					this.selfLog(this.captchaId, '----', res.CaptchaId)
 				})
 			},
 			// 先校验一把表单的字段合法性  和  验证码是不是对的 
 			submitForm(formName) {
-				this.form.loading = true;
+				this.form.loading = true
 				this.$refs[formName].validate(valid => {
 					if (valid) {
 						this.selfLog({
-							"captchaId": this.captchaId,
-							"captchaSolution": this.form.captcha_str
+							'captchaId': this.captchaId,
+							'captchaSolution': this.form.captcha_str
 						})
 						this.$captcha_axios.VerifyCaptcha({
-							"captchaId": this.captchaId,
-							"captchaSolution": this.form.captcha_str
+							'captchaId': this.captchaId,
+							'captchaSolution': this.form.captcha_str
 						}).then(res => {
 							this.selfLog(res)
 							if (res.errcode === 200) {
@@ -157,7 +157,7 @@
 								this.$message({
 									message: '验证码错误',
 									type: 'warning'
-								});
+								})
 								this.form.loading = false
 							}
 						})
@@ -165,45 +165,45 @@
 						this.$message({
 							message: '请检查字段合法性',
 							type: 'warning'
-						});
-						this.form.loading = false;
-						return false;
+						})
+						this.form.loading = false
+						return false
 					}
-				});
+				})
 			},
 			register(type) {
 				this.get_captcha_img()
 				this.$user_axios.Register({
-					"UserName": this.form.username,
-					"Password": this.form.password,
-					"Email":this.form.email
-				}).then(res=>{
+					'UserName': this.form.username,
+					'Password': this.form.password,
+					'Email': this.form.email
+				}).then(res => {
 					this.selfLog(res)
-					if(res.errcode===205){
+					if (res.errcode === 205) {
 						this.$message({
 							message: '该用户名已经被注册',
 							type: 'warning'
-						});
-					}else if(res.errcode===206){
+						})
+					} else if (res.errcode === 206) {
 						this.$message({
 							message: '该email已经被注册',
 							type: 'warning'
-						});
+						})
 					}
 				})
 				this.form.loading = false
 			},
 			register_msg(type) {
-				if (type === "老师") {
+				if (type === '老师') {
 					this.$notify({
-						title: "审核通知",
-						message: "尊敬的老师您好，注册老师账号需审核，请确保您的邮箱正确",
-						type: "warning"
-					});
+						title: '审核通知',
+						message: '尊敬的老师您好，注册老师账号需审核，请确保您的邮箱正确',
+						type: 'warning'
+					})
 				}
 			}
 		}
-	};
+	}
 </script>
 
 <style lang="scss" scoped>

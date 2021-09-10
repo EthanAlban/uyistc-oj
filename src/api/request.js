@@ -65,6 +65,7 @@ instance.interceptors.response.use(response => {
 		return Promise.resolve(response)
 	}
 }, error => {
+	selfLog(error)
 	// const resCode = error.response.status;
 	// switch (resCode) {
 	//   case 401:
