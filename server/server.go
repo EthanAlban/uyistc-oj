@@ -2,6 +2,7 @@ package server
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	uuid "github.com/satori/go.uuid"
 	"github.com/wonderivan/logger"
@@ -179,6 +180,14 @@ func (*Judger) CompileSourceFile(filepath string) error {
 		cmd = exec.Command("gcc", "../"+filepath, "-o", "../"+strings.Split(filepath, ".")[0])
 	} else if JUDGER.Language == "Golang" {
 		cmd = exec.Command("go", "build", "-o", "../"+strings.Split(filepath, ".")[0], "../"+filepath)
+	} else if JUDGER.Language == "C++" {
+		cmd = exec.Command("g++", "-o", "../"+strings.Split(filepath, ".")[0], "../"+filepath)
+	} else {
+		//	不识别的编程语言
+		JUDGER.JudgeInfo = "尚未支持所选的编程语言..."
+		JUDGER.FinalStat = -2
+		logger.Warn("[3] 编译文件失败:%s\n", "尚未支持所选的编程语言")
+		return errors.New("尚未支持所选的编程语言")
 	}
 
 	out, err := cmd.CombinedOutput()
@@ -186,11 +195,9 @@ func (*Judger) CompileSourceFile(filepath string) error {
 		JUDGER.JudgeInfo = strings.Replace(string(out), filepath, "submissionFile ", -1)
 		JUDGER.FinalStat = -2
 		logger.Warn("[3] 编译文件失败:%s\n", string(out))
-		//fmt.Printf("[3] 编译文件失败:%s\n", string(out))
 		return err
 	}
 	logger.Info("[3] 编译文件成功... %s\n", string(out))
-	//fmt.Printf("[3] 编译文件成功... %s\n", string(out))
 	return err
 }
 

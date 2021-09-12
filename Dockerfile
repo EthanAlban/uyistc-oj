@@ -6,7 +6,7 @@ MAINTAINER ZhangLianjun "2814634354@qq.com"
 # 修改国内源
 RUN sed -i s/archive.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list && sed -i s/security.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install gcc libc6-dev git lrzsz inetutils-ping curl -y
+RUN apt-get install  gcc  build-essential libc6-dev git lrzsz inetutils-ping curl -y
 #禁止交互
 ENV DEBIAN_FRONTEND=noninteractive
 
