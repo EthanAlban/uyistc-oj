@@ -1,6 +1,12 @@
 package models
 
-import "time"
+import (
+	"encoding/json"
+	"github.com/wonderivan/logger"
+	"strconv"
+	"time"
+	"unioj/models/redisOP"
+)
 
 type Submission struct {
 	SubmissionId string    `orm:"column(submission_id);pk"`
@@ -42,4 +48,48 @@ func (sb *Submission) GetSubmissionByID(submissionID string) (error, Submission)
 	var submission Submission
 	err := O.QueryTable("submission").Filter("SubmissionId", submissionID).One(&submission)
 	return err, submission
+}
+
+// GetProblemStatusLogin 通过UserId和问题id查询问题最后的最好的提交状态
+func (sb *Submission) GetProblemStatusLogin(userId, pid int) int {
+	var submissions []Submission
+	_, err := O.QueryTable("submission").Filter("problem_id", pid).Filter("user_id", userId).OrderBy("create_time").All(&submissions)
+	if err != nil {
+		logger.Error("查询用户提交列表失败，err:", err)
+	}
+	if len(submissions) == 0 {
+		return -3
+	}
+	for i := 0; i < len(submissions); i++ {
+		if submissions[i].Result == 0 {
+			return 0
+		}
+	}
+	return submissions[0].Result
+}
+
+type GroupBy struct {
+	Result string `json:"result"`
+	Nums   int    `json:"nums"`
+}
+
+// GetSubmissionStaticForProblem 获取某个问题的通过统计信息
+func (sb *Submission) GetSubmissionStaticForProblem(pid int) []GroupBy {
+	value, err := redisOP.RedisGetKey(strconv.Itoa(pid) + "_submission_static")
+	var subStastic []GroupBy
+	if err != nil {
+		// 查数据库
+		_, err := O.Raw("SELECT result,count(*) as nums from submission WHERE problem_id=? GROUP BY result order by result", pid).QueryRows(&subStastic)
+		if err != nil {
+			logger.Error("查询提交统计信息失败,err:", err)
+			return nil
+		}
+		// 存入redis
+		bytes, _ := json.Marshal(subStastic)
+		redisOP.RedisSetKeyWithTimeout(strconv.Itoa(pid)+"_submission_static", string(bytes), 120)
+		logger.Debug("查询提交统计信息成功")
+		return subStastic
+	}
+	json.Unmarshal([]byte(value), &subStastic)
+	return subStastic
 }

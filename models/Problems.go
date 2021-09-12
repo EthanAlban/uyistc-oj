@@ -1,7 +1,11 @@
 package models
 
 import (
+	"fmt"
+	"github.com/beego/beego/v2/client/orm"
 	"github.com/wonderivan/logger"
+	"strconv"
+	"unioj/models/redisOP"
 )
 
 // Problems 记录所有问题的基本信息的表
@@ -65,4 +69,66 @@ func (p *Problems) GetProblemByTag(tagname string) *[]Problems {
 	var problems []Problems
 	O.QueryTable("problems").Filter("problem_type", NewTags().GetTagObjectByTagName(tagname)).All(&problems)
 	return &problems
+}
+
+// IncProblemAcTimes 增加问题通过次数
+func (p *Problems) IncProblemAcTimes(pid int) {
+	qs := O.QueryTable("problems").Filter("pid", pid)
+	_, err := qs.Update(orm.Params{
+		"accept_submissions": orm.ColValue(orm.ColAdd, 1),
+	})
+	if err != nil {
+		logger.Error("增加通过次数失败：", err)
+	}
+	var problem Problems
+	err = qs.One(&problem)
+	if err != nil {
+		logger.Error(err)
+	}
+	acceptSubmissions := problem.AcceptSubmissions
+	// 设置redis
+	err = redisOP.RedisSetKeyWithTimeout("problem_"+strconv.Itoa(pid)+"_accept_submissions", strconv.Itoa(acceptSubmissions), 120)
+	if err != nil {
+		logger.Error("存储增加问题通过redis失败  ", err)
+	}
+	logger.Trace("增加问题通过" + strconv.Itoa(pid) + " 成功")
+}
+
+// IncProblemSubTimes 增加问题提交次数
+func (p *Problems) IncProblemSubTimes(pid int) {
+	qs := O.QueryTable("problems").Filter("pid", pid)
+	_, err := qs.Update(orm.Params{
+		"TotalSubmissions": orm.ColValue(orm.ColAdd, 1),
+	})
+	if err != nil {
+		logger.Error("增加提交提交失败：", err)
+	}
+	var problem Problems
+	qs.One(&problem)
+	totalSubmissions := problem.TotalSubmissions
+	// 设置redis
+	err = redisOP.RedisSetKeyWithTimeout("problem_"+strconv.Itoa(pid)+"_total_submissions", strconv.Itoa(totalSubmissions), 120)
+	if err != nil {
+		logger.Error("存储增加问题提交redis失败  ", err)
+	}
+	logger.Trace("增加问题提交" + strconv.Itoa(pid) + " 成功")
+}
+
+// GetAcSubTimes 获取ac和提交次数
+func (p *Problems) GetAcSubTimes(pid int) (int, int) {
+	ac, err := redisOP.RedisGetKey("problem_" + strconv.Itoa(pid) + "_accept_submissions")
+	sub, err := redisOP.RedisGetKey("problem_" + strconv.Itoa(pid) + "_total_submissions")
+	if err != nil {
+		logger.Error("获取ac_sub次数失败:", err)
+		fmt.Println("--------------------------------------  ", pid)
+		problem, _ := NewProblems().GetProblemDetailById(pid)
+		logger.Debug("数据库加载sub_ac次数")
+		err = redisOP.RedisSetKeyWithTimeout("problem_"+strconv.Itoa(pid)+"_total_submissions", strconv.Itoa(problem.TotalSubmissions), 120)
+		err = redisOP.RedisSetKeyWithTimeout("problem_"+strconv.Itoa(pid)+"_accept_submissions", strconv.Itoa(problem.AcceptSubmissions), 120)
+		return problem.AcceptSubmissions, problem.TotalSubmissions
+	}
+	logger.Trace("缓存加载sub_ac次数")
+	ac_, _ := strconv.Atoi(ac)
+	sub_, _ := strconv.Atoi(sub)
+	return ac_, sub_
 }

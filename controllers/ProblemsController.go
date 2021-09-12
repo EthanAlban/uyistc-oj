@@ -10,18 +10,35 @@ type ProblemsController struct {
 	BaseController
 }
 
-// GetPagesProblems 分页查询题目列表
+// GetPagesProblems 分页查询题目列表  得到列表的同时通过用户id查询当前用户是否已经通过这个题目
 func (this *ProblemsController) GetPagesProblems() {
+	// 获取当前的登陆用户
+	var userId int
+	userLogin := this.Ctx.Input.CruSession.Get("user_login")
+	if userLogin != nil {
+		userId = userLogin.(models.User).UId
+	} else {
+		userId = -1
+	}
 	pros, err := models.NewProblems().GetPagesProblems(10, 0)
 	if err != nil {
 		logger.Error(err)
 		//fmt.Println(err)
 	}
+	// map[问题id]问题状态
+	problemStatus := make(map[int]int)
 	for i := 0; i < len(*pros); i++ {
 		models.O.LoadRelated(&((*pros)[i]), "ProblemType")
 		(*pros)[i].Uid, _ = models.NewUser().GetUserByUid((*pros)[i].Uid.UId)
+		if userId >= 0 {
+			// 加载缓存用户做题信息
+			problemStatus[(*pros)[i].Pid] = models.NewSubmission().GetProblemStatusLogin(userId, (*pros)[i].Pid)
+		}
 	}
-	this.JsonResult(200, "问题列表加载成功", pros)
+	retmap := make(map[string]interface{})
+	retmap["results"] = problemStatus
+	retmap["problems"] = pros
+	this.JsonResult(200, "问题列表加载成功", retmap)
 }
 
 // GetProblemDetailById 根据问题id查询单个问题的详情
@@ -85,4 +102,14 @@ func (this *ProblemsController) GetProblemTagsById() {
 	pid, _ := strconv.Atoi(this.Ctx.Input.Query("pid"))
 	tags := models.NewProblemTags().GetProblemTagsById(pid)
 	this.JsonResult(200, "tags加载完成", tags)
+}
+
+// GetProblemAcSubTimes  获取对应问题的通过次数和提交次数
+func (this *ProblemsController) GetProblemAcSubTimes() {
+	pid, _ := strconv.Atoi(this.Ctx.Input.Query("pid"))
+	ac, sub := models.NewProblems().GetAcSubTimes(pid)
+	retMap := make(map[string]int)
+	retMap["ac"] = ac
+	retMap["submissions"] = sub
+	this.JsonResult(200, "获取问题提交次数成功", retMap)
 }

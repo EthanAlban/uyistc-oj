@@ -22,3 +22,7 @@ func TestGetPagesProblems(t *testing.T) {
 func TestGetProblemByTag(t *testing.T) {
 	logger.Debug(*(models.NewProblems().GetProblemByTag("快慢指针")))
 }
+
+func TestGetAcSubTimes(t *testing.T) {
+	fmt.Println(models.NewProblems().GetAcSubTimes(1))
+}

@@ -28,6 +28,17 @@ func RedisSetKey(keyname string, keyval string) error {
 	return err
 }
 
+// RedisSetKeyWithTimeout 设置有过期时间的key
+func RedisSetKeyWithTimeout(keyname, keyval string, expireSec int) error {
+	Conn, _ = redis.Dial("tcp", conf.GetStringConfig("redis_host"))
+	_, err := Conn.Do("set", keyname, keyval, "EX", expireSec)
+	if err != nil {
+		logger.Error(err)
+		return err
+	}
+	return err
+}
+
 func RedisGetKey(keyname string) (string, error) {
 	Conn, _ = redis.Dial("tcp", conf.GetStringConfig("redis_host"))
 	reply, err := Conn.Do("get", keyname)
@@ -38,6 +49,7 @@ func RedisGetKey(keyname string) (string, error) {
 	return str, err
 }
 
+// RedisSetExpireLimit 限制读取api单位时间内读取的次数  limit:时间段内访问上限  expireSec:时间段长度
 func RedisSetExpireLimit(keyname string, expireSec, limit int) (bool, error) {
 	Conn, _ = redis.Dial("tcp", conf.GetStringConfig("redis_host"))
 	//如果键不存在设置新的

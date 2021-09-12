@@ -6,6 +6,7 @@ import (
 	uuid "github.com/satori/go.uuid"
 	"github.com/wonderivan/logger"
 	"math/rand"
+	"strconv"
 	"time"
 	"unioj/models"
 	"unioj/models/redisOP"
@@ -55,6 +56,8 @@ func (this *SubmissionController) SendTaskToKafka() {
 	task.UserName = user.UserName
 	task.UserId = &user
 	err = models.NewSubmission().InsertNewSubmission(task)
+	// 增加提交次数
+	models.NewProblems().IncProblemSubTimes(task.ProblemId.Pid)
 	if err != nil {
 		logger.Error("插入submission失败,请稍候重试... err:", err)
 		//logger.LogError("插入submission失败,请稍候重试... err:" + err.Error())
@@ -113,12 +116,23 @@ func (this *SubmissionController) GetFinalInfoOfSubmission() {
 			this.JsonResult(204, "没有对应的提交...")
 			logger.Warn(err)
 		} else {
-			this.JsonResult(205, err.Error())
+			this.JsonResult(205, "服务器错误："+err.Error())
 			logger.Error(err)
 		}
 	}
 	if submision.Result == -3 {
 		this.JsonResult(202, "判题中...")
 	}
+	if submision.Result == 0 {
+		// 增加通过次数
+		models.NewProblems().IncProblemAcTimes(submision.ProblemId.Pid)
+	}
 	this.JsonResult(200, "OK", submision)
+}
+
+// GetSubmissionStaticForProblem 获取某个问题的通过统计信息
+func (this *SubmissionController) GetSubmissionStaticForProblem() {
+	pid, _ := strconv.Atoi(this.Ctx.Input.Query("pid"))
+	value := models.NewSubmission().GetSubmissionStaticForProblem(pid)
+	this.JsonResult(200, "查询问题提交统计情况成功", value)
 }
