@@ -38,5 +38,14 @@ export default {
 	// 查询提交的最新状态
 	GetSubmissionFinal: submissionID => {
 		return Get('submission/get_submission_final?submissionID=' + submissionID)
+	},
+	// 查询问题的提交次数
+	GetAcSubTimes: pid => {
+		return Get('problems/get_problem_ac_sub_times?pid=' + pid)
+	},
+	// 查询问题提交情况的统计信息
+	GetSubmissionStaticForProblem: pid => {
+		return Get('submission/get_submission_static_for_problem?pid=' + pid)
 	}
+
 }

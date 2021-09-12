@@ -8,9 +8,9 @@
 					<p style="marginLeft:10px"
 						:class="{low:problbemDetailDifficulty==='简单',mid:problbemDetailDifficulty==='中等',high:problbemDetailDifficulty==='困难'}">
 						{{ problbemDetailDifficulty }}
-					</p>
+					</p> 
 					<el-tag style="margin:10px 0 10px 10px" :type="tag_types[idx%5]"
-						v-for="(tag,idx) in problbemDetail.tags" :key="tag">{{tag}}</el-tag>
+						v-for="(tag,idx) in tags" :key="tag">{{tag}}</el-tag>
 				</div>
 			</div>
 			<el-divider>
@@ -34,9 +34,9 @@
 					</div>
 				</div>
 				<div style="marginTop:20px">
-					<span>通过次数:{{ problbemDetail.AcceptSubmissions }}</span>
+					<span>通过次数:{{ acceptSub }}</span>
 					<el-divider direction="vertical"></el-divider>
-					<span>提交次数:{{ problbemDetail.TotalSubmissions }}</span>
+					<span>提交次数:{{ totalSub }}</span>
 					<!-- 使用echarts画图 -->
 					<div id="echart-pass-rate"></div>
 				</div>
@@ -68,16 +68,35 @@
 		<!-- -2编译错误 -1答案错误 0正确 1计算超时  2超时 3内存超过 4运行时错误 5传送...  6判题中...  7部分正确 -->
 		<el-drawer title="提交结果" :visible.sync="drawer" append-to-body destroy-on-close direction="btt"
 			:before-close="handleClose" style="width:80%;marginLeft:20%">
-			<el-tag style="marginLeft:5%" v-if="submission_status==='编译错误'" type="danger" effect="dark">{{submission_status}}</el-tag>
-			<el-tag style="marginLeft:5%" v-if="submission_status==='答案错误'" type="danger" effect="dark">{{submission_status}}</el-tag>
-			<el-tag style="marginLeft:5%" v-if="submission_status==='正确'" type="success" effect="dark">{{submission_status}}</el-tag>
-			<el-tag style="marginLeft:5%" v-if="submission_status==='计算超时'" type="info" effect="dark">{{submission_status}}</el-tag>
-			<el-tag style="marginLeft:5%" v-if="submission_status==='超时'" type="info" effect="dark">{{submission_status}}</el-tag>
-			<el-tag style="marginLeft:5%" v-if="submission_status==='内存超过'" type="info" effect="dark">{{submission_status}}</el-tag>
-			<el-tag style="marginLeft:5%" v-if="submission_status==='运行时错误'" type="success" effect="dark">{{submission_status}}</el-tag>
-			<el-tag style="marginLeft:5%" v-if="submission_status==='传送...'" type="info" effect="dark">{{submission_status}}</el-tag>
-			<el-tag style="marginLeft:5%" v-if="submission_status==='判题中...'" type="info" effect="dark">{{submission_status}}</el-tag>
-			<el-tag style="marginLeft:5%" v-if="submission_status==='服务器响应超时请重试提交...'" type="info" effect="dark">{{submission_status}}
+			<el-tag style="marginLeft:5%" v-if="submission_status==='编译错误'" type="danger" effect="dark">
+				{{submission_status}}
+			</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='答案错误'" type="danger" effect="dark">
+				{{submission_status}}
+			</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='正确'" type="success" effect="dark">
+				{{submission_status}}
+			</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='计算超时'" type="info" effect="dark">
+				{{submission_status}}
+			</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='超时'" type="info" effect="dark">
+				{{submission_status}}
+			</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='内存超过'" type="info" effect="dark">
+				{{submission_status}}
+			</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='运行时错误'" type="success" effect="dark">
+				{{submission_status}}
+			</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='传送...'" type="info" effect="dark">
+				{{submission_status}}
+			</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='判题中...'" type="info" effect="dark">
+				{{submission_status}}
+			</el-tag>
+			<el-tag style="marginLeft:5%" v-if="submission_status==='服务器响应超时请重试提交...'" type="info" effect="dark">
+				{{submission_status}}
 			</el-tag>
 			<el-tag v-if="submission_status==='部分正确'" type="warning" effect="dark">{{submission_status}}</el-tag>
 			<br />
@@ -105,6 +124,7 @@
 		name: 'problemDetail',
 		mounted() {
 			this.getData()
+			this.setEchart()
 		},
 		data() {
 			return {
@@ -112,9 +132,13 @@
 				InitLoadCode: false,
 				//  重复提交代码计数器
 				submissionReply: 0,
-				tag_types: ['info', 'warning', 'danger', '', 'success'],
+				tag_types: ['info', 'warning', 'danger', 'success'],
 				drawer: false,
 				problbemDetail: {},
+				acceptSub: 0,
+				totalSub: 0,
+				statistic_info: [],
+				tags:[],
 				msg: '',
 				samples: [],
 				language: 'C',
@@ -144,7 +168,9 @@
 				err_info: '',
 				score: '',
 				option: {
-					tooltip: { trigger: 'item' },
+					tooltip: {
+						trigger: 'item'
+					},
 					legend: {
 						top: '5%',
 						left: 'center'
@@ -177,36 +203,101 @@
 		},
 		methods: {
 			setEchart() {
-				//配置做题分析数据
-				this.option.series[0].data = []
-				const keyMap = new Map([
-					['0', '通过'],
-					['-1', '超时'],
-					['-2', '编译错误']
-				])
-				const colorMap = new Map([
-					['0', '#00b8a9'],
-					['-1', '#ff2e63'],
-					['-2', '#e84545']
-				])
-				for (let key in this.problbemDetail.statistic_info) {
-					let obj = {
-						name: keyMap.get(key),
-						value: this.problbemDetail.statistic_info[key],
-						itemStyle: { color: colorMap.get(key) }
-					}
-					this.option.series[0].data.push(obj)
-				}
-				let chartDom = document.getElementById('echart-pass-rate')
-				let myChart = echarts.init(chartDom)
-				myChart.setOption(this.option, true)
+				var chartDom = document.getElementById('echart-pass-rate');
+				var myChart = echarts.init(chartDom);
+				var option;
+
+				option = {
+					tooltip: {
+						trigger: 'item'
+					},
+					legend: {
+						top: '5%',
+						left: 'center'
+					},
+					color:[],
+					series: [{
+						name: '提交统计',
+						type: 'pie',
+						radius: ['40%', '70%'],
+						avoidLabelOverlap: false,
+						itemStyle: {
+							borderRadius: 10,
+							borderColor: '#fff',
+							borderWidth: 2
+						},
+						label: {
+							show: false,
+							position: 'center'
+						},
+						emphasis: {
+							label: {
+								show: true,
+								fontSize: '40',
+								fontWeight: 'bold'
+							}
+						},
+						labelLine: {
+							show: false
+						},
+						data: []
+					}],
+				};
+				this.option = option
+				option && myChart.setOption(option);
 			},
 			handleClose(done) {
 				done()
 			},
+			setStasticPanel(pid){
+				// 获取问题提交情况统计
+				this.$problem_axios.GetSubmissionStaticForProblem(pid).then(res => {
+					this.selfLog(res)
+					this.statistic_info = res.data
+					const keyMap = new Map([
+						['4', '运行时错误'],
+						['3', '内存超过'],
+						['2', '超时'],
+						['1', '编译错误'],
+						['0', '通过'],
+						['-1', '答案错误'],
+						['-2', '编译错误'],
+						['-3', '未完成判题'],
+					])
+					const colorMap = new Map([
+						['4', '#5555ff'],
+						['3', '#ff5500'],
+						['2', '#ff5500'],
+						['1', '#aa0000'],
+						['0', '#00b8a9'],
+						['-1', '#ff2e63'],
+						['-2', '#e84545'],
+						['-3', '#550000'],
+					])
+					for (let key in this.statistic_info) {
+						let obj = {
+							name: keyMap.get(this.statistic_info[key].result),
+							value: this.statistic_info[key].nums
+						}
+						this.option.color.push(colorMap.get(this.statistic_info[key].result))
+						this.option.series[0].data.push(obj)
+					}
+					var chartDom = document.getElementById('echart-pass-rate');
+					var myChart = echarts.init(chartDom);
+					this.option && myChart.setOption(this.option);
+				})
+			},
 			async getData() {
+				this.setStasticPanel(this.$route.params.id)
+				// 用id获取问题的提交次数
+				this.$problem_axios.GetAcSubTimes(this.$route.params.id).then(res => {
+					this.selfLog(res)
+					this.acceptSub = res.data.ac
+					this.totalSub = res.data.submissions
+				})
 				// 用id获取问题详情
 				await this.$problem_axios.ProblemDetailById(this.$route.params.id).then(res => {
+					this.selfLog("获取问题详情")
 					this.selfLog(res)
 					if (res.errcode === 204) {
 						this.$router.push('/404')
@@ -225,7 +316,7 @@
 						this.code = this.problbemDetail.TemplateC
 					} else {
 						this.selfLog('检测到前置代码')
-						this.selfLog(cookie_code)
+						// this.selfLog(cookie_code)
 						this.code = cookie_code
 					}
 					// 设置可用的语言选择下拉框
@@ -236,11 +327,10 @@
 					this.problbemDetail['languages'] = lans
 
 					this.$problem_axios.GetProblemTagsById(this.problbemDetail.Pid).then(res => {
-						this.problbemDetail['tags'] = res.data
-						this.selfLog(this.problbemDetail)
+						this.selfLog("-=------=-----------")
+						this.tags = res.data
 					})
 					this.setEchart()
-
 					this.score = this.problbemDetail.total_score
 					if (this.problbemDetail.submission_number === 0) {
 						this.problbemDetail['pass_rate'] = 0
@@ -280,12 +370,14 @@
 			// 恢复默认模板代码
 			recoverInit() {
 				this.selfLog(this.problbemDetail)
-				this.selfLog("当前语言：")
+				this.selfLog('当前语言：')
 				this.selfLog(this.language)
 				this.code = this.problbemDetail.templates[this.language]
 			},
 			// 提交代码
 			submission() {
+				this.err_info = ''
+				this.submission_status = '传送...'
 				this.drawer = true
 				let params = {
 					Code: this.code,
@@ -296,8 +388,14 @@
 				this.$problem_axios.Submission(params).then(res => {
 					this.selfLog(res)
 					if (res.errcode === 200) {
+						// 用id获取问题的提交次数
+						this.$problem_axios.GetAcSubTimes(this.$route.params.id).then(res => {
+							this.selfLog(res)
+							this.acceptSub = res.data.ac
+							this.totalSub = res.data.submissions
+						})
 						this.submission_id = res.data.submissionID
-						this.getSubmissionDetail(params.problem_id, this.submission_id)
+						this.getSubmissionDetail(params.ProblemId, this.submission_id)
 					} else if (res.errcode === 204) {
 						this.$message({
 							message: '提交失败，请先登录',
@@ -312,9 +410,9 @@
 				})
 			},
 			// 提交代码之后定时查询提交的状态
-			getSubmissionDetail(problem_id) {
+			getSubmissionDetail(problem_id,submissionid) {
 				// 先查有没有对应的提交
-				this.$problem_axios.IsSubmissionExsit(this.submission_id).then(res => {
+				this.$problem_axios.IsSubmissionExsit(submissionid).then(res => {
 					// 提交存在
 					this.selfLog('查询问题存在与否:')
 					this.selfLog(res)
@@ -326,9 +424,18 @@
 							this.$problem_axios.GetSubmissionFinal(this.submission_id).then(res => {
 								this.selfLog(res)
 								if (res.errcode === 200) {
+									//  更新提交次数
+									this.selfLog("-------------------------------------"+problem_id)
+									this.$problem_axios.GetAcSubTimes(problem_id).then(res => {
+										this.selfLog(res)
+										this.acceptSub = res.data.ac
+										this.totalSub = res.data.submissions
+									})
 									// 更新状态完成就清楚定时任务
 									let result_ = res.data.Result
-									if (result_ === -2) {
+									if (result_ === -3) {
+										this.submission_status = '还没做'
+									} else if (result_ === -2) {
 										this.submission_status = '编译错误'
 									} else if (result_ === -1) {
 										this.submission_status = '答案错误'
@@ -438,7 +545,7 @@
 		.q_desc {
 			width: 30%;
 			background-color: white;
-			max-height: 60%;
+			max-height: 100%;
 			overflow-y: scroll;
 			text-align: left;
 
