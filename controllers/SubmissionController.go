@@ -136,3 +136,24 @@ func (this *SubmissionController) GetSubmissionStaticForProblem() {
 	value := models.NewSubmission().GetSubmissionStaticForProblem(pid)
 	this.JsonResult(200, "查询问题提交统计情况成功", value)
 }
+
+// GetUserSubmissions 分页获得当前用户的所有提交
+func (this *SubmissionController) GetUserSubmissions() {
+	limit, _ := strconv.Atoi(this.Ctx.Input.Query("limit"))
+	offset, _ := strconv.Atoi(this.Ctx.Input.Query("offset"))
+	userLogin := this.Ctx.Input.CruSession.Get("user_login")
+	if userLogin != nil {
+		userId := userLogin.(models.User).UId
+		submissions := models.NewSubmission().GetUserSubmissions(limit, offset, userId)
+		retmap := make(map[string]interface{})
+		for i := 0; i < len(*submissions); i++ {
+			models.O.LoadRelated(&((*submissions)[i]), "Language")
+		}
+		count := models.NewSubmission().TotalSubmissions(userId)
+		retmap["total"] = count
+		retmap["submissions"] = *submissions
+		this.JsonResult(200, "查询提交列表成功", retmap)
+	} else {
+		this.JsonResult(204, "未登录无法查看提交记录")
+	}
+}

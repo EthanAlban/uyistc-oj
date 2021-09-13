@@ -9,16 +9,19 @@ import (
 )
 
 type Submission struct {
-	SubmissionId string    `orm:"column(submission_id);pk"`
-	ProblemId    *Problems `orm:"column(problem_id);rel(fk)"`
-	CreateTime   time.Time `orm:"column(create_time)"`
-	UserId       *User     `orm:"column(user_id);rel(fk)"`
-	UserName     string    `orm:"column(username)"`
-	Code         string    `orm:"column(code)"`
-	Result       int       `orm:"column(result)"`
-	Language     *Language `orm:"column(language);rel(fk)"`
-	Score        float64   `orm:"column(score)"`
-	ErrInfo      string    `orm:"column(err_info)"`
+	SubmissionId     string    `orm:"column(submission_id);pk"`
+	ProblemId        *Problems `orm:"column(problem_id);rel(fk)"`
+	CreateTime       time.Time `orm:"column(create_time)"`
+	UserId           *User     `orm:"column(user_id);rel(fk)"`
+	UserName         string    `orm:"column(username)"`
+	Code             string    `orm:"column(code)"`
+	Result           int       `orm:"column(result)"`
+	Language         *Language `orm:"column(language);rel(fk)"`
+	Score            float64   `orm:"column(score)"`
+	ErrInfo          string    `orm:"column(err_info)"`
+	LastTestcase     string    `orm:"column(last_testcase)"`
+	LastDesireOutput string    `orm:"column(last_desire_output)"`
+	LastOutput       string    `orm:"column(last_output)"`
 }
 
 // TableName 获取对应数据库表名.
@@ -92,4 +95,21 @@ func (sb *Submission) GetSubmissionStaticForProblem(pid int) []GroupBy {
 	}
 	json.Unmarshal([]byte(value), &subStastic)
 	return subStastic
+}
+
+// GetUserSubmissions 分页查询某个用户的提交
+func (sb *Submission) GetUserSubmissions(limit int, offset int, userid int) *[]Submission {
+	var submissions []Submission
+	O.QueryTable("submission").Filter("UserId", userid).Limit(limit, offset).OrderBy("-CreateTime").All(&submissions)
+	return &submissions
+}
+
+// TotalSubmissions 获取某个用户的全部提交的数量
+func (sb *Submission) TotalSubmissions(userid int) int {
+	count, err := O.QueryTable("submission").Filter("UserId", userid).Count()
+	if err != nil {
+		logger.Error(err)
+		return 0
+	}
+	return int(count)
 }

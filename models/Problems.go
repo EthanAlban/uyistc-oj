@@ -1,6 +1,7 @@
 package models
 
 import (
+	"encoding/json"
 	"fmt"
 	"github.com/beego/beego/v2/client/orm"
 	"github.com/wonderivan/logger"
@@ -48,10 +49,20 @@ func NewProblems() *Problems {
 
 func (p *Problems) GetPagesProblems(limit, offset int) (problems *[]Problems, err error) {
 	var pros []Problems
-	_, err = O.QueryTable("problems").Limit(limit, offset).All(&pros)
+	proString, err := redisOP.RedisGetKey("problems_page_limit_" + strconv.Itoa(limit) + "_offset_" + strconv.Itoa(offset))
 	if err != nil {
-		return nil, err
+		_, err = O.QueryTable("problems").Limit(limit, offset).All(&pros)
+		if err != nil {
+			logger.Error(err)
+			return nil, err
+		}
+		str, _ := json.Marshal(pros)
+		redisOP.RedisSetKeyWithTimeout("problems_page_limit_"+strconv.Itoa(limit)+"_offset_"+strconv.Itoa(offset), string(str), 240)
+		logger.Info("数据库加载问题列表")
+		return &pros, err
 	}
+	json.Unmarshal([]byte(proString), &pros)
+	logger.Info("缓存加载问题列表")
 	return &pros, err
 }
 
@@ -131,4 +142,23 @@ func (p *Problems) GetAcSubTimes(pid int) (int, int) {
 	ac_, _ := strconv.Atoi(ac)
 	sub_, _ := strconv.Atoi(sub)
 	return ac_, sub_
+}
+
+func (p *Problems) TotalProblems() int {
+	//记录总的问题数量
+	nums, err := redisOP.RedisGetKey("total_problems_count")
+	if err != nil {
+		// 查数据库
+		count, err := O.QueryTable("problems").Count()
+		if err != nil {
+			logger.Error(err)
+			return 0
+		}
+		redisOP.RedisSetKeyWithTimeout("total_problems_count", strconv.Itoa(int(count)), 240)
+		logger.Info("查询数据库获取问题总数：", count)
+		return int(count)
+	}
+	nums_, _ := strconv.Atoi(nums)
+	logger.Info("缓存加载问题总数 ", nums_)
+	return nums_
 }

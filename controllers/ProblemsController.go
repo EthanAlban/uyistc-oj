@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"fmt"
 	"github.com/wonderivan/logger"
 	"strconv"
 	"unioj/models"
@@ -12,6 +13,9 @@ type ProblemsController struct {
 
 // GetPagesProblems 分页查询题目列表  得到列表的同时通过用户id查询当前用户是否已经通过这个题目
 func (this *ProblemsController) GetPagesProblems() {
+	limit, _ := strconv.Atoi(this.Ctx.Input.Query("limit"))
+	offset, _ := strconv.Atoi(this.Ctx.Input.Query("offset"))
+	fmt.Println("limit:", limit, " offset:", offset)
 	// 获取当前的登陆用户
 	var userId int
 	userLogin := this.Ctx.Input.CruSession.Get("user_login")
@@ -20,7 +24,7 @@ func (this *ProblemsController) GetPagesProblems() {
 	} else {
 		userId = -1
 	}
-	pros, err := models.NewProblems().GetPagesProblems(10, 0)
+	pros, err := models.NewProblems().GetPagesProblems(limit, offset)
 	if err != nil {
 		logger.Error(err)
 		//fmt.Println(err)
@@ -38,6 +42,7 @@ func (this *ProblemsController) GetPagesProblems() {
 	retmap := make(map[string]interface{})
 	retmap["results"] = problemStatus
 	retmap["problems"] = pros
+	retmap["total"] = models.NewProblems().TotalProblems()
 	this.JsonResult(200, "问题列表加载成功", retmap)
 }
 

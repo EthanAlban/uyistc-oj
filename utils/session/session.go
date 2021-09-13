@@ -14,10 +14,10 @@ func InitSession() {
 	sessionConfig := &session.ManagerConfig{
 		CookieName:      "goo",
 		EnableSetCookie: true,
-		Gclifetime:      3600,
-		Maxlifetime:     3600,
+		Gclifetime:      72000,
+		Maxlifetime:     72000,
 		Secure:          false,
-		CookieLifeTime:  3600,
+		CookieLifeTime:  72000,
 		ProviderConfig:  address,
 	}
 	beego.BConfig.WebConfig.Session.SessionProviderConfig = address
