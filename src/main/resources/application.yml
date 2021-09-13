@@ -10,7 +10,7 @@ spring:
 
 
 mybatis-plus:
-  mapper-location: classpath:mappers/**/*.xml
+  mapper-locations: classpath:mappers/**/*.xml
   type-aliases-package: com.judgeserver.oj.dao
 
 swagger:

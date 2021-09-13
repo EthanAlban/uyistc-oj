@@ -8,7 +8,6 @@ import java.util.List;
 @Mapper
 public interface TestCaseMapper {
 
-
     public void addMultipleCase(List<TestCase> list);
 
     public void addCase(TestCase testCase);
@@ -22,4 +21,5 @@ public interface TestCaseMapper {
     public HashMap queryOne(Long caseId);
 
     public void deleteMultipleCase(Long pid);
+
 }

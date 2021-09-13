@@ -23,8 +23,10 @@
         values(#{TestCaseId},#{Input},#{Output})
     </insert>
     <delete id="deleteCase" parameterType="java.lang.Long">
-        delete from testcase
-        where testcase_id = #{caseId}
+        delete question_relation,testcase from question_relation
+        join testcase
+        on question_relation.testcase_id = testcase.testcase_id
+        where question_relation.testcase_id = #{caseId}
     </delete>
     <update id="updateCase" parameterType="com.judgeserver.oj.entity.TestCase">
         update testcase
@@ -41,7 +43,7 @@
         delete question_relation,testcase from question_relation
         join testcase
         on question_relation.testcase_id = testcase.testcase_id
-        where question_relation.pid = 2
+        where question_relation.pid = #{pid}
     </delete>
     <insert id="addRelation" >
         insert into question_relation

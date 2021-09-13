@@ -31,6 +31,6 @@ public class GenerateIdUtil {
             LAST_TIME_STAMP = TIME_STAMP;
             SEQUENCE_ID = 1L;
         }
-        return LAST_TIME_STAMP<<(WORK_ID_BITS+SEQUENCE_ID_BITS)+WORK_ID<<SEQUENCE_ID_BITS+SEQUENCE_ID;
+        return (LAST_TIME_STAMP<<(WORK_ID_BITS+SEQUENCE_ID_BITS))|(WORK_ID<<SEQUENCE_ID_BITS)|SEQUENCE_ID;
     }
 }

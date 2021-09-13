@@ -57,7 +57,7 @@ public class TestCaseServiceImpl implements TestCaseService {
 
     @Override
     public void deleteMultipleCase(Long pid) {
-        testCaseMapper.deleteCase(pid);
+        testCaseMapper.deleteMultipleCase(pid);
     }
 
     @Override

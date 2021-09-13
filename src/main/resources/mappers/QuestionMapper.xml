@@ -26,7 +26,8 @@
         from question as q
         join question_relation as qr
         join testcase as t
-        where q.pid=qr.pid
-        and qr.testcese_id=t.testcase_id
+        on q.pid=qr.pid
+        and qr.testcase_id=t.testcase_id
+		where q.pid = #{pid}
     </select>
 </mapper>

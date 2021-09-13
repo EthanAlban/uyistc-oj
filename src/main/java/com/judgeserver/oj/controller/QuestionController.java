@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.judgeserver.oj.Utils.GenerateIdUtil;
 import com.judgeserver.oj.entity.Question;
 import com.judgeserver.oj.service.QuestionService;
+import com.judgeserver.oj.service.TestCaseService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,9 @@ public class QuestionController {
 
     @Autowired
     QuestionService questionService;
+
+    @Autowired
+    TestCaseService testCaseService;
 
     @ApiOperation(value = "获取测试案例",notes = "根据问题id获取到该问题下所有测试案例", httpMethod = "POST")
     @RequestMapping(value = "/getCaseMsgByPid")
@@ -43,6 +47,7 @@ public class QuestionController {
     public String deleteOne(Long pid){
         HashMap map = new HashMap();
         questionService.deleteOneByPid(pid);
+        testCaseService.deleteMultipleCase(pid);
         map.put("result","OK");
         return JSONObject.toJSONString(map);
     }
