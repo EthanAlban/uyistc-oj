@@ -14,6 +14,8 @@ import UtilsApi from './api/utils_api'
 import CaptcahApi from './api/captcha_api'
 import AnnonceApi from './api/annonce_api'
 import ProblemApi from './api/problem_api'
+import SubmissionApi from './api/submission_api'
+
 
 import './icons'
 import VueCookies from 'vue-cookies'
@@ -62,7 +64,8 @@ Vue.prototype.$user_axios = UserApi
 Vue.prototype.$utils_axios = UtilsApi
 Vue.prototype.$captcha_axios = CaptcahApi
 Vue.prototype.$annonce_axios = AnnonceApi
-Vue.prototype.$problem_axios = ProblemApi
+Vue.prototype.$problem_axios = ProblemApi 
+Vue.prototype.$submission_axios = SubmissionApi 
 
 // 全局的this.selfLog替换
 // import selfLog from './utils/selfLog';

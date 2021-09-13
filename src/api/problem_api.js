@@ -14,7 +14,7 @@ export default {
 			'limit': limit,
 			'offset': offset
 		}
-		return Post('problems/get_pages_problems', params)
+		return Get('problems/get_pages_problems', params)
 	},
 	//根据问题id获取问题的详情
 	ProblemDetailById: Pid => {

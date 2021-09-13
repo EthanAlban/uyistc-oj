@@ -96,6 +96,7 @@
 							type: 'warning'
 						})
 					} else if (res.errcode === 200) {
+						this.$root.user_profile = res.data
 						this.$message({
 							message: '登录成功~',
 							type: 'success',

@@ -99,8 +99,19 @@
 				{{submission_status}}
 			</el-tag>
 			<el-tag v-if="submission_status==='部分正确'" type="warning" effect="dark">{{submission_status}}</el-tag>
-			<br />
-			<br />
+			<el-tag style="marginLeft:5%" type="success" effect="dark">
+				得分：{{score}}
+			</el-tag>
+			<el-tag style="marginLeft:5%" type="info" effect="dark">
+				最后测试用例：{{LastTestcase}}
+			</el-tag>
+			<el-tag style="marginLeft:5%" type="info" effect="dark">
+				正确输出：    {{LastDesireOutput}}
+			</el-tag>
+			<el-tag style="marginLeft:5%" type="info" effect="dark">
+				代码输出：    {{LastOutput}}
+			</el-tag>
+			<br/>
 			<span style="color:red">{{err_info}}</span>
 		</el-drawer>
 	</div>
@@ -167,6 +178,9 @@
 				submission_status: '',
 				err_info: '',
 				score: '',
+				LastTestcase:'',
+				LastDesireOutput:'',
+				LastOutput:'',
 				option: {
 					tooltip: {
 						trigger: 'item'
@@ -425,7 +439,10 @@
 								this.selfLog(res)
 								if (res.errcode === 200) {
 									//  更新提交次数
-									this.selfLog("-------------------------------------"+problem_id)
+									this.score = res.data.Score
+									this.LastTestcase = res.data.LastTestcase
+									this.LastDesireOutput = res.data.LastDesireOutput
+									this.LastOutput = res.data.LastOutput
 									this.$problem_axios.GetAcSubTimes(problem_id).then(res => {
 										this.selfLog(res)
 										this.acceptSub = res.data.ac
