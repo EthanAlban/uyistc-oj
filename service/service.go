@@ -52,6 +52,10 @@ func JudgeUserCode(submission structs.Submission) {
 	//将判题结果更新到数据库中
 	submission.Result = Final.Code
 	submission.ErrInfo = Final.Info
+	submission.Score = Final.Score
+	submission.LastTestcase = Final.LastTestcase
+	submission.LastDesireOutput = Final.LastDesireOutput
+	submission.LastOutput = Final.LastOutput
 	mysql.UpdateSubmission(submission)
 }
 

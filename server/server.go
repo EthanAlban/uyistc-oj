@@ -19,13 +19,17 @@ import (
 //这个文件用于编译运行代码
 
 type Judger struct {
-	TimeLimit   time.Duration //毫秒时间
-	MemoryLimit int           //内存限制的单位是mb
-	Code        string        //代码
-	Language    string        //语言类型
-	Suffix      string        //代码后缀
-	FinalStat   int           //判题结束时的状态
-	JudgeInfo   string        //判题得到的信息
+	TimeLimit        time.Duration //毫秒时间
+	MemoryLimit      int           //内存限制的单位是mb
+	Code             string        //代码
+	Language         string        //语言类型
+	Suffix           string        //代码后缀
+	FinalStat        int           //判题结束时的状态
+	JudgeInfo        string        //判题得到的信息
+	Score            float64       //判题之后本次提交的得分
+	LastTestcase     string        // 程序最后执行的测试用例
+	LastDesireOutput string        //对于最后一个测试用例正确的输出
+	LastOutput       string        //最后一个测试用例用户程序的输出
 }
 
 func NewServer() *Judger {
@@ -67,11 +71,13 @@ func (*Judger) CmdBash(codesDir, filename string, result chan public.JudgeResult
 	//开启协程执行代码
 	go JUDGER.ExecuteObj(filepath, in, out, timeout)
 	//读取testcase的in的数组
-	testcases_in := []string{"1 1", "2 1", "3 1", "4 1", "5 1", "6 1", "7 1", "8 1", "9 1"}
-	testcases_out := []string{"2", "3", "4", "5", "6", "7", "8", "9", "10"}
+	testcases_in := []string{"1 1", "2 1", "3 1", "4 1", "5 1", "6 1", "7 1", "8 1", "9 1", "10 1"}
+	testcases_out := []string{"2", "3", "4", "5", "6", "7", "8", "9", "10", "11"}
+	score := []float64{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}
 	//解答的结果中正确和错误的个数
 	correct, wrong := 0, 0
 	//in <- strconv.Itoa(0)
+	last_index := 0
 	for i := 0; i < len(testcases_in); i++ {
 		in <- testcases_in[i]
 		fmt.Println("1. 发送:", i+1)
@@ -79,6 +85,7 @@ func (*Judger) CmdBash(codesDir, filename string, result chan public.JudgeResult
 		if err == nil {
 			//fmt.Println("rss:", meminfo.RSS/1024, "Mb  MemoryLimit:", JUDGER.MemoryLimit, "Mb")
 			logger.Info("rss:", meminfo.RSS/1024, "Mb  MemoryLimit:", JUDGER.MemoryLimit, "Mb")
+			// 超过内存退出
 			if meminfo.RSS/1024 > JUDGER.MemoryLimit {
 				JUDGER.JudgeInfo = ""
 				JUDGER.FinalStat = 3
@@ -86,12 +93,19 @@ func (*Judger) CmdBash(codesDir, filename string, result chan public.JudgeResult
 			}
 		}
 		select {
-		case num := <-out:
-			fmt.Printf("3. ---------输出结果:%v  预期结果：%v\n", num, testcases_out[i])
-			if num == testcases_out[i] {
+		case output := <-out:
+			fmt.Printf("3. ---------输出结果:%v  预期结果：%v\n", output, testcases_out[i])
+			if output == testcases_out[i] {
+				// 加分
+				JUDGER.Score = JUDGER.Score + score[i]
+				JUDGER.LastOutput = output
 				correct++
 			} else {
+				// 遇到答案不对就退出
+				JUDGER.LastOutput = output
 				wrong++
+				i = len(testcases_in)
+				break
 			}
 		case <-time.After(JUDGER.TimeLimit): //上面的ch如果一直没数据会阻塞，那么select也会检测其他case条件，检测到后3秒超时
 			logger.Warn("用户程序计算超时" + strconv.Itoa(int(JUDGER.TimeLimit)/1000000) + "ms...")
@@ -111,6 +125,7 @@ func (*Judger) CmdBash(codesDir, filename string, result chan public.JudgeResult
 			//close(out)
 			break
 		}
+		last_index++
 	}
 	//判题结果
 	//全错了没有一个对的
@@ -121,10 +136,15 @@ func (*Judger) CmdBash(codesDir, filename string, result chan public.JudgeResult
 		JUDGER.FinalStat = -1
 	} else if wrong == 0 && correct == len(testcases_out) {
 		JUDGER.FinalStat = 0
-	} else if wrong >= 0 && correct > 0 {
-		JUDGER.FinalStat = 7
+	} else if wrong > 0 && correct > 0 {
+		JUDGER.FinalStat = 8
 	}
-	ret := public.JudgeResult{Code: JUDGER.FinalStat, Info: ""}
+	// 如果是运行正确过来的i要-1 否则越界
+	if last_index == len(testcases_in) {
+		last_index--
+	}
+	ret := public.JudgeResult{Code: JUDGER.FinalStat, Info: "", Score: JUDGER.Score, LastTestcase: testcases_in[last_index], LastDesireOutput: testcases_out[last_index], LastOutput: JUDGER.LastOutput}
+	JUDGER.Score = 0
 	result <- ret
 }
 

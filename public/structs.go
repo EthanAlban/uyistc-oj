@@ -9,8 +9,12 @@ type Ret struct {
 
 // JudgeResult 接收判题结果的结构体
 type JudgeResult struct {
-	Code int
-	Info string
+	Code             int
+	Info             string
+	Score            float64
+	LastTestcase     string
+	LastDesireOutput string
+	LastOutput       string
 }
 
 // SysUsage 获取系统资源使用情况

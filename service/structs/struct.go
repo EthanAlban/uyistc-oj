@@ -63,6 +63,9 @@ type Submission struct {
 		Template string `json:"Template"`
 		Suffix   string `json:"Suffix"`
 	} `json:"Language"`
-	Score   int    `json:"Score"`
-	ErrInfo string `json:"ErrInfo"`
+	Score            float64 `json:"Score"`
+	ErrInfo          string  `json:"ErrInfo"`
+	LastTestcase     string  `json:"LastTestcase"`
+	LastDesireOutput string  `json:"LastDesireOutput"`
+	LastOutput       string  `json:"LastOutput"`
 }
