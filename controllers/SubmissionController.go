@@ -157,3 +157,14 @@ func (this *SubmissionController) GetUserSubmissions() {
 		this.JsonResult(204, "未登录无法查看提交记录")
 	}
 }
+
+// GetUserSubmissionProfile 获得当前用的所有的提交数量
+func (this *SubmissionController) GetUserSubmissionProfile() {
+	userLogin := this.Ctx.Input.CruSession.Get("user_login")
+	if userLogin == nil {
+		this.JsonResult(204, "未登录无法查看提交记录")
+	}
+	retMap := make(map[string]interface{})
+	retMap["sub_counts"], retMap["problems"], retMap["problems"], retMap["status"] = models.NewSubmission().GetUserSubmissionProfile(userLogin.(models.User))
+	this.JsonResult(200, "查询用户做题详情成功...", retMap)
+}

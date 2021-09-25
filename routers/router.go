@@ -7,4 +7,5 @@ func init() {
 	utilsRouter()
 	sysinfoRouter()
 	judgerRouter()
+	logsRouter()
 }

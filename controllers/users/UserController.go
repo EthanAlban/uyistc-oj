@@ -1,15 +1,17 @@
-package controllers
+package users
 
 import (
 	"encoding/json"
 	"github.com/astaxie/beego"
 	"github.com/wonderivan/logger"
+	"unioj/conf"
+	"unioj/controllers"
 	"unioj/models"
 	"unioj/utils"
 )
 
 type UserController struct {
-	BaseController
+	controllers.BaseController
 }
 
 type pramas struct {
@@ -64,6 +66,8 @@ func (this *UserController) Login() {
 	if err != nil {
 		logger.Warn(err)
 	}
+	// 写入日志中
+	models.NewLogs().AddLogging(conf.GetStringConfig("log_type_login"), user_, "用户登陆")
 	this.JsonResult(200, "登陆成功", user)
 }
 

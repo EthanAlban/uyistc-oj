@@ -42,7 +42,7 @@ func init() {
 	}
 	orm.RegisterDriver("mysql", orm.DRMySQL)
 	//beego 注册模型
-	orm.RegisterModel(new(User), new(Annnocement), new(ProblemType), new(Problems), new(Tags), new(ProblemTags), new(SysInfo), new(Judger), new(Submission), new(Language))
+	orm.RegisterModel(new(User), new(Annnocement), new(ProblemType), new(Problems), new(Tags), new(ProblemTags), new(SysInfo), new(Judger), new(Submission), new(Language), new(Logs))
 	O = orm.NewOrm()
 }
 

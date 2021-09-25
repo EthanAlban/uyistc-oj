@@ -2,6 +2,7 @@ package models
 
 import (
 	"encoding/json"
+	"fmt"
 	"github.com/wonderivan/logger"
 	"strconv"
 	"time"
@@ -112,4 +113,32 @@ func (sb *Submission) TotalSubmissions(userid int) int {
 		return 0
 	}
 	return int(count)
+}
+
+// GetDoneProblems 获取某个用户做过的所有题目
+func (sb *Submission) GetDoneProblems(userid int) (*[]Problems, map[int]int) {
+	type problemCount struct {
+		ProblemId int `json:"problem_id"`
+	}
+	var idlist []problemCount
+	var problems []Problems
+	status := make(map[int]int)
+	O.Raw("SELECT problem_id FROM `submission`  WHERE user_id=? GROUP BY problem_id", userid).QueryRows(&idlist)
+	fmt.Println(idlist)
+	for _, id := range idlist {
+		pro, err := NewProblems().GetProblemDetailById(id.ProblemId)
+		if err != nil {
+			return nil, nil
+		}
+		status[pro.Pid] = sb.GetProblemStatusLogin(userid, pro.Pid)
+		problems = append(problems, *pro)
+	}
+	return &problems, status
+}
+
+// GetUserSubmissionProfile 得到用户提交总数  做过的题目总数 做过的所有问题
+func (sb *Submission) GetUserSubmissionProfile(user User) (int, int, *[]Problems, map[int]int) {
+	subCounts := sb.TotalSubmissions(user.UId)
+	problems, status := sb.GetDoneProblems(user.UId)
+	return subCounts, len(*problems), problems, status
 }
