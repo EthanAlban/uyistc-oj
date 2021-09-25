@@ -15,4 +15,7 @@ export default {
 		}
 		return Get('submission/get_user_submissions', params)
 	},
+	GetUserSubmissionProfile:()=>{
+		return Get('submission/get_user_submission_profile')
+	}
 }

@@ -1,19 +1,19 @@
 <template>
   <div id="main">
     <div v-if="user_profile!==null">
-      <img class="avatar" :src="user_profile.avatar" alt />
+      <img class="avatar" :src="user_profile.Avatar" alt />
       <!-- <dv-border-box-8> -->
       <div class="content">
-        <div>用户名：{{ user_profile.user.username }}</div>
-        <div>邮箱：{{ user_profile.user.email }}</div>
-        <div>用户类型：{{ user_type }}</div>
-        <div>上次登录：{{ user_profile.user.last_login | formatDate}}</div>
-        <div>博客：<a :href=user_profile.blog target="_blank">{{ user_profile.blog }}</a></div>
-        <div>github：<a :href=user_profile.github target="_blank">{{ user_profile.github }}</a></div>
-        <div>专业：{{ user_profile.major }}</div>
+        <div>用户名：{{ user_profile.UserName }}</div>
+        <div>邮箱：{{ user_profile.Email }}</div>
+        <div>用户类型：{{ user_profile.UserType }}</div>
+        <!-- <div>上次登录：{{ user_profile.user.last_login | formatDate}}</div> -->
+        <div>博客：<a :href=user_profile.blog target="_blank">{{ user_profile.Blogaddr }}</a></div>
+        <div>github：<a :href=user_profile.github target="_blank">{{ user_profile.Gitaddr }}</a></div>
+        <div>专业：{{ user_profile.Major }}</div>
         <div>总分：{{user_profile.total_score}}</div>
         <!-- 若是教师则隐藏申请教师权限按钮 -->
-        <el-button v-if="user_type === '普通用户'" type="success" style="z-index:100" round
+        <el-button v-if="user_profile.UserType === 2" type="success" style="z-index:100" round
           @click="apply_to_be_a_teacher()">
           申请教师权限
         </el-button>
@@ -58,10 +58,9 @@
 export default {
   name: "profile",
   mounted () {
-    this.$axios.user_profile().then(res => {
+    this.$user_axios.user_profile().then(res => {
       this.selfLog(res);
       this.user_profile = res["data"];
-      this.user_profile.avatar = this.$OJIP + this.user_profile.avatar;
       this.get_submission_problems()
     });
     // 获取登陆记录
@@ -136,7 +135,7 @@ export default {
     },
     // 获取登陆记录
     login_history () {
-      this.$axios.login_history().then(res => {
+      this.$user_axios.login_history().then(res => {
         this.selfLog(res);
         let data = {}
         if (res["error"] === null) {
@@ -172,18 +171,23 @@ export default {
     },
     // 拿自己做过的题目|提交的题目数量
     get_submission_problems () {
-      this.submission = this.user_profile.submission_number
-      this.problems = this.user_profile.acm_problems_status.problems
-      for (let key in this.problems) {
-        this.count = this.count + 1
-        var item = this.problems[key];
-        this.selfLog(item); //AA,BB,CC,DD
-        this.problems_id.push({
-          id: item['_id'],
-          status: item['status']
-        });
-      }
-      this.selfLog(this.problems_id);
+		this.$submission_axios.GetUserSubmissionProfile().then(res=>{
+			this.selfLog(res)
+			 this.submission = res.data.sub_counts
+			 this.problems = res.data.problems
+			 for (let key in this.problems) {
+			   this.count = this.count + 1
+			   var item = this.problems[key];
+			   this.selfLog(item); //AA,BB,CC,DD
+			   this.problems_id.push({
+			     id: item['Pid'],
+			     status: res.data.status[item['Pid']]
+			   });
+			 }
+			 this.selfLog(this.problems_id);
+		})
+     
+      
     },
     // 进入问题详情页
     problemDetail (id) {
@@ -193,13 +197,13 @@ export default {
   },
   computed: {
     user_type () {
-      if (this.user_profile.user.admin_type === 'Regular User') {
+      if (this.user_profile.UserType === 2) {
         return '普通用户'
       }
-      if (this.user_profile.user.admin_type === 'Admin') {
+      if (this.user_profile.UserType === 1) {
         return '教师'
       }
-      if (this.user_profile.user.admin_type === 'Super Admin') {
+      if (this.user_profile.UserType === 0) {
         return '管理员'
       }
     }

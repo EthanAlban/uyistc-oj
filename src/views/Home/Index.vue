@@ -392,7 +392,6 @@
 			logOut() {
 				this.$confirm("确认退出？").then(() => {
 					this.user_profile = null;
-					this.$root.user_profile = null
 					this.$user_axios.Logout();
 					this.$message('已登出...');
 				});

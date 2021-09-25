@@ -21,5 +21,8 @@ export default {
 	},
 	user_profile: () => {
 		return Get('usr/user_profile')
+	},
+	login_history: () => {
+		return Get('logs/get_cur_user_loginhistory')
 	}
 }

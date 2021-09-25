@@ -8,9 +8,9 @@
 					<p style="marginLeft:10px"
 						:class="{low:problbemDetailDifficulty==='简单',mid:problbemDetailDifficulty==='中等',high:problbemDetailDifficulty==='困难'}">
 						{{ problbemDetailDifficulty }}
-					</p> 
-					<el-tag style="margin:10px 0 10px 10px" :type="tag_types[idx%5]"
-						v-for="(tag,idx) in tags" :key="tag">{{tag}}</el-tag>
+					</p>
+					<el-tag style="margin:10px 0 10px 10px" :type="tag_types[idx%5]" v-for="(tag,idx) in tags"
+						:key="tag">{{tag}}</el-tag>
 				</div>
 			</div>
 			<el-divider>
@@ -64,10 +64,11 @@
 		<!-- 提交固定于页面右下角 -->
 		<!-- 提交结果以抽屉展示 从下往上-->
 		<el-button class="submit_fixed" type="success" round @click="submission">提交</el-button>
-
+		<!-- <div style="position:absolute;right: 0;bottom: 0;height: 40%;width: 80%;background-color: #008855;z-index: 998;"  ></div> -->
 		<!-- -2编译错误 -1答案错误 0正确 1计算超时  2超时 3内存超过 4运行时错误 5传送...  6判题中...  7部分正确 -->
 		<el-drawer title="提交结果" :visible.sync="drawer" append-to-body destroy-on-close direction="btt"
-			:before-close="handleClose" style="width:80%;marginLeft:20%">
+			:before-close="handleClose" style="z-index: 9;width:80%;marginLeft:20%" :modal-append-to-body="false"  v-loading="drawer_loading"
+			element-loading-text="拼命判题中" element-loading-spinner="el-icon-loading">
 			<el-tag style="marginLeft:5%" v-if="submission_status==='编译错误'" type="danger" effect="dark">
 				{{submission_status}}
 			</el-tag>
@@ -106,12 +107,12 @@
 				最后测试用例：{{LastTestcase}}
 			</el-tag>
 			<el-tag style="marginLeft:5%" type="info" effect="dark">
-				正确输出：    {{LastDesireOutput}}
+				正确输出： {{LastDesireOutput}}
 			</el-tag>
 			<el-tag style="marginLeft:5%" type="info" effect="dark">
-				代码输出：    {{LastOutput}}
+				代码输出： {{LastOutput}}
 			</el-tag>
-			<br/>
+			<br />
 			<span style="color:red">{{err_info}}</span>
 		</el-drawer>
 	</div>
@@ -139,6 +140,7 @@
 		},
 		data() {
 			return {
+				drawer_loading: false,
 				// 初次加载代码标记
 				InitLoadCode: false,
 				//  重复提交代码计数器
@@ -149,7 +151,7 @@
 				acceptSub: 0,
 				totalSub: 0,
 				statistic_info: [],
-				tags:[],
+				tags: [],
 				msg: '',
 				samples: [],
 				language: 'C',
@@ -178,9 +180,9 @@
 				submission_status: '',
 				err_info: '',
 				score: '',
-				LastTestcase:'',
-				LastDesireOutput:'',
-				LastOutput:'',
+				LastTestcase: '',
+				LastDesireOutput: '',
+				LastOutput: '',
 				option: {
 					tooltip: {
 						trigger: 'item'
@@ -229,7 +231,7 @@
 						top: '5%',
 						left: 'center'
 					},
-					color:[],
+					color: [],
 					series: [{
 						name: '提交统计',
 						type: 'pie',
@@ -263,7 +265,7 @@
 			handleClose(done) {
 				done()
 			},
-			setStasticPanel(pid){
+			setStasticPanel(pid) {
 				// 获取问题提交情况统计
 				this.$problem_axios.GetSubmissionStaticForProblem(pid).then(res => {
 					this.selfLog(res)
@@ -402,6 +404,8 @@
 				this.$problem_axios.Submission(params).then(res => {
 					this.selfLog(res)
 					if (res.errcode === 200) {
+						
+						this.drawer_loading = true
 						// 用id获取问题的提交次数
 						this.$problem_axios.GetAcSubTimes(this.$route.params.id).then(res => {
 							this.selfLog(res)
@@ -424,7 +428,7 @@
 				})
 			},
 			// 提交代码之后定时查询提交的状态
-			getSubmissionDetail(problem_id,submissionid) {
+			getSubmissionDetail(problem_id, submissionid) {
 				// 先查有没有对应的提交
 				this.$problem_axios.IsSubmissionExsit(submissionid).then(res => {
 					// 提交存在
@@ -477,6 +481,7 @@
 									}
 									if (!(res.data.Result === 6 || res.data.Result === 7)) {
 										this.err_info = res.data.ErrInfo
+										this.drawer_loading = false
 										clearInterval(this.setInterval_id)
 									}
 									this.selfLog('查询结束，清除定时任务')
@@ -493,6 +498,7 @@
 											type: 'warning'
 										})
 										this.submission_status = '服务器响应超时请重试提交...'
+										this.drawer_loading = false
 										this.submissionReply = 0
 									}
 								}
