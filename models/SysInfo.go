@@ -1,6 +1,6 @@
 package models
 
-// SysInfo Tags 保存系统中的问题标签
+// SysInfo 保存系统通知
 type SysInfo struct {
 	Iid     int    `orm:"column(iid);pk"`
 	UId     *User  `orm:"column(uid);rel(fk)"`

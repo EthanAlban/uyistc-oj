@@ -46,7 +46,7 @@ func (j *Judger) UpdateJudgerStatus(host string, online int, mem_usage, load_usa
 		judger.Online = online
 		judger.MemUsage = mem_usage
 		judger.LoadUsage = load_usage
-		judger.LoadUsage = load_usage
+		//judger.LoadUsage = load_usage
 		judger.KafkaTopic = topic
 		if _, err := O.Update(&judger); err == nil {
 			logger.Debug("更新 " + host + " 状态成功...")
