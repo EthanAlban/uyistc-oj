@@ -24,7 +24,7 @@ func InitMysqlServer(user, password, host string) (err error) {
 }
 
 func UpdateSubmission(submision structs.Submission) {
-	fmt.Println(submision)
+	//fmt.Println(submision)
 	ret, err := Conn.Exec("UPDATE submission set result=?,err_info=?,score=?,last_testcase=?,last_desire_output=?,last_output=? where submission_id=?", submision.Result, submision.ErrInfo, submision.Score, submision.LastTestcase, submision.LastDesireOutput, submision.LastOutput, submision.SubmissionId)
 	if err != nil {
 		logger.Error("更新问题失败,err:", err)

@@ -15,6 +15,7 @@ import (
 // JudgeUserCode 接收用户代码进行评测
 func JudgeUserCode(submission structs.Submission) {
 	//logger.Debug("kafka读取submissoin: ", submission)
+	server.JUDGER.Pid = submission.ProblemId.Pid
 	server.JUDGER.Code = submission.Code
 	server.JUDGER.Language = submission.Language.Language
 	server.JUDGER.MemoryLimit = submission.ProblemId.MemoryLimit
