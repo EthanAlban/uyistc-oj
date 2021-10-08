@@ -60,5 +60,4 @@ func (l *Logs) GetTypeLogsofUser(type_ int, userid User) *[]Logs {
 		return nil
 	}
 	return &logs
-
 }
