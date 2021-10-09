@@ -9,14 +9,14 @@ public class GenerateIdUtil {
 
     private final static int SEQUENCE_ID_BITS = 12;
 
-    private static Long LAST_TIME_STAMP = -1L;
+    private static long LAST_TIME_STAMP = -1L;
 
-    private static Long WORK_ID = 12L;
+    private static long WORK_ID = 12L;
 
-    private static Long SEQUENCE_ID = 1L;
+    private static long SEQUENCE_ID = 1L;
 
     public static synchronized Long getNextId(){
-        Long TIME_STAMP = System.currentTimeMillis();
+        long TIME_STAMP = System.currentTimeMillis();
         if(TIME_STAMP == LAST_TIME_STAMP){
             if(SEQUENCE_ID >= 4096L){
                 while(LAST_TIME_STAMP!=System.currentTimeMillis()){
