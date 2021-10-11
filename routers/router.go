@@ -8,4 +8,5 @@ func init() {
 	sysinfoRouter()
 	judgerRouter()
 	logsRouter()
+	contestsRouter()
 }
