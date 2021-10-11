@@ -15,6 +15,7 @@ import CaptcahApi from './api/captcha_api'
 import AnnonceApi from './api/annonce_api'
 import ProblemApi from './api/problem_api'
 import SubmissionApi from './api/submission_api'
+import ContestsApi from './api/contests_api'
 
 
 import './icons'
@@ -53,8 +54,8 @@ import 'quill/dist/quill.core.css' // import styles
 import 'quill/dist/quill.snow.css' // for snow theme
 import 'quill/dist/quill.bubble.css' // for bubble theme
 // 导入文件导出插件js
-import Blob from './views/Teacher/export/Blob'
-import Export2Excel from './views/Teacher/export/Export2Excel'
+import Blob from './views/Contest/export/Blob'
+import Export2Excel from './views/Contest/export/Export2Excel'
 
 Vue.use(VueQuillEditor, /* { default global options } */ )
 Vue.use(VueCookies)
@@ -65,7 +66,8 @@ Vue.prototype.$utils_axios = UtilsApi
 Vue.prototype.$captcha_axios = CaptcahApi
 Vue.prototype.$annonce_axios = AnnonceApi
 Vue.prototype.$problem_axios = ProblemApi 
-Vue.prototype.$submission_axios = SubmissionApi 
+Vue.prototype.$submission_axios = SubmissionApi  
+Vue.prototype.$contests_axios = ContestsApi
 
 // 全局的this.selfLog替换
 // import selfLog from './utils/selfLog';

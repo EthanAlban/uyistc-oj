@@ -138,10 +138,10 @@ export default {
       this.$user_axios.login_history().then(res => {
         this.selfLog(res);
         let data = {}
-        if (res["error"] === null) {
+        if (res["errcode"] === 200) {
           let login_historys = res["data"]
           for (let his of login_historys) {
-            his = his.last_activity.substr(0, 10)
+            his = his.Date.substr(0, 10)
             // this.selfLog(his.last_activity.substr(0, 10));
             let strArray = his.split('-');
             strArray = strArray.map(function (val) {
@@ -186,8 +186,6 @@ export default {
 			 }
 			 this.selfLog(this.problems_id);
 		})
-     
-      
     },
     // 进入问题详情页
     problemDetail (id) {

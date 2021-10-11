@@ -14,7 +14,7 @@
     </el-button>
     <div>
       <el-table :data="tableData">
-        <el-table-column label="作业" width="120" prop="title"></el-table-column>
+        <el-table-column label="竞赛" width="120" prop="title"></el-table-column>
         <el-table-column label="作业描述" width="220" prop="description">
           <template slot-scope="scope">
             <div v-html="scope.row.description"></div>

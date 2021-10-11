@@ -46,6 +46,10 @@ export default {
 	// 查询问题提交情况的统计信息
 	GetSubmissionStaticForProblem: pid => {
 		return Get('submission/get_submission_static_for_problem?pid=' + pid)
+	},
+	// 获取题目支持的语言类型
+	GetProblemSupportLanguage:pid=>{
+		return Get('problems/get_problem_support_language?pid='+pid)
 	}
 
 }

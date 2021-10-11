@@ -52,11 +52,11 @@ export default new Router({
             },
             {
                 path: '/home/nav3',
-                name: 'nav3',
+                name: 'contests',
                 component (resolve) {
-                    require(['@/views/Home/Nav3.vue'], resolve)
+                    require(['@/views/Home/3_contests.vue'], resolve)
                 }
-                // component: () => import('@/views/Home/Nav3.vue'),
+                // component: () => import('@/views/Home/contests.vue'),
             },
             {
                 path: '/home/nav4',
@@ -152,33 +152,33 @@ export default new Router({
         {
             path: '/teacher',
             name: 'teacher',
-            // component: () => import('@/views/Teacher/index.vue'),
+            // component: () => import('@/views/Contest/index.vue'),
             component (resolve) {
-                require(['@/views/Teacher/index.vue'], resolve)
+                require(['@/views/Contest/index.vue'], resolve)
             },
             children: [{
                 path: '/teacher/question',
                 name: 'profile',
                 component (resolve) {
-                    require(['@/views/Teacher/question.vue'], resolve)
+                    require(['@/views/Contest/question.vue'], resolve)
                 }
-                // component: () => import('@/views/Teacher/question.vue'),
+                // component: () => import('@/views/Contest/question.vue'),
             },
             {
-                path: '/teacher/assign',
+                path: '/teacher/contests',
                 name: 'profile',
                 component (resolve) {
-                    require(['@/views/Teacher/assign.vue'], resolve)
+                    require(['@/views/Contest/contests.vue'], resolve)
                 }
-                // component: () => import('@/views/Teacher/assign.vue'),
+                // component: () => import('@/views/Contest/contests.vue'),
             },
             {
                 path: '/teacher/class',
                 name: 'profile',
                 component (resolve) {
-                    require(['@/views/Teacher/class.vue'], resolve)
+                    require(['@/views/Contest/class.vue'], resolve)
                 }
-                // component: () => import('@/views/Teacher/class.vue'),
+                // component: () => import('@/views/Contest/class.vue'),
             }
 
             ]
@@ -244,7 +244,7 @@ export default new Router({
                 // component: () => import('@/views/Admin/05_problem_list.vue'),
             },
             {
-                path: '/admin/assign',
+                path: '/admin/contests',
                 name: 'task_list',
                 component (resolve) {
                     require(['@/views/Admin/06_task_list.vue'], resolve)

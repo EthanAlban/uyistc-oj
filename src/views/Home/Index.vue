@@ -49,7 +49,7 @@
 							</el-button>
 							<el-button type="text" style="color:black" @click="page_navigator('/home/nav3')">
 								<img src="../../icons/pages/homework.png" class="icons_images"></img>
-								<i>作业</i>
+								<i>比赛</i>
 							</el-button>
 							<el-button type="text" style="color:black" @click="page_navigator('/home/nav4')">
 								<img src="../../icons/pages/submission.png" class="icons_images"></img>

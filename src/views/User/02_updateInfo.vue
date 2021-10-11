@@ -11,20 +11,17 @@
           <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
         </el-upload>
       </el-form-item>
-      <el-form-item label="学校" prop="school">
-        <el-input v-model="user_profile.school"></el-input>
-      </el-form-item>
       <el-form-item label="专业" prop="major">
-        <el-input v-model="user_profile.major"></el-input>
+        <el-input v-model="user_profile.Major"></el-input>
       </el-form-item>
       <el-form-item label="github地址" prop="github">
-        <el-input v-model="user_profile.github"></el-input>
+        <el-input v-model="user_profile.Gitaddr"></el-input>
       </el-form-item>
       <el-form-item label="博客地址" prop="blog">
-        <el-input v-model="user_profile.blog"></el-input>
+        <el-input v-model="user_profile.Blogaddr"></el-input>
       </el-form-item>
       <el-form-item label="个性签名" prop="mood">
-        <el-input v-model="user_profile.mood"></el-input>
+        <el-input v-model="user_profile.Signature"></el-input>
       </el-form-item>
     </el-form>
     <el-button type="primary" @click="update_profile" class="editButton">确认</el-button>
@@ -36,7 +33,8 @@ export default {
   name: "updateInfo",
   beforeMount () {
     if (this.user_profile === null) {
-      this.$axios.user_profile().then(res => {
+      this.$user_axios.user_profile().then(res => {
+		  this.selfLog(res)
         this.user_profile = res["data"];
       });
     }

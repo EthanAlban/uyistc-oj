@@ -131,7 +131,7 @@
 </template>
 
 <script>
-import Sample from "@/views/Teacher/components/question_sample.vue";
+import Sample from "@/views/Contest/components/question_sample.vue";
 import axios from "axios";
 Vue.prototype.$http = axios;
 import Vue from "vue";
