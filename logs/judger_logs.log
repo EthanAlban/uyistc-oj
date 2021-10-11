@@ -5310,3 +5310,1248 @@ collect2: error: ld returned 1 exit status
 2021-10-08 14:24:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 24.59  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
 2021-10-08 14:25:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
 2021-10-08 14:25:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 24.59  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:25:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:25:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 2.4  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:26:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:26:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 1.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:26:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:26:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.42  负载统计: 2.27  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:27:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:27:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.42  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:27:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:27:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:28:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:28:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:28:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:28:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:29:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:29:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:29:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:29:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:30:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:30:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:30:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:30:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:31:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:31:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:31:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:31:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:32:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:32:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 2.0100000000000002  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:32:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:32:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 1.6400000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:33:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:33:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:33:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:33:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:34:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:34:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 2.14  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:34:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:34:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 1.3900000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:35:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:35:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:35:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:35:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:36:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:36:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 1.8900000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:36:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:36:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 1.26  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:37:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:37:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:37:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:37:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.49  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:38:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:38:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.38  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:38:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:38:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:39:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:39:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:39:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:39:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:40:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:40:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:40:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:40:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:41:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:41:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:41:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:41:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:42:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:42:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.49  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:42:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:42:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:43:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:43:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:43:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:43:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:44:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:44:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:44:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:44:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:45:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:45:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:45:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:45:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:46:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:46:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:46:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:46:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:47:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:47:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:47:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:47:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 1.6400000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:48:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:48:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:48:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:48:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:49:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:49:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 2.14  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:49:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:49:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 1.6400000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:50:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:50:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 1  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:50:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:50:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.42  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:51:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:51:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:51:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:51:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.42  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:52:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:52:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:52:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:52:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:53:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:53:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:53:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:53:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 1.3800000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:54:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:54:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:54:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:54:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:55:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:55:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:55:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:55:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:56:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:56:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:56:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:56:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.42  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:57:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:57:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:57:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:57:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:58:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:58:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:58:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:58:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:59:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:59:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 14:59:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 14:59:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:00:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:00:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:00:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:00:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.43  负载统计: 1  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:01:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:01:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.42  负载统计: 0.49  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:01:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:01:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.37  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:02:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:02:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 1.76  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:02:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:02:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 2.0100000000000002  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:03:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:03:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:03:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:03:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:04:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:04:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:04:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:04:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:05:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:05:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:05:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:05:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:06:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:06:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:06:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:06:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:07:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:07:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:07:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:07:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:08:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:08:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:08:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:08:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:09:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:09:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:09:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:09:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:10:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:10:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:10:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:10:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:11:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:11:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:11:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:11:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:12:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:12:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:12:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:12:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:13:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:13:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:14:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:14:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.39  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:14:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:14:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:15:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:15:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:15:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:15:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:16:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:16:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:16:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:16:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 1  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:17:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:17:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:17:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:17:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 1.77  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:18:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:18:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:18:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:18:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:19:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:19:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 2.02  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:19:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:19:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 2.0100000000000002  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:20:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:20:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.42  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:20:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:20:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:21:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:21:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:21:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:21:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:22:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:22:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:22:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:22:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.41  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:23:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:23:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.400000000000002  负载统计: 0.74  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:23:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:23:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.650000000000002  负载统计: 52.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:24:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:24:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.580000000000002  负载统计: 18.79  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:24:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:24:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.72  负载统计: 22.46  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:25:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:25:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.8  负载统计: 55.480000000000004  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:25:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:25:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.85  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:26:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:26:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.85  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:26:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:26:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.86  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:27:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:27:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.84  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:27:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:27:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.84  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:28:03 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:28:04 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.84  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:28:35 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:108] kafka消费者启动成功...,topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:29:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:29:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.84  负载统计: 0.87  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:29:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:29:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.86  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:30:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:30:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.87  负载统计: 1.8900000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:30:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:30:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.86  负载统计: 1.6400000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:31:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:31:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.86  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:31:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:31:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.86  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:32:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:32:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.86  负载统计: 1.1400000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:32:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:32:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.87  负载统计: 1.51  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:33:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:33:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.87  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:34:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:34:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.87  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:34:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:34:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.88  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:35:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:35:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.88  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:35:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:35:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.89  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:36:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:36:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.89  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:36:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:36:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.89  负载统计: 0.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:37:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:37:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.89  负载统计: 0.75  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:37:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:37:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.89  负载统计: 0.49  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:38:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:38:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.88  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:38:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:38:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.89  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:39:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:39:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.89  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:39:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:39:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.900000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:40:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:40:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.89  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:40:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:40:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.89  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:40:54 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 10   err: kafka server: The broker is still loading offsets after a leader change for that offset's topic partition.
+2021-10-08 15:41:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:41:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.900000000000002  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:41:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:41:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.89  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:42:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:42:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.89  负载统计: 0.75  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:42:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:42:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.89  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:43:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:43:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.89  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:43:03 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:92] kafka恢复，重置重试次数...
+2021-10-08 15:43:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:43:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.900000000000002  负载统计: 9.33  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:44:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:44:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 29.98  负载统计: 2.5100000000000002  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:44:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:44:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 30  负载统计: 1.52  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:45:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:45:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 11.78  负载统计: 6.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:45:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:45:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 20.45  负载统计: 12.99  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:46:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:46:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 20.59  负载统计: 7.98  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:46:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:46:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 21.490000000000002  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:47:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:47:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 21.580000000000002  负载统计: 15.870000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:47:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:47:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 21.900000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:48:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:48:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 21.900000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:48:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:48:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 21.89  负载统计: 7.33  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:49:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:49:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 22.05  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:49:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:49:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 22.21  负载统计: 1.6300000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:50:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:50:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 22.79  负载统计: 36.26  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:50:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:50:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 22.92  负载统计: 8.31  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:51:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:51:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 22.97  负载统计: 51.550000000000004  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:51:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:51:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 23.06  负载统计: 0.88  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:52:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:52:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 23.07  负载统计: 1.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:52:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:52:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 23.25  负载统计: 8.13  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:53:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:53:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 23.28  负载统计: 2.77  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:53:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:53:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 23.18  负载统计: 2.91  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:54:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:54:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 23.31  负载统计: 1.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:54:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:54:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 23.240000000000002  负载统计: 2.0100000000000002  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:55:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:55:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 24.32  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:55:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:55:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 24.23  负载统计: 0.62  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:56:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:56:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 24.23  负载统计: 1.77  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:56:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:56:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 24.07  负载统计: 2.0100000000000002  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:57:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:57:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 24.060000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:57:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:57:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 24.060000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:58:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:58:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 24.080000000000002  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:58:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:58:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 24.080000000000002  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:59:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:59:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.27  负载统计: 5.49  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 15:59:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 15:59:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.43  负载统计: 2.63  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:00:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:00:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 24.490000000000002  负载统计: 93.23  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:00:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:00:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.05  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:01:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:01:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.03  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:01:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:01:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.01  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:02:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:02:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.05  负载统计: 10.43  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:02:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:02:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.18  负载统计: 1.76  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:03:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:03:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.19  负载统计: 7.18  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:03:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:03:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.07  负载统计: 0.87  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:04:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:04:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.07  负载统计: 0.37  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:04:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:04:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.07  负载统计: 0.12  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:05:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:05:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 25.07  负载统计: 0.25  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:06:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:06:02 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.35  负载统计: 48.56  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:06:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:06:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 27.39  负载统计: 11.48  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:07:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:07:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.07  负载统计: 10.35  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:07:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:07:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 27.990000000000002  负载统计: 18.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:08:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:08:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.37  负载统计: 10.6  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:08:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:08:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.1  负载统计: 12.450000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:09:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:09:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.1  负载统计: 8.78  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:09:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:09:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.37  负载统计: 8.26  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:10:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:10:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.36  负载统计: 8.27  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:10:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:10:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.330000000000002  负载统计: 8.65  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:11:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:11:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.490000000000002  负载统计: 7.75  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:11:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:11:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.25  负载统计: 8.78  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:12:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:12:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.6  负载统计: 7.640000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:12:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:12:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.8  负载统计: 8.53  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:13:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:13:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.64  负载统计: 8.74  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:13:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:13:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.88  负载统计: 9.63  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:14:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:14:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.7  负载统计: 8.38  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:14:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:14:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 29.150000000000002  负载统计: 9.14  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:15:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:15:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 29.11  负载统计: 13.63  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:15:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:15:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.85  负载统计: 9.74  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:16:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:16:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.86  负载统计: 7.4  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:16:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:16:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.86  负载统计: 8.36  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:17:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:17:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.68  负载统计: 8.65  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:17:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:17:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.810000000000002  负载统计: 8.13  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:18:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:18:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.75  负载统计: 8.5  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:18:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:18:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.38  负载统计: 8.51  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:19:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:19:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.560000000000002  负载统计: 8.64  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:19:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:19:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.34  负载统计: 8.41  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:20:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:20:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.35  负载统计: 8.63  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:20:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-08 16:20:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.37  负载统计: 8.370000000000001  topic: judger_taskf74537cd-7159-4397-900a-2e4a9927817c
+2021-10-08 16:21:00 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 10   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-08 16:21:03 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 9   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-08 16:21:06 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 8   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-08 16:21:09 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 7   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-08 16:21:12 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 6   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-08 16:21:14 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 5   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-08 16:21:17 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 4   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-08 16:21:20 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 3   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-08 16:21:23 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 2   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-08 16:21:25 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 1   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-08 16:21:28 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:126] 关闭kafka消费者出现错误  kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-08 16:21:28 [EROR] [/home/et/Desktop/Projects/unioj-judger/run/run.go:50] kafka挂了
+2021-10-08 16:21:28 [WARN] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:40] 正在销毁判题器： 192.168.128.0:7999
+2021-10-08 16:21:28 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:70] 销毁判题器  192.168.128.0:7999  状态失败...  err: dial tcp 47.96.99.172:3306: connect: connection refused
+2021-10-08 16:21:28 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:72] 销毁判题器  192.168.128.0:7999  状态成功...
+2021-10-08 16:21:28 [EMER] [/home/et/go/pkg/mod/github.com/wonderivan/logger@v1.0.0/log.go:391] ###Exec Panic:判题器撤出...
+2021-10-09 14:54:14 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/log.go:13] Judgerloger初始化成功...
+2021-10-09 14:54:14 [DEBG] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:75] [1] INFO  获取server kafka配置信息成功...
+2021-10-09 14:54:14 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:77] 		(_1_)  kafka_host:       47.96.99.172:9092
+2021-10-09 14:54:14 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:78] 		(_2_)  juger_task_topic: judger_task
+2021-10-09 14:54:14 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:79] 		(_3_)  sql_host:         47.96.99.172:3306
+2021-10-09 14:54:14 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:80] 		(_4_)  sql_user:         root
+2021-10-09 14:54:14 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:81] 		(_5_)  sql_password:     Abc741258963.0
+2021-10-09 14:54:14 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:21] [3] INFO:初始化连接mysql成功... 
+2021-10-09 14:54:14 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/etcd.go:38] etcd连接成功...
+2021-10-09 14:54:14 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/maintain.go:25] 定时删除任务启动成功...
+2021-10-09 14:54:14 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:35] 新的topic:  judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 14:54:14 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:46] kafka消费者启动中...
+2021-10-09 14:54:14 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:24] 注册判题器信息：externalIp 192.168.128.0:7999   topic:  judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 14:54:14 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:44] 查询已有判题器成功...  nums： 1
+2021-10-09 14:54:14 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:62] 更新判题器  192.168.128.0:7999  状态成功...
+2021-10-09 14:54:14 [DEBG] [/home/et/Desktop/Projects/unioj-judger/run/run.go:59] judgeserver 启动成功...   监听：0.0.0.0:7999
+2021-10-09 14:54:15 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:108] kafka消费者启动成功...,topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 14:54:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 14:54:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 1.25  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 14:55:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 14:55:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.63  负载统计: 0.75  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 14:55:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 14:55:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.62  负载统计: 0.62  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 14:56:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 14:56:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.62  负载统计: 0.87  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 14:56:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 14:56:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.61  负载统计: 0.62  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 14:57:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 14:57:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 0.62  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 14:57:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 14:57:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.52  负载统计: 0.5  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 14:58:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 14:58:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.52  负载统计: 0.37  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 14:58:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 14:58:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.53  负载统计: 0.75  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 14:59:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 14:59:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.53  负载统计: 0.62  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 14:59:33 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:55] codesfiles/    +     69371fde-7ede-480b-a01c-5eb81f707a28.c
+2021-10-09 14:59:33 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:168] [1] 文件创建成功...
+2021-10-09 14:59:33 [INFO] [/home/et/Desktop/Projects/unioj-judger/server/server.go:194] [2] 文件写入成功...
+2021-10-09 14:59:33 [DEBG] [/home/et/Desktop/Projects/unioj-judger/server/server.go:203] C 代码，编译中...
+2021-10-09 14:59:33 [EROR] [/home/et/Desktop/Projects/unioj-judger/server/server.go:204] ----------- codesfiles/69371fde-7ede-480b-a01c-5eb81f707a28.c
+2021-10-09 14:59:33 [WARN] [/home/et/Desktop/Projects/unioj-judger/server/server.go:223] [3] 编译文件失败:../codesfiles/69371fde-7ede-480b-a01c-5eb81f707a28.c: In function ‘main’:
+../codesfiles/69371fde-7ede-480b-a01c-5eb81f707a28.c:5:3: warning: implicit declaration of function ‘sldsseep’; did you mean ‘sleep’? [-Wimplicit-function-declaration]
+    5 |   sldsseep(1);
+      |   ^~~~~~~~
+      |   sleep
+/usr/bin/ld: /tmp/ccV0vsm3.o: in function `main':
+69371fde-7ede-480b-a01c-5eb81f707a28.c:(.text+0x26): undefined reference to `sldsseep'
+collect2: error: ld returned 1 exit status
+
+
+2021-10-09 14:59:33 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:33] 更新记录数量: 1  更新问题: A+B
+2021-10-09 14:59:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 14:59:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.62  负载统计: 0.75  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:00:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/maintain.go:87] 文件:../codesfiles/69371fde-7ede-480b-a01c-5eb81f707a28.c 已过期，予以删除
+2021-10-09 15:00:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:00:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 5.44  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:00:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:00:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 1.5  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:01:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:01:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.62  负载统计: 3.89  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:01:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:01:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.63  负载统计: 5.5600000000000005  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:02:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:02:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.63  负载统计: 0.37  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:02:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:02:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.64  负载统计: 0.5  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:03:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:03:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.64  负载统计: 0.25  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:03:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:03:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.61  负载统计: 0.62  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:04:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:04:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.62  负载统计: 0.37  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:04:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:04:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.62  负载统计: 0.25  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:05:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:05:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.63  负载统计: 0.5  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:05:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:05:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 0.5  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:06:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:06:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 0.37  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:06:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:06:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.580000000000002  负载统计: 0.25  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:07:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:07:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 2.0300000000000002  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:07:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:07:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 1.6400000000000001  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:08:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:08:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 0.37  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:08:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:08:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 0.5  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:09:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:09:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 1.26  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:09:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:09:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 1.6400000000000001  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:10:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:10:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 0.37  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:10:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:10:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 0.5  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:11:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:11:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 1.3900000000000001  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:11:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:11:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 1.26  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:12:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:12:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 0.5  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:12:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:12:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 0.25  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:13:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:13:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 1  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:13:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:13:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.580000000000002  负载统计: 0.62  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:14:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:14:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 0.25  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:14:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:14:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 0.37  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:15:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:15:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 0.25  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:15:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:15:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 0.12  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:16:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:16:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 0.5  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:16:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:16:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.580000000000002  负载统计: 0.49  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:17:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:17:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.580000000000002  负载统计: 0.75  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:17:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:17:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 0.37  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:18:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:18:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 0.37  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:18:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:18:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 0.12  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:19:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:19:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 0.37  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:19:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:19:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 0.25  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:20:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:20:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.6  负载统计: 0.37  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:20:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:20:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 0.25  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:21:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-09 15:21:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 26.59  负载统计: 0.37  topic: judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-09 15:21:46 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 10   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-09 15:21:49 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 9   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-09 15:21:52 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 8   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-09 15:21:54 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 7   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-09 15:21:57 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 6   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-09 15:22:00 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 5   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-09 15:22:03 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 4   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-09 15:22:06 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 3   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-09 15:22:08 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 2   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-09 15:22:11 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:85] kafka消费者错误 重试次数： 1   err: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-09 15:22:14 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:126] 关闭kafka消费者出现错误  kafka: client has run out of available brokers to talk to (Is your cluster reachable?)
+2021-10-09 15:22:14 [EROR] [/home/et/Desktop/Projects/unioj-judger/run/run.go:50] kafka挂了
+2021-10-09 15:22:14 [WARN] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:40] 正在销毁判题器： 192.168.128.0:7999
+2021-10-09 15:22:14 [EROR] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:70] 销毁判题器  192.168.128.0:7999  状态失败...  err: dial tcp 47.96.99.172:3306: connect: connection refused
+2021-10-09 15:22:14 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:72] 销毁判题器  192.168.128.0:7999  状态成功...
+2021-10-09 15:22:14 [EMER] [/home/et/go/pkg/mod/github.com/wonderivan/logger@v1.0.0/log.go:391] ###Exec Panic:判题器撤出...
+2021-10-10 09:31:00 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/log.go:13] Judgerloger初始化成功...
+2021-10-10 09:31:00 [DEBG] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:75] [1] INFO  获取server kafka配置信息成功...
+2021-10-10 09:31:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:77] 		(_1_)  kafka_host:       47.96.99.172:9092
+2021-10-10 09:31:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:78] 		(_2_)  juger_task_topic: judger_task
+2021-10-10 09:31:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:79] 		(_3_)  sql_host:         47.96.99.172:3306
+2021-10-10 09:31:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:80] 		(_4_)  sql_user:         root
+2021-10-10 09:31:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:81] 		(_5_)  sql_password:     Abc741258963.0
+2021-10-10 09:31:00 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:21] [3] INFO:初始化连接mysql成功... 
+2021-10-10 09:31:00 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/etcd.go:38] etcd连接成功...
+2021-10-10 09:31:00 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/maintain.go:25] 定时删除任务启动成功...
+2021-10-10 09:31:00 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:24] 注册判题器信息：externalIp 192.168.128.0:7999   topic:  judger_task7b3e49d1-af9f-46f4-b0b7-ac883f8bbc7b
+2021-10-10 09:31:00 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:35] 新的topic:  judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:31:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:46] kafka消费者启动中...
+2021-10-10 09:31:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:44] 查询已有判题器成功...  nums： 1
+2021-10-10 09:31:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:62] 更新判题器  192.168.128.0:7999  状态成功...
+2021-10-10 09:31:01 [DEBG] [/home/et/Desktop/Projects/unioj-judger/run/run.go:59] judgeserver 启动成功...   监听：0.0.0.0:7999
+2021-10-10 09:31:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:108] kafka消费者启动成功...,topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:31:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:31:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.45  负载统计: 62.09  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:32:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:32:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.51  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:32:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:32:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.51  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:33:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:33:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.51  负载统计: 1.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:33:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:33:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.490000000000002  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:34:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:34:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.490000000000002  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:34:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:34:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.5  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:35:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:35:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.38  负载统计: 2.89  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:35:28 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:35:29 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.45  负载统计: 6.18  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:35:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:35:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.53  负载统计: 10.55  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:36:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:36:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 30.26  负载统计: 24.41  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:36:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:36:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.53  负载统计: 38.660000000000004  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:37:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:37:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.26  负载统计: 13.74  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:37:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:37:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.54  负载统计: 18.990000000000002  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:38:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:38:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.63  负载统计: 20.12  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:38:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:38:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.14  负载统计: 13.09  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:39:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:39:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 33.35  负载统计: 20.23  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:39:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:39:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.23  负载统计: 19.21  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:40:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:40:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.95  负载统计: 13.9  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:40:18 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:40:19 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.660000000000004  负载统计: 13.450000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:40:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:40:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.68  负载统计: 11.44  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:41:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:41:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 33.160000000000004  负载统计: 13.36  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:41:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:41:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.88  负载统计: 12.18  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:42:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:42:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.830000000000002  负载统计: 13.08  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:42:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:42:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 30.71  负载统计: 15.68  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:43:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:43:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.39  负载统计: 58.24  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:43:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:43:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.21  负载统计: 22.81  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:44:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:44:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.99  负载统计: 47.27  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:44:07 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:44:08 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 33.17  负载统计: 13.040000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:44:33 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:44:34 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.87  负载统计: 16.36  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:44:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:44:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.89  负载统计: 31.990000000000002  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:45:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:45:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.37  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:45:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:45:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.15  负载统计: 2.2600000000000002  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:46:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:46:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.82  负载统计: 18.67  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:46:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:46:02 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.17  负载统计: 8.44  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:46:12 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:46:13 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.19  负载统计: 3.67  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:46:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:46:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.27  负载统计: 5.32  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:46:53 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:46:54 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 33.44  负载统计: 14.34  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:46:54 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:46:55 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.28  负载统计: 7.47  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:47:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:47:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.31  负载统计: 5.83  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:47:22 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:47:23 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.28  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:47:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:47:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.29  负载统计: 1.1300000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:48:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:48:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.29  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:48:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:48:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.29  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:49:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:49:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.28  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:49:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:49:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.27  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:50:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:50:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.28  负载统计: 0.74  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:50:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:50:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.27  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:51:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:51:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.29  负载统计: 0.74  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:51:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:51:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.3  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:52:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:52:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.31  负载统计: 1.6400000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:52:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:52:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.31  负载统计: 1.27  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:53:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:53:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.31  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:53:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:53:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.33  负载统计: 0  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:54:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:54:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.33  负载统计: 1.8900000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:54:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:54:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.33  负载统计: 1.8900000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:55:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:55:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.33  负载统计: 0.88  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:55:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:55:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.33  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:56:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:56:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.33  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:56:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:56:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.32  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:57:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:57:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.34  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:57:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:57:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.34  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:58:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:58:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.34  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:58:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:58:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.33  负载统计: 0.12  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:59:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:59:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.31  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 09:59:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 09:59:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.3  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:00:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:00:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.3  负载统计: 0.88  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:00:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:00:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.3  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:01:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:01:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.31  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:01:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:01:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.32  负载统计: 5.24  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:02:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:02:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.32  负载统计: 11.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:02:35 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:02:36 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.35  负载统计: 1.1300000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:02:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:02:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.36  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:03:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:03:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.38  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:03:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:03:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.38  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:04:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:04:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.39  负载统计: 2.4  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:04:32 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:04:33 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.36  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:04:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:04:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.38  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:05:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:05:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.39  负载统计: 5.28  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:05:11 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:05:12 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.69  负载统计: 2.2600000000000002  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:05:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:05:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.73  负载统计: 1.6400000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:06:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:06:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.73  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:06:38 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:06:39 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.76  负载统计: 1.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:06:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:06:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.78  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:07:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:07:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.810000000000002  负载统计: 4.15  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:07:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:07:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.810000000000002  负载统计: 2.0100000000000002  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:08:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:08:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.810000000000002  负载统计: 6.0600000000000005  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:08:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:08:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.85  负载统计: 14.24  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:09:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:09:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.66  负载统计: 12.59  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:09:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:09:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.44  负载统计: 4.32  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:09:49 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:09:50 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.42  负载统计: 2.38  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:10:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:10:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.44  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:10:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:10:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.45  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:11:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:11:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.44  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:11:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:11:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.44  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:12:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:12:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.45  负载统计: 5.05  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:12:24 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:12:25 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 33.54  负载统计: 13.63  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:12:25 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:12:26 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.45  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:12:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:12:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.49  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:13:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:13:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.49  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:13:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:13:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.480000000000004  负载统计: 0.12  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:14:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:14:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.480000000000004  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:14:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:14:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:15:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:15:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.49  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:15:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:15:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:16:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:16:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.12  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:16:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:16:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.480000000000004  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:17:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:17:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:17:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:17:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.51  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:18:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:18:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:18:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:18:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 1.01  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:19:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:19:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.12  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:19:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:19:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32  负载统计: 11.77  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:20:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:20:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.12  负载统计: 39.52  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:20:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:20:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.32  负载统计: 6.55  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:21:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:21:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.47  负载统计: 41.45  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:21:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:21:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.62  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:22:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:22:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.65  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:22:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:22:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.67  负载统计: 13.67  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:23:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:23:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.68  负载统计: 48.620000000000005  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:23:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:23:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.68  负载统计: 6.36  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:24:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:24:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 6.96  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:24:33 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:24:34 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.68  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:24:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:24:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.69  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:25:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:25:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:25:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:25:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 2.63  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:26:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:26:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.74  负载统计: 11.47  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:26:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:26:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:27:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:27:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 1.3800000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:27:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:27:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.74  负载统计: 25.3  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:27:57 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:27:58 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.68  负载统计: 3.5300000000000002  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:28:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:28:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.69  负载统计: 28.09  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:28:02 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:28:03 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.68  负载统计: 6.66  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:28:23 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:28:24 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.69  负载统计: 2.56  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:28:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:28:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.69  负载统计: 2.54  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:29:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:29:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.7  负载统计: 0.87  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:29:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:29:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.7  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:30:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:30:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:30:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:30:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:31:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:31:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:31:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:31:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:32:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:32:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:32:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:32:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.12  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:33:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:33:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 2.14  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:33:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:33:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 1.8900000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:34:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:34:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:34:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:34:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:35:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:35:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 2.38  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:35:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:35:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 2.39  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:36:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:36:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:36:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:36:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:37:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:37:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.87  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:37:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:37:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:38:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:38:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.12  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:38:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:38:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:39:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:39:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:39:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:39:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:40:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:40:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:40:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:40:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:41:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:41:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:41:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:41:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:42:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:42:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.87  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:42:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:42:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:43:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:43:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:43:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:43:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:44:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:44:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 1  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:44:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:44:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.7  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:45:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:45:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:45:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:45:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:46:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:46:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 2.14  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:46:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:46:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 1.76  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:47:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:47:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:47:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:47:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:48:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:48:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 2.02  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:48:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:48:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 2.2600000000000002  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:49:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:49:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 1.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:49:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:49:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:50:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:50:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:50:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:50:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:51:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:51:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:51:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:51:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:52:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:52:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:52:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:52:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:53:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:53:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:53:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:53:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.74  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:54:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:54:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.74  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:54:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:54:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:55:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:55:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:55:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:55:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 1.12  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:56:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:56:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:56:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:56:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:57:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:57:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.71  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:57:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:57:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.74  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:58:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:58:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 3.64  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:58:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:58:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:59:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:59:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 1.9000000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 10:59:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 10:59:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 2.14  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:00:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:00:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:00:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:00:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:01:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:01:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 2.02  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:01:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:01:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 1.6400000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:02:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:02:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:02:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:02:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:03:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:03:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:03:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:03:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.730000000000004  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:04:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:04:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.74  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:04:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:04:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:05:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:05:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:05:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:05:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:06:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:06:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.72  负载统计: 1.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:06:37 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:06:38 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.480000000000004  负载统计: 0.87  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:06:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:06:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.49  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:07:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:07:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.49  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:07:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:07:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.49  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:08:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:08:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.49  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:08:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:08:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.51  负载统计: 0.87  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:09:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:09:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.52  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:09:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:09:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.52  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:10:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:10:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.52  负载统计: 1.51  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:10:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:10:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.51  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:11:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:11:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.51  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:11:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:11:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:12:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:12:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.51  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:12:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:12:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 1.9000000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:13:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:13:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.51  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:13:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:13:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:14:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:14:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 2.5300000000000002  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:14:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:14:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.51  负载统计: 1.77  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:15:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:15:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:15:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:15:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:16:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:16:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:16:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:16:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:17:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:17:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:17:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:17:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:18:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:18:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:18:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:18:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:19:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:19:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.51  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:19:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:19:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.51  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:20:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:20:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.87  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:20:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:20:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.5  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:21:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:21:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.52  负载统计: 3.16  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:21:14 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:21:15 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.49  负载统计: 19.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:21:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:21:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.71  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:22:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:22:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 31.85  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:22:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:22:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.07  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:23:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:23:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.08  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:23:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:23:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.08  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:24:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:24:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.08  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:24:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:24:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.07  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:25:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:25:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.07  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:25:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:25:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.08  负载统计: 2.65  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:26:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:26:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.08  负载统计: 62.04  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:26:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:26:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.03  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:27:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:27:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.03  负载统计: 1.6400000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:27:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:27:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.02  负载统计: 1.9000000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:28:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:28:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.02  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:28:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:28:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.02  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:29:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:29:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.02  负载统计: 1.12  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:29:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:29:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.02  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:30:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:30:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.01  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:30:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:30:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.02  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:31:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:31:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.02  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:31:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:31:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.01  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:32:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:32:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:32:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:32:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.02  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:33:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:33:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.01  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:33:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:33:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.01  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:34:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:34:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.01  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:34:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:34:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.01  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:35:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:35:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.01  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:35:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:35:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:36:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:36:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32  负载统计: 2.02  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:36:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:36:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32  负载统计: 1.6400000000000001  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:37:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:37:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32  负载统计: 0.62  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:37:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:37:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:38:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:38:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32  负载统计: 0.25  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:38:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:38:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:39:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:39:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.02  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:39:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:39:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.01  负载统计: 0.5  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:40:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:40:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.01  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:40:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:40:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.01  负载统计: 0.75  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:41:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:41:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.01  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:41:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:41:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32  负载统计: 0.37  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-10 11:42:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-10 11:42:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 32.01  负载统计: 1.01  topic: judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-11 08:56:24 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/log.go:13] Judgerloger初始化成功...
+2021-10-11 08:56:24 [DEBG] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:75] [1] INFO  获取server kafka配置信息成功...
+2021-10-11 08:56:24 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:77] 		(_1_)  kafka_host:       47.96.99.172:9092
+2021-10-11 08:56:24 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:78] 		(_2_)  juger_task_topic: judger_task
+2021-10-11 08:56:24 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:79] 		(_3_)  sql_host:         47.96.99.172:3306
+2021-10-11 08:56:24 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:80] 		(_4_)  sql_user:         root
+2021-10-11 08:56:24 [INFO] [/home/et/Desktop/Projects/unioj-judger/conf/initConf.go:81] 		(_5_)  sql_password:     Abc741258963.0
+2021-10-11 08:56:24 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:21] [3] INFO:初始化连接mysql成功... 
+2021-10-11 08:56:24 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/etcd.go:38] etcd连接成功...
+2021-10-11 08:56:24 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/maintain.go:25] 定时删除任务启动成功...
+2021-10-11 08:56:24 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:24] 注册判题器信息：externalIp 192.168.128.0:7999   topic:  judger_task7c3dcd45-8efb-4899-99df-54a026227cd4
+2021-10-11 08:56:24 [DEBG] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:35] 新的topic:  judger_taskbbd897c9-1626-49a5-8ba3-26a611c2f58b
+2021-10-11 08:56:24 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:46] kafka消费者启动中...
+2021-10-11 08:56:24 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:44] 查询已有判题器成功...  nums： 1
+2021-10-11 08:56:25 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/mysql/mysql.go:62] 更新判题器  192.168.128.0:7999  状态成功...
+2021-10-11 08:56:25 [DEBG] [/home/et/Desktop/Projects/unioj-judger/run/run.go:59] judgeserver 启动成功...   监听：0.0.0.0:7999
+2021-10-11 08:56:25 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/kafka.go:108] kafka消费者启动成功...,topic: judger_taskbbd897c9-1626-49a5-8ba3-26a611c2f58b
+2021-10-11 08:56:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-11 08:56:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 27.13  负载统计: 53.68  topic: judger_taskbbd897c9-1626-49a5-8ba3-26a611c2f58b
+2021-10-11 08:57:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-11 08:57:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 27.53  负载统计: 52.46  topic: judger_taskbbd897c9-1626-49a5-8ba3-26a611c2f58b
+2021-10-11 08:57:40 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-11 08:57:41 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.85  负载统计: 9.74  topic: judger_taskbbd897c9-1626-49a5-8ba3-26a611c2f58b
+2021-10-11 08:57:51 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-11 08:57:52 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 29.96  负载统计: 36.17  topic: judger_taskbbd897c9-1626-49a5-8ba3-26a611c2f58b
+2021-10-11 08:57:52 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-11 08:57:53 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 28.93  负载统计: 14.13  topic: judger_taskbbd897c9-1626-49a5-8ba3-26a611c2f58b
+2021-10-11 08:58:00 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:50] 心跳检测--判题器工作正常
+2021-10-11 08:58:01 [INFO] [/home/et/Desktop/Projects/unioj-judger/service/healthy/health.go:68] 内存统计: 29.310000000000002  负载统计: 15.8  topic: judger_taskbbd897c9-1626-49a5-8ba3-26a611c2f58b
