@@ -162,3 +162,25 @@ func (p *Problems) TotalProblems() int {
 	logger.Info("缓存加载问题总数 ", nums_)
 	return nums_
 }
+
+// GetProblemSupportLanguage 获取某个问题支持使用的问题列表
+func (p *Problems) GetProblemSupportLanguage(pid int) []string {
+	problem, _ := NewProblems().GetProblemDetailById(pid)
+	lans := make([]string, 0)
+	if (*problem).TemplateC != "" {
+		lans = append(lans, "C")
+	}
+	if (*problem).TemplateGo != "" {
+		lans = append(lans, "Golang")
+	}
+	if (*problem).TemplateCplus != "" {
+		lans = append(lans, "C++")
+	}
+	if (*problem).TemplateJava != "" {
+		lans = append(lans, "Java")
+	}
+	if (*problem).TemplatePython != "" {
+		lans = append(lans, "Python")
+	}
+	return lans
+}

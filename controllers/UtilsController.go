@@ -3,6 +3,7 @@ package controllers
 import (
 	"crypto/md5"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"github.com/astaxie/beego"
 	_ "github.com/astaxie/beego"
@@ -203,4 +204,13 @@ func (this *UtilsController) GetServerConfig() {
 	configMap["sql_user"] = SqlUser
 	configMap["sql_password"] = SqlPassword
 	this.JsonResult(200, "获取参数成功", configMap)
+}
+
+// Userprofile UserProfile 按照session中存储的userid查询登陆用户的信息
+func Userprofile(this BaseController) (models.User, error) {
+	userLogin := this.Ctx.Input.CruSession.Get("user_login")
+	if userLogin == nil {
+		return models.User{}, errors.New("未登录")
+	}
+	return userLogin.(models.User), nil
 }

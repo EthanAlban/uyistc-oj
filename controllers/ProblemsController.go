@@ -118,3 +118,10 @@ func (this *ProblemsController) GetProblemAcSubTimes() {
 	retMap["submissions"] = sub
 	this.JsonResult(200, "获取问题提交次数成功", retMap)
 }
+
+// GetProblemSupportLanguage 获取某个问题支持使用的问题列表
+func (this *ProblemsController) GetProblemSupportLanguage() {
+	pid, _ := strconv.Atoi(this.Ctx.Input.Query("pid"))
+	lans := models.NewProblems().GetProblemSupportLanguage(pid)
+	this.JsonResult(200, "查询问题接受语言成功", lans)
+}

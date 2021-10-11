@@ -1,6 +1,7 @@
 package models
 
 import (
+	uuid "github.com/satori/go.uuid"
 	"github.com/wonderivan/logger"
 	"strconv"
 	"time"
@@ -61,4 +62,29 @@ func (c *Contests) GetContestQuantity() int {
 		return 0
 	}
 	return val
+}
+
+// GetContestById 按照id查询竞赛
+func (c *Contests) GetContestById(contest_id string) *Contests {
+	var contest Contests
+	O.QueryTable("contests").Filter("cid", contest_id).One(&contest)
+	return &contest
+}
+
+func (c *Contests) ContestPasswordCheck(id string, pwd string) bool {
+	var contest Contests
+	O.QueryTable("contests").Filter("cid", id).One(&contest)
+	if contest.Password == pwd {
+		return true
+	}
+	return false
+}
+
+func (c *Contests) AllowUserToContest(user User, id string) {
+	contest := NewContests().GetContestById(id)
+	var contestAccess ContestAccess
+	contestAccess.UserId = &user
+	contestAccess.ContestId = contest
+	contestAccess.Cuid = (uuid.NewV4()).String()
+	O.Insert(&contestAccess)
 }
