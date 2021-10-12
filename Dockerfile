@@ -34,5 +34,5 @@ CMD  ["./main"]
 #   删除none镜像
 #   docker rmi `docker images | grep  '<none>' | awk '{print $3}'`
 
-#   docker tag 50262f800cca registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-beego:latest
+#   docker tag c2d0e07b8338 registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-beego:latest
 #   docker push registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-beego:latest

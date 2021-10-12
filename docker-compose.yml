@@ -1,4 +1,8 @@
 version: '3'
+networks:
+  etcd-net:           # 网络
+    driver: bridge    # 桥接模式
+
 services:
   mysql:
     restart: always
@@ -21,12 +25,33 @@ services:
     ports:
       - 3306:3306
     # 设置端口
-    
+
+  mysql_testcase:
+    restart: always
+    image: mysql:5.7
+    # 选择镜像，这里用的是mysql8，低版本mysql需要修改配置文件映射地址
+    container_name: unioj_mysql_testcase
+    volumes:
+      - ./mysql_testcase/mydir:/mydir
+      # 文件挂载
+      - ./mysql_testcase/datadir:/var/lib/mysql
+      # 挂载目录
+      - ./mysql_testcase/conf:/etc/mysql
+      # 挂载 my.cnf 配置文件
+      - ./mysql_testcase/docker/mysql/source:/docker-entrypoint-initdb.d
+    environment:
+      - "MYSQL_ROOT_PASSWORD=123456"
+      # 设置密码
+      - "TZ=Asia/Shanghai"
+      # 设置时区
+    ports:
+      - 3307:3306
+    # 设置端口    
     
   redis:
+    restart: always
     image: redis:4.0.8-alpine
     container_name: unioj_redis
-    restart: always
     ports:
       - 6379:6379
     volumes:
@@ -45,12 +70,12 @@ services:
     image: wurstmeister/kafka
     container_name: unioj_kafka
     ports:
-      - 9092:9092
+      - "9092:9092"
     # host ip
     environment:
       KAFKA_ADVERTISED_HOST_NAME: kafka
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181/kafka
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://39.105.152.206:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://47.96.99.172:9092
       KAFKA_LISTENERS: PLAINTEXT://:9092
       KAFKA_BROKER_ID: 1
     # always restart
@@ -58,3 +83,62 @@ services:
     volumes:
       - ./docker.sock:/var/run/docker.sock
       - ./kafka:/kafka
+
+  unioj-beego:
+    restart: always
+    image: registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-beego:latest
+    container_name: unioj-beego
+    ports:
+      - "9000:8000"
+      - "8666:8666"
+    volumes:
+      - ./beego:$GOPATH/src/unioj/logs
+
+  unioj-vue:
+    restart: always
+    image: registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-vue:latest
+    container_name: unioj-vue
+    ports:
+      - "8080:8080"
+
+  unioj-judger:
+    restart: always
+    image: registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-judger
+    container_name: unioj-judger
+    entrypoint: $GOPATH/src/unioj-judger/server_detect.sh
+    ports:
+      - "7999:7999"
+    environment:
+      JUDGERIP: 47.96.99.172:7999
+    links:
+      - unioj-beego
+
+
+  unioj-fileserver:
+    restart: always
+    image: registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-fileserver
+    container_name: unioj-fileserver  
+    ports:
+      - "8081:8081"
+
+
+  consul:
+    image: consul:latest
+    volumes:
+      - /home/test/consul/data:/consul/data
+      - /home/test/consul/config:/consul/config
+    container_name: unioj_consul
+    restart: always
+    ports:
+      - "8300:8300"
+      - "8301:8301"
+      - "8301:8301/udp"
+      - "8302:8302"
+      - "8302:8302/udp"
+      - "8400:8400"
+      - "8500:8500"
+      - "54:53/udp"
+    command: agent -server -bind=0.0.0.0 -client=0.0.0.0 -node=consul_Server1 -bootstrap-expect=1 -ui
+      
+    
+ 
