@@ -1,0 +1,201 @@
+version: '3'
+networks:
+  etcd-net:           # 网络
+    driver: bridge    # 桥接模式
+
+services:
+  mysql:
+    restart: always
+    image: mysql:5.7
+    # 选择镜像，这里用的是mysql8，低版本mysql需要修改配置文件映射地址
+    container_name: unioj_mysql
+    volumes:
+      - ./mysql/mydir:/mydir
+      # 文件挂载
+      - ./mysql/datadir:/var/lib/mysql
+      # 挂载目录
+      - ./mysql/conf:/etc/mysql
+      # 挂载 my.cnf 配置文件
+      - ./mysql/docker/mysql/source:/docker-entrypoint-initdb.d
+    environment:
+      - "MYSQL_ROOT_PASSWORD=Abc741258963.0"
+      # 设置密码
+      - "TZ=Asia/Shanghai"
+      # 设置时区
+    ports:
+      - 3306:3306
+    # 设置端口
+
+  mysql_testcase:
+    restart: always
+    image: mysql:5.7
+    # 选择镜像，这里用的是mysql8，低版本mysql需要修改配置文件映射地址
+    container_name: unioj_mysql_testcase
+    volumes:
+      - ./mysql_testcase/mydir:/mydir
+      # 文件挂载
+      - ./mysql_testcase/datadir:/var/lib/mysql
+      # 挂载目录
+      - ./mysql_testcase/conf:/etc/mysql
+      # 挂载 my.cnf 配置文件
+      - ./mysql_testcase/docker/mysql/source:/docker-entrypoint-initdb.d
+    environment:
+      - "MYSQL_ROOT_PASSWORD=123456"
+      # 设置密码
+      - "TZ=Asia/Shanghai"
+      # 设置时区
+    ports:
+      - 3307:3306
+    # 设置端口    
+    
+  redis:
+    restart: always
+    image: redis:4.0.8-alpine
+    container_name: unioj_redis
+    ports:
+      - 6379:6379
+    volumes:
+      - ./redis/config:/docker/config
+      - ./redis/data:/data
+
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: unioj_zookeeper
+    # always restart
+    restart: always
+    ports:
+      - 2181:2181
+
+  kafka:
+    image: wurstmeister/kafka
+    container_name: unioj_kafka
+    ports:
+      - "9092:9092"
+    # host ip
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181/kafka
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://47.96.99.172:9092
+      KAFKA_LISTENERS: PLAINTEXT://:9092
+      KAFKA_BROKER_ID: 1
+    # always restart
+    restart: always
+    volumes:
+      - ./docker.sock:/var/run/docker.sock
+      - ./kafka:/kafka
+
+  unioj-beego:
+    restart: always
+    image: registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-beego:latest
+    container_name: unioj-beego
+    ports:
+      - "9000:8000"
+      - "8666:8666"
+    volumes:
+      - ./beego:$GOPATH/src/unioj/logs
+
+  unioj-vue:
+    restart: always
+    image: registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-vue:latest
+    container_name: unioj-vue
+    ports:
+      - "8080:8080"
+
+  unioj-judger:
+    restart: always
+    image: registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-judger
+    container_name: unioj-judger
+    entrypoint: $GOPATH/src/unioj-judger/server_detect.sh
+    ports:
+      - "7999:7999"
+      - "8081:8081"
+    environment:
+      JUDGERIP: 47.96.99.172:7999
+    links:
+      - unioj-beego
+
+  consul:
+    image: consul:latest
+    volumes:
+      - /home/test/consul/data:/consul/data
+      - /home/test/consul/config:/consul/config
+    container_name: unioj_consul
+    restart: always
+    ports:
+      - "8300:8300"
+      - "8301:8301"
+      - "8301:8301/udp"
+      - "8302:8302"
+      - "8302:8302/udp"
+      - "8400:8400"
+      - "8500:8500"
+      - "54:53/udp"
+    command: agent -server -bind=0.0.0.0 -client=0.0.0.0 -node=consul_Server1 -bootstrap-expect=1 -ui
+      
+    
+  etcd1:
+    image: bitnami/etcd:latest  # 镜像
+    container_name: etcd1       # 容器名 --name
+    restart: always             # 总是重启
+    networks:
+      - etcd-net                # 使用的网络 --network
+    ports:                      # 端口映射 -p
+      - "20000:2379"
+      - "20001:2380"
+    environment:                # 环境变量 --env
+      - ALLOW_NONE_AUTHENTICATION=yes                       # 允许不用密码登录
+      - ETCD_NAME=etcd1                                     # etcd 的名字
+      - ETCD_INITIAL_ADVERTISE_PEER_URLS=http://etcd1:2380  # 列出这个成员的伙伴 URL 以便通告给集群的其他成员
+      - ETCD_LISTEN_PEER_URLS=http://0.0.0.0:2380           # 用于监听伙伴通讯的URL列表
+      - ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379         # 用于监听客户端通讯的URL列表
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd1:2379        # 列出这个成员的客户端URL，通告给集群中的其他成员
+      - ETCD_INITIAL_CLUSTER_TOKEN=etcd-cluster             # 在启动期间用于 etcd 集群的初始化集群记号
+      - ETCD_INITIAL_CLUSTER=etcd1=http://etcd1:2380,etcd2=http://etcd2:2380,etcd3=http://etcd3:2380 # 为启动初始化集群配置
+      - ETCD_INITIAL_CLUSTER_STATE=new                      # 初始化集群状态
+    volumes:
+      - ./etcd/etcd1_data:/bitnami/etcd                            # 挂载的数据卷
+
+  etcd2:
+    image: bitnami/etcd:latest
+    container_name: etcd2
+    restart: always
+    networks:
+      - etcd-net
+    ports:
+      - "20002:2379"
+      - "20003:2380"
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_NAME=etcd2
+      - ETCD_INITIAL_ADVERTISE_PEER_URLS=http://etcd2:2380
+      - ETCD_LISTEN_PEER_URLS=http://0.0.0.0:2380
+      - ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd2:2379
+      - ETCD_INITIAL_CLUSTER_TOKEN=etcd-cluster
+      - ETCD_INITIAL_CLUSTER=etcd1=http://etcd1:2380,etcd2=http://etcd2:2380,etcd3=http://etcd3:2380
+      - ETCD_INITIAL_CLUSTER_STATE=new
+    volumes:
+      - ./etcd/etcd2_data:/bitnami/etcd
+
+  etcd3:
+    image: bitnami/etcd:latest
+    container_name: etcd3
+    restart: always
+    networks:
+      - etcd-net
+    ports:
+      - "20004:2379"
+      - "20005:2380"
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_NAME=etcd3
+      - ETCD_INITIAL_ADVERTISE_PEER_URLS=http://etcd3:2380
+      - ETCD_LISTEN_PEER_URLS=http://0.0.0.0:2380
+      - ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd3:2379
+      - ETCD_INITIAL_CLUSTER_TOKEN=etcd-cluster
+      - ETCD_INITIAL_CLUSTER=etcd1=http://etcd1:2380,etcd2=http://etcd2:2380,etcd3=http://etcd3:2380
+      - ETCD_INITIAL_CLUSTER_STATE=new
+    volumes:
+      - ./etcd/etcd3_data:/bitnami/etcd
+

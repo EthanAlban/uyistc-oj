@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR app
 
 ADD oj-0.0.1-SNAPSHOT.jar  /oj-0.0.1-SNAPSHOT.jar
-
+COPY . .
 EXPOSE 8081
 CMD java -jar /oj-0.0.1-SNAPSHOT.jar
 
