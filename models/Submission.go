@@ -55,7 +55,7 @@ func (sb *Submission) GetSubmissionByID(submissionID string) (error, Submission)
 }
 
 // GetProblemStatusLogin 通过UserId和问题id查询问题最后的最好的提交状态
-func (sb *Submission) GetProblemStatusLogin(userId, pid int) int {
+func (sb *Submission) GetProblemStatusLogin(userId string, pid int) int {
 	var submissions []Submission
 	_, err := O.QueryTable("submission").Filter("problem_id", pid).Filter("user_id", userId).OrderBy("create_time").All(&submissions)
 	if err != nil {
@@ -99,14 +99,14 @@ func (sb *Submission) GetSubmissionStaticForProblem(pid int) []GroupBy {
 }
 
 // GetUserSubmissions 分页查询某个用户的提交
-func (sb *Submission) GetUserSubmissions(limit int, offset int, userid int) *[]Submission {
+func (sb *Submission) GetUserSubmissions(limit int, offset int, userid string) *[]Submission {
 	var submissions []Submission
 	O.QueryTable("submission").Filter("UserId", userid).Limit(limit, offset).OrderBy("-CreateTime").All(&submissions)
 	return &submissions
 }
 
 // TotalSubmissions 获取某个用户的全部提交的数量
-func (sb *Submission) TotalSubmissions(userid int) int {
+func (sb *Submission) TotalSubmissions(userid string) int {
 	count, err := O.QueryTable("submission").Filter("UserId", userid).Count()
 	if err != nil {
 		logger.Error(err)
@@ -116,7 +116,7 @@ func (sb *Submission) TotalSubmissions(userid int) int {
 }
 
 // GetDoneProblems 获取某个用户做过的所有题目
-func (sb *Submission) GetDoneProblems(userid int) (*[]Problems, map[int]int) {
+func (sb *Submission) GetDoneProblems(userid string) (*[]Problems, map[int]int) {
 	type problemCount struct {
 		ProblemId int `json:"problem_id"`
 	}

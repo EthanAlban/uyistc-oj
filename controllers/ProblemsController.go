@@ -17,12 +17,12 @@ func (this *ProblemsController) GetPagesProblems() {
 	offset, _ := strconv.Atoi(this.Ctx.Input.Query("offset"))
 	fmt.Println("limit:", limit, " offset:", offset)
 	// 获取当前的登陆用户
-	var userId int
+	var userId string
 	userLogin := this.Ctx.Input.CruSession.Get("user_login")
 	if userLogin != nil {
 		userId = userLogin.(models.User).UId
 	} else {
-		userId = -1
+		userId = "-1"
 	}
 	pros, err := models.NewProblems().GetPagesProblems(limit, offset)
 	if err != nil {
@@ -34,10 +34,9 @@ func (this *ProblemsController) GetPagesProblems() {
 	for i := 0; i < len(*pros); i++ {
 		models.O.LoadRelated(&((*pros)[i]), "ProblemType")
 		(*pros)[i].Uid, _ = models.NewUser().GetUserByUid((*pros)[i].Uid.UId)
-		if userId >= 0 {
-			// 加载缓存用户做题信息
-			problemStatus[(*pros)[i].Pid] = models.NewSubmission().GetProblemStatusLogin(userId, (*pros)[i].Pid)
-		}
+		// 加载缓存用户做题信息
+		problemStatus[(*pros)[i].Pid] = models.NewSubmission().GetProblemStatusLogin(userId, (*pros)[i].Pid)
+
 	}
 	retmap := make(map[string]interface{})
 	retmap["results"] = problemStatus

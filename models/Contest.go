@@ -86,5 +86,10 @@ func (c *Contests) AllowUserToContest(user User, id string) {
 	contestAccess.UserId = &user
 	contestAccess.ContestId = contest
 	contestAccess.Cuid = (uuid.NewV4()).String()
+	contestAccess.Score = 0
+	contestAccess.Penalty = 0
+	//设置当前用户的参加时间为当前  完成时间为比赛的截止时间
+	contestAccess.FinishTime = contest.EndingTime
+	contestAccess.EntryTime = time.Now()
 	O.Insert(&contestAccess)
 }

@@ -6,13 +6,12 @@ import (
 	"github.com/beego/beego/v2/client/orm"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/wonderivan/logger"
-	"strconv"
 	"unioj/conf"
 	"unioj/models/redisOP"
 )
 
 type User struct {
-	UId       int    `orm:"column(uid);pk"`
+	UId       string `orm:"column(uid);pk"`
 	UserName  string `orm:"column(username);size(60)"`
 	UserType  int    `orm:"column(usertype)"`
 	RealName  string `orm:"column(realname);size(60)"`
@@ -82,17 +81,14 @@ func (u *User) GetuserbyUsernamePwd(email_or_tel, pwd, usernameType string) (*Us
 }
 
 // GetUserByUid 根据user id得到user的基本信息  过滤掉系统中的敏感信息
-func (u *User) GetUserByUid(uid int) (*User, error) {
+func (u *User) GetUserByUid(uid string) (*User, error) {
 	var user User
-	if uid < 0 {
-		return nil, errors.New("用户id非法")
-	}
-	res, err := redisOP.RedisGetKey("user_" + strconv.Itoa(uid))
+	res, err := redisOP.RedisGetKey("user_" + uid)
 	if err != nil {
 		O.Raw("SELECT uid,avatar,username,credit,signature,usertype,gitaddr,major,blogaddr from `user` where uid = ?", uid).QueryRow(&user)
 		//O.QueryTable("user").Filter("uid", uid).One(&user)
 		str, _ := json.Marshal(user)
-		err = redisOP.RedisSetKey("user_"+strconv.Itoa(uid), string(str))
+		err = redisOP.RedisSetKey("user_"+uid, string(str))
 	} else {
 		err = json.Unmarshal([]byte(res), &user)
 	}

@@ -9,4 +9,5 @@ func init() {
 	judgerRouter()
 	logsRouter()
 	contestsRouter()
+	submissionAcmRouter()
 }

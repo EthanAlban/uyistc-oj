@@ -3,6 +3,7 @@ package users
 import (
 	"encoding/json"
 	"github.com/astaxie/beego"
+	uuid "github.com/satori/go.uuid"
 	"github.com/wonderivan/logger"
 	"unioj/conf"
 	"unioj/controllers"
@@ -80,6 +81,7 @@ func (this *UserController) Register() {
 		logger.Error(err)
 	}
 	var user models.User
+	user.UId = (uuid.NewV4()).String()
 	user.UserName = params.UserName
 	user.Email = params.Email
 	user.Password = params.Password

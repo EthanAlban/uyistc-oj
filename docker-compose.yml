@@ -47,7 +47,7 @@ services:
     ports:
       - 3307:3306
     # 设置端口    
-    
+
   redis:
     restart: always
     image: redis:4.0.8-alpine
@@ -117,7 +117,7 @@ services:
   unioj-fileserver:
     restart: always
     image: registry.cn-beijing.aliyuncs.com/uyistcoj/unioj-fileserver
-    container_name: unioj-fileserver  
+    container_name: unioj-fileserver
     ports:
       - "8081:8081"
 
