@@ -62,13 +62,15 @@ module.exports = {
 			// oj服务器
 			'/api': {
 				// target: 'http://192.168.10.63:30001',
-				target: 'http://192.168.128.0:8000',
+				// target: 'http://47.96.99.172:9000',
+				target: 'http://192.168.128.0:9000',
 				ws: true,
 				changeOrigin: true,
 				pathRewrite: { '^/api': '/api' }
 			},
 			'/captcha': {
 				// target: 'http://192.168.10.63:30002',
+				// target: 'http://47.96.99.172:8666',
 				target: 'http://192.168.128.0:8666',
 				ws: true,
 				changeOrigin: true,

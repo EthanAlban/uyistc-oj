@@ -83,7 +83,7 @@ export default new Router({
                 // component: () => import('@/views/Home/problemDetail.vue')
             },
             {
-                path: '/problemDetail_Contest/:contest_id/:problem_id',
+                path: '/problemDetail_Contest/:problem_id/:contest_id',
                 name: 'problemDetail_Contest',
                 component (resolve) {
                     require(['@/views/Home/problemDetail_Contest.vue'], resolve)

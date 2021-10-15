@@ -152,16 +152,16 @@
 <script>
 	export default {
 		beforeMount() {
-			this.GetAllContests();
+			this.GetAllContests()
 			this.$user_axios.user_profile().then(res => {
-				this.selfLog(res);
-				this.user_profile = res["data"];
-				this.selfLog(this.user_profile);
-			});
+				this.selfLog(res)
+				this.user_profile = res['data']
+				this.selfLog(this.user_profile)
+			})
 		},
 		data() {
 			return {
-				tag_types: ["info", "warning", "danger", "", "success"],
+				tag_types: ['info', 'warning', 'danger', '', 'success'],
 				user_profile: null,
 				// 分页查看
 				page: 1,
@@ -171,44 +171,42 @@
 				contest_id: 0,
 				tableData: [],
 				dialogFormVisible: false,
-				form: {
-					password: ""
-				},
+				form: { password: '' },
 				formInline: {
-					keyword: "",
-					status: ""
+					keyword: '',
+					status: ''
 				},
 				problems: {},
 				complete_num:[],
 				table: false,
 				contest_annon_list_drawer_visble: false,
 				contest_annon_list: []
-			};
+			}
 		},
 		methods: {
 			handleClose(done) {
-				this.form.password = '';
-				done();
+				this.form.password = ''
+				done()
 			},
 			cancelYanZhen() {
-				this.form.password = '';
-				this.dialogFormVisible = false;
+				this.form.password = ''
+				this.dialogFormVisible = false
 			},
 			GetAllContests() {
 				this.$contests_axios.GetAllContests(this.offset, this.limit).then(res => {
-					this.tableData = res.data;
+					this.tableData = res.data
 					for (let contest of this.tableData) {
 						// 转化类型码
-						if (contest["ContestType"] === 0){
-							contest["ContestType"] = "ACM"
-						}else if (contest["ContestType"] === 1){
-							contest["ContestType"] = "OI"
-						}else if(contest["ContestType"] === 2){
-							contest["ContestType"] = "IOI"
+						if (contest['ContestType'] === 0){
+							contest['ContestType'] = 'ACM'
+						}else if (contest['ContestType'] === 1){
+							contest['ContestType'] = 'OI'
+						}else if(contest['ContestType'] === 2){
+							contest['ContestType'] = 'IOI'
 						}
 						var curDate = new Date(),
 							beginDate = new Date(contest.StartTime),
-							endDate = new Date(contest.EndingTime);
+							endDate = new Date(contest.EndingTime)
 							// 正在进行 0  未开始1   已结束-1
 						if (curDate >= beginDate && curDate <= endDate) {
 							contest['status'] = '0'
@@ -217,9 +215,9 @@
 						}else{
 							contest['status'] = '1'
 						}
-						this.selfLog(this.tableData);
+						this.selfLog(this.tableData)
 					}
-				});
+				})
 				this.$contests_axios.GetContestQuantity().then(res => {
 					this.total = res.data
 				})
@@ -227,157 +225,153 @@
 			// // 查询公告列表
 			get_annonce_for_contest() {
 				this.$axios.get_annonce_for_contest_stu(this.contest_id).then(res => {
-					this.selfLog(res);
-					this.contest_annon_list = res.data;
-					this.contest_annon_list_drawer_visble = true;
-				});
+					this.selfLog(res)
+					this.contest_annon_list = res.data
+					this.contest_annon_list_drawer_visble = true
+				})
 			},
 			// 展示公告抽屉
 			async show_drawer_for_annoce() {
-				await this.get_annonce_for_contest(this.contest_id);
-				this.contest_annon_list_drawer_visble = true;
+				await this.get_annonce_for_contest(this.contest_id)
+				this.contest_annon_list_drawer_visble = true
 			},
 			// 监听分页控件
 			handleSizeChange(val) {
-				this.limit = val;
-				this.offset = (this.page - 1) * this.limit;
-				this.Get_Contests_List();
-				this.selfLog(`每页 ${val} 条`);
+				this.limit = val
+				this.offset = (this.page - 1) * this.limit
+				this.Get_Contests_List()
+				this.selfLog(`每页 ${val} 条`)
 			},
 			handleCurrentChange(val) {
-				this.page = val;
-				this.offset = (this.page - 1) * this.limit;
-				this.Get_Contests_List();
-				this.selfLog(`当前页: ${val}`);
+				this.page = val
+				this.offset = (this.page - 1) * this.limit
+				this.Get_Contests_List()
+				this.selfLog(`当前页: ${val}`)
 			},
 			// 参加按钮监听
 			EnterContest(contest_id) {
 				if (this.user_profile === null) {
 					this.$message({
-						message: "查看习题请先登录",
-						type: "warning"
-					});
-					return false;
+						message: '查看习题请先登录',
+						type: 'warning'
+					})
+					return false
 				}
-				this.selfLog(contest_id);
-				this.contest_id = contest_id;
+				this.selfLog(contest_id)
+				this.contest_id = contest_id
 				this.$contests_axios.ContestAccess(contest_id).then(res => {
-					this.selfLog(res);
+					this.selfLog(res)
 					// 没有权限就要输密码
 					if (res.errcode===205) {
 						this.$message({
-							message: "暂无权限，请输入密码",
-							type: "warning"
-						});
-						this.dialogFormVisible = true;
+							message: '暂无权限，请输入密码',
+							type: 'warning'
+						})
+						this.dialogFormVisible = true
 					} else if(res.errcode===204){
 						this.$message({
-							message: "查看习题请先登录",
-							type: "warning"
-						});
+							message: '查看习题请先登录',
+							type: 'warning'
+						})
 					}else if(res.errcode===200){
 						this.$message({
-							message: "拥有权限，可进入",
-							type: "success"
-						});
+							message: '拥有权限，可进入',
+							type: 'success'
+						})
 						// 查询竞赛的问题列表
 						this.$contests_axios.ContestProblemList(this.contest_id).then(res => {
-							this.selfLog(res);
-							if (res.data === "Contest has not started yet.") {
+							this.selfLog(res)
+							if (res.data === 'Contest has not started yet.') {
 								this.$message({
-									message: "竞赛尚未到达开始时间",
-									type: "warning"
-								});
+									message: '竞赛尚未到达开始时间',
+									type: 'warning'
+								})
 							} else {
-								this.problems = res.data.problems;
+								this.problems = res.data.problems
 								this.complete_num = res.data.complete_num
 								this.selfLog( this.complete_num)
 								for(let problem of this.problems){
 									this.$problem_axios.GetProblemSupportLanguage(problem.Pid).then(res=>{
-										problem["supported_lan"] = res.data
-										problem["complete_num"] = this.complete_num[problem["Pid"]]
-										
+										problem['supported_lan'] = res.data
+										problem['complete_num'] = this.complete_num[problem['Pid']]
 									})
 								}
-								this.dialogFormVisible = false;
-								this.table = true;
+								this.dialogFormVisible = false
+								this.table = true
 							}
-						});
+						})
 					}
-				});
+				})
 				// this.dialogFormVisible = false
 			},
 			EnterContest_password(id) {
 				if (this.user_profile === null) {
 					this.$message({
-						message: "查看习题请先登录",
-						type: "warning"
-					});
-					return false;
+						message: '查看习题请先登录',
+						type: 'warning'
+					})
+					return false
 				}
-				if (this.form.password === "") {
+				if (this.form.password === '') {
 					this.$message({
-						message: "密码不能为空",
-						type: "warning"
-					});
-					return false;
+						message: '密码不能为空',
+						type: 'warning'
+					})
+					return false
 				}
 				this.$contests_axios.ContestPasswordCheck(this.contest_id,this.form.password).then(res => {
-					this.selfLog(res);
+					this.selfLog(res)
 					if (res.errcode === 204) {
 						this.$message({
-							message: "密码错误或者密码已过期",
-							type: "error"
-						});
+							message: '密码错误或者密码已过期',
+							type: 'error'
+						})
 					} else if (res.errcode === 200) {
 						this.$message({
-							message: "密码正确~",
-							type: "success"
-						});
+							message: '密码正确~',
+							type: 'success'
+						})
 						// 查询竞赛的问题列表
 						this.$contests_axios.ContestProblemList(this.contest_id).then(res => {
-							this.selfLog(res);
-							if (res.data === "Contest has not started yet.") {
+							this.selfLog(res)
+							if (res.data === 'Contest has not started yet.') {
 								this.$message({
-									message: "竞赛尚未到达开始时间",
-									type: "warning"
-								});
+									message: '竞赛尚未到达开始时间',
+									type: 'warning'
+								})
 							} else {
-								this.problems = res.data.problems;
+								this.problems = res.data.problems
 								this.complete_num = res.data.complete_num
 								this.selfLog( this.complete_num)
 								for(let problem of this.problems){
+									problem['complete_num'] = this.complete_num[problem['Pid']]
 									this.$problem_axios.GetProblemSupportLanguage(problem.Pid).then(res=>{
-										problem["supported_lan"] = res.data
-										problem["complete_num"] = this.complete_num[problem["Pid"]]
-										
+										problem['supported_lan'] = res.data
 									})
 								}
-								this.dialogFormVisible = false;
-								this.table = true;
+								this.dialogFormVisible = false
+								this.table = true
 							}
-						});
+						})
 					}
-				});
+				})
 			},
 			doProblem(id) {
-				this.selfLog(id);
-				this.$router.push(`/problemDetail_Contest/${id}/${this.contest_id}`);
+				this.selfLog('前端传入路径参数问题id：'+id)
+				this.$router.push(`/problemDetail_Contest/${id}/${this.contest_id}`)
 			},
 			search_task() {
 				this.$axios
 					.search_assign(this.offset, this.limit, this.formInline)
 					.then(res => {
-						this.total = res.data.total;
-						this.tableData = res.data.results;
-						this.selfLog(res);
-					});
+						this.total = res.data.total
+						this.tableData = res.data.results
+						this.selfLog(res)
+					})
 			}
 		},
-		computed: {
-			
-		}
-	};
+		computed: {}
+	}
 </script>
 
 <style lang='scss' scoped>
