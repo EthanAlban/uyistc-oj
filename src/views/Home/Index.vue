@@ -560,7 +560,7 @@
 			}
 		},
 		watch: {},
-		computed: {}
+		   computed: {}
 	};
 </script>
 

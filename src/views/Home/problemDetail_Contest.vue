@@ -34,9 +34,9 @@
 					</div>
 				</div>
 				<div style="marginTop:20px">
-					<span>通过次数:{{ acceptSub }}</span>
+					<span>以完成人次:{{ actimes }}</span>
 					<el-divider direction="vertical"></el-divider>
-					<span>提交次数:{{ totalSub }}</span>
+					<span>你的总罚时:{{ penalty }}</span>
 					<!-- 使用echarts画图 -->
 					<div id="echart-pass-rate"></div>
 				</div>
@@ -126,6 +126,7 @@
 	export default {
 		name: 'problemDetail',
 		mounted() {
+			this.checkUser()
 			this.getData()
 			this.setEchart()
 		},
@@ -201,12 +202,29 @@
 							show: true,
 							length: 5
 						},
-						data: []
+						data: [],
 					}]
-				}
+				},
+				
+				// 总罚时
+				penalty:0,
+				// 完成人次
+				actimes:0
 			}
 		},
 		methods: {
+			checkUser(){
+				// 检查用户是否有当前比赛的权限  防止通过链接直接访问
+				this.$contests_axios.ContestAccess(this.$route.params.contest_id).then(res=>{
+					if(res.errcode!==200){
+						this.$message({
+							message: '无权限访问该竞赛题目',
+							type: 'error'
+						})
+						this.$router.push('/')
+					}
+				})
+			},
 			setEchart() {
 				var chartDom = document.getElementById('echart-pass-rate')
 				var myChart = echarts.init(chartDom)
@@ -291,6 +309,11 @@
 			async getData() {
 				this.selfLog('获取问题id：'+ this.$route.params.problem_id)
 				this.setStasticPanel(this.$route.params.problem_id)
+				this.$problem_axios.GetAcAndPenalty(this.$route.params.contest_id,this.$route.params.problem_id).then(res=>{
+					this.selfLog(res)
+					this.actimes = res.data.actimes
+					this.penalty = res.data.penalty
+				})
 				// 用id获取问题的提交次数
 				this.$problem_axios.GetAcSubTimes(this.$route.params.problem_id).then(res => {
 					this.selfLog(res)

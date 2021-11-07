@@ -50,6 +50,14 @@ export default {
 	// 获取题目支持的语言类型
 	GetProblemSupportLanguage:pid=>{
 		return Get('problems/get_problem_support_language?pid='+pid)
+	},
+	// 获取竞赛题目的通过次数和总罚时
+	GetAcAndPenalty:(contest_id, pid)=>{
+		let params = {
+			'contest_id':contest_id,
+			'pid':pid
+		}
+		return Get('problems/get_ac_and_penalty',params)
 	}
 
 }
