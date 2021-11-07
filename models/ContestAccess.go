@@ -54,8 +54,11 @@ func (c *ContestAccess) AddPenalty(contest_id string, user_id string, penalty in
 	}
 }
 
-// 查询用户在某个竞赛中的累积罚时
-func GetTotalPenalty(userId, contestId string) {
-	contest := NewContests().GetContestById(contest_id)
-
+// GetTotalPenalty 查询用户在某个竞赛中的累积罚时
+func (c *ContestAccess) GetTotalPenalty(userId, contestId string) float64 {
+	contest := NewContests().GetContestById(contestId)
+	user, _ := NewUser().GetUserByUid(userId)
+	var contestAccess ContestAccess
+	O.QueryTable("contests_access").Filter("ContestId", contest).Filter("UserId", user).One(&contestAccess)
+	return contestAccess.Penalty
 }

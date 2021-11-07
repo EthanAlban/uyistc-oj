@@ -65,7 +65,7 @@ func (this *UserController) Login() {
 	//sess,err := session.GlobalSessions.SessionStart(this.Ctx.ResponseWriter,this.Ctx.Request)
 	//err = sess.Set("userid", user.UId)
 	if err != nil {
-		logger.Warn(err)
+		logger.Error(err)
 	}
 	// 写入日志中
 	models.NewLogs().AddLogging(conf.GetStringConfig("log_type_login"), user_, "用户登陆")

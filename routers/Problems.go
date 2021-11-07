@@ -12,4 +12,5 @@ func problemsRouter() {
 	beego.Router("api/problems/get_problem_tags_by_id", &controllers.ProblemsController{}, "get:GetProblemTagsById")
 	beego.Router("api/problems/get_problem_ac_sub_times", &controllers.ProblemsController{}, "get:GetProblemAcSubTimes")
 	beego.Router("api/problems/get_problem_support_language", &controllers.ProblemsController{}, "get:GetProblemSupportLanguage")
+	beego.Router("api/problems/get_ac_and_penalty", &controllers.ProblemsController{}, "get:GetAcAndPenalty")
 }

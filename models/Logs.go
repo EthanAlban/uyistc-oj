@@ -1,6 +1,7 @@
 package models
 
 import (
+	"fmt"
 	uuid "github.com/satori/go.uuid"
 	"github.com/wonderivan/logger"
 	"strconv"
@@ -36,6 +37,7 @@ func (l *Logs) AddLogging(type_ string, userid *User, content string) bool {
 		logger.Error(err)
 		return false
 	}
+	fmt.Println(userid)
 	newLog := Logs{
 		Type:    type__,
 		Content: content,

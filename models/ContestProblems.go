@@ -38,3 +38,17 @@ func (cp *ContestProblems) ContestProblemList(contest_id string) (*[]Problems, *
 	}
 	return &problems, &completeNum
 }
+
+// GetAcAndPenalty 查询某个问题的通过次数和当前用户的总罚时
+func (cp *ContestProblems) GetAcAndPenalty(contestId, userId string, problemId int) (int, float64) {
+	contest := NewContests().GetContestById(contestId)
+	problem, _ := NewProblems().GetProblemDetailById(problemId)
+	user, _ := NewUser().GetUserByUid(userId)
+	var contestProblem ContestProblems
+	var contestAccess ContestAccess
+	O.QueryTable("contest_problems").Filter("contest_id", contest).Filter("problem_id", problem).One(&contestProblem)
+	O.QueryTable("contests_access").Filter("user_id", user).Filter("contest_id", problemId).One(&contestAccess)
+	actimes := contestProblem.CompleteNum
+	penalty := contestAccess.Penalty
+	return actimes, penalty
+}

@@ -66,3 +66,5 @@ func (this *SubmissionAcmController) GetFinalInfoOfSubmission() {
 	submision.LastOutput = ""
 	this.JsonResult(200, "OK", submision)
 }
+
+//

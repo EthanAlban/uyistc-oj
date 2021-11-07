@@ -124,3 +124,21 @@ func (this *ProblemsController) GetProblemSupportLanguage() {
 	lans := models.NewProblems().GetProblemSupportLanguage(pid)
 	this.JsonResult(200, "查询问题接受语言成功", lans)
 }
+
+// GetAcAndPenalty 获取比赛中问题的通过次数总罚时
+func (this *ProblemsController) GetAcAndPenalty() {
+	var userId string
+	userLogin := this.Ctx.Input.CruSession.Get("user_login")
+	if userLogin != nil {
+		userId = userLogin.(models.User).UId
+	} else {
+		userId = "-1"
+	}
+	contest_id := this.Ctx.Input.Query("contest_id")
+	pid, _ := strconv.Atoi(this.Ctx.Input.Query("pid"))
+	actime, penalty := models.NewContestProblems().GetAcAndPenalty(contest_id, userId, pid)
+	resMap := make(map[string]interface{})
+	resMap["actimes"] = actime
+	resMap["penalty"] = penalty
+	this.JsonResult(200, "查询总罚时和通过次数成功", resMap)
+}
